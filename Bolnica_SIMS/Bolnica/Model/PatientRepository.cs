@@ -4,6 +4,7 @@
 // Purpose: Definition of Class PatientRepository
 
 using System;
+using System.Collections.Generic;
 
 namespace Model
 {

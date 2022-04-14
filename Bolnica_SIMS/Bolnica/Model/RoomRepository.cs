@@ -4,6 +4,7 @@
 // Purpose: Definition of Class RoomRepository
 
 using System;
+using System.Collections.Generic;
 
 namespace Model
 {

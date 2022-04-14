@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bolnica"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Background="LightSkyBlue">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Button Background="White" Grid.Column="0" Grid.Row="0" Width="200" Height="60" Margin="30" Click="Button_Click_1" FontFamily="Times New Roman" FontSize="20px">
+            <Bold>Doctor</Bold>
+        </Button>
+
+        <Button Background="White" Grid.Column="1" Grid.Row="0" Width="200" Height="60" Margin="30" Click="Button_Click_2" FontFamily="Times New Roman" FontSize="20px">
+            <Bold>Patient</Bold>
+        </Button>
+
+        <Button Background="White" Grid.Column="0" Grid.Row="1" Width="200" Height="60" Margin="30" Click="Button_Click_3" FontFamily="Times New Roman" FontSize="20px">
+            <Bold>Upravnik</Bold>
+        </Button>
+
+        <Button Background="White" Grid.Column="1" Grid.Row="1" Width="200" Height="60" Margin="30" Click="Button_Click_4" FontFamily="Times New Roman" FontSize="20px">
+            <Bold>Sekretar</Bold>
+        </Button>
+
+
+
+
+
 
     </Grid>
 </Window>

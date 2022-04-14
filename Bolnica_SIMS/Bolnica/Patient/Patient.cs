@@ -4,6 +4,7 @@
 // Purpose: Definition of Class Patient
 
 using System;
+using System.Collections.Generic;
 
 namespace Model
 {
@@ -11,7 +12,7 @@ namespace Model
    {
       private List<String> drugs;
       private List<String> alergies;
-      private List<Appointments> appointments;
+      private List<Appointment> appointments;
    
    }
 }

@@ -4,6 +4,7 @@
 // Purpose: Definition of Class RoomsController
 
 using System;
+using System.Collections.Generic;
 
 namespace Model
 {

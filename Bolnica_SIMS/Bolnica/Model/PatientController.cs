@@ -4,6 +4,7 @@
 // Purpose: Definition of Class PatientController
 
 using System;
+using System.Collections.Generic;
 
 namespace Model
 {
