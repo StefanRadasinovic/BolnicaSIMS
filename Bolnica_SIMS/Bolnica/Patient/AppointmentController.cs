@@ -4,6 +4,7 @@
 // Purpose: Definition of Class AppointmentController
 
 using System;
+using System.Collections.Generic;
 
 namespace Model
 {

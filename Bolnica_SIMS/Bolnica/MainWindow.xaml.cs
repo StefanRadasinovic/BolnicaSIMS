@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Bolnica.Patient;
 
 namespace Bolnica
 {
@@ -24,5 +25,37 @@ namespace Bolnica
         {
             InitializeComponent();
         }
+
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            PatientView patientView = new PatientView();
+
+            patientView.Show();
+            this.Close();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+
+
+
+
+
+
+
     }
 }

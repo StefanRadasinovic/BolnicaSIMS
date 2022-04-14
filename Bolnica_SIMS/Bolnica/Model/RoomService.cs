@@ -4,6 +4,7 @@
 // Purpose: Definition of Class RoomService
 
 using System;
+using System.Collections.Generic;
 
 namespace Model
 {

@@ -9,10 +9,8 @@ namespace Model
 {
    public class DoctorID : User
    {
-      public int DoctorID()
-      {
-         throw new NotImplementedException();
-      }
+      public int DoctorsID { get; set; }  
+     
    
    }
 }
