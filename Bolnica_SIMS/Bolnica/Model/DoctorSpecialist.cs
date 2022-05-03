@@ -9,7 +9,7 @@ namespace Model
 {
    public class DoctorSpecialist : DoctorID
    {
-      private Specialisation specialisation;
+      //private Specialisation specialisation;
    
    }
 }

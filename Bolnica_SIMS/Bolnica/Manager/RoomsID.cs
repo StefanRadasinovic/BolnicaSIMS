@@ -9,9 +9,11 @@ namespace Model
 {
     public class RoomsID
     {
-        public String RoomID;
- 
+        public String RoomID { get; set; }
 
-
+        public RoomsID(string roomID)
+        {
+            RoomID = roomID;
+        }
     }  
 }

@@ -41,11 +41,7 @@
 
         </DataGrid>
 
-        <Button Grid.Column="1" Grid.Row="0" Content="Create Appointment" Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click"  Background="White"/>
-        <Button Grid.Column="1" Grid.Row="1" Content="Update Appointment"  Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_1"  Background="White"/>
-        <Button Grid.Column="1" Grid.Row="2" Content="Cancel Appointment"  Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_2"  Background="White"/>
-        <Button Grid.Column="1" Grid.Row="3" Content="Back"  Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_3"  Background="White"/>
-
+       
 
 
 

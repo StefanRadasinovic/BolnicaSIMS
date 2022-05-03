@@ -9,7 +9,11 @@ namespace Model
 {
    public class Appointment : RoomsID
    {
-      public DateTime Date { get; set; }
+        public Appointment(string roomID) : base(roomID)
+        {
+        }
+
+        public DateTime Date { get; set; }
       public DateTime TimeStart { get; set; }
       public DateTime TimeEnd { get; set; }
       public String AppointmentID { get; set; }

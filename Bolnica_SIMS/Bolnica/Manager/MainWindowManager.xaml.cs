@@ -1,8 +1,7 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -10,57 +9,47 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Bolnica.Manager;
-using Bolnica.Patient;
 
-namespace Bolnica
+namespace Bolnica.Manager
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindowManager : Window
     {
-        public MainWindow()
+
+        public MainWindowManager()
         {
             InitializeComponent();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            RoomsController roomsController = new RoomsController();
+            RoomView roomView = new RoomView();
+            roomView.Show();
+            this.Close();
+
+        }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            EquipmentController equipmentController = new EquipmentController();
+            EquipmentView equipmentView = new EquipmentView();
+            equipmentView.Show();
+            this.Close();
 
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            PatientView patientView = new PatientView();
 
-            patientView.Show();
-            this.Close();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
 
-            MainWindowManager mainWindowManager = new MainWindowManager();
-            mainWindowManager.Show();
-            this.Close();
-
         }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-           
-        }
-
-
-
-
-
-
-
-
     }
 }

@@ -53,10 +53,10 @@ namespace Bolnica.Patient
 
 
         }
-        */
+        
 
 
-        /*
+        
         private void Button_Click_1(object sender, RoutedEventArgs e) //////////OVDE IDE DUGME ZA UPDATE 
         {
 
@@ -99,7 +99,7 @@ namespace Bolnica.Patient
             }
 
         }
-        */
+        
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
@@ -109,8 +109,9 @@ namespace Bolnica.Patient
 
         }
 
-
-
+        
+        */
 
     }
+        
 }
