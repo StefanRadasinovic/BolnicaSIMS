@@ -10,37 +10,36 @@ namespace Model
 {
    public class OperationController
    {
-      public bool Create(Operation operation)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public bool Update(Operation operation)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public bool Delete(String operationID)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public Operation GetOperation(String operationID)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public List<Operation> GetByDoctor(int doctorID)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public List<Operation> GetByPatient()
-      {
-         throw new NotImplementedException();
-      }
-      
-      public OperationService operationService;
-   
-   }
+        public static bool Create(Model.Operation operation)
+        {
+            return Model.OperationService.Create(operation);
+        }
+
+        public bool Update(Model.Operation operation)
+        {
+            return Model.OperationService.Update(operation);
+        }
+
+        public bool Delete(int operationID)
+        {
+            return Model.OperationService.Delete(operationID);
+        }
+
+        public Model.Operation GetOperation(int operationID)
+        {
+            return Model.OperationService.GetOperation(operationID);
+        }
+
+        public List<Operation> GetByDoctor(int doctorID)
+        {
+            return Model.OperationService.GetByDoctor(doctorID);
+        }
+
+        public List<Operation> GetByPatient(int patientID)
+        {
+            return Model.OperationService.GetByPatient(patientID);
+        }
+
+        public OperationService operationService;
+    }
 }

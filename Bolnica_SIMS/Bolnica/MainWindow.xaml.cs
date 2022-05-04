@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Bolnica.Manager;
 using Bolnica.Patient;
+using Bolnica.View;
 
 namespace Bolnica
 {
@@ -30,7 +31,9 @@ namespace Bolnica
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            DoctorViewMain mainWindowDoc = new DoctorViewMain();
+            mainWindowDoc.Show();
+            this.Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
