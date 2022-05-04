@@ -24,10 +24,11 @@ namespace Model
             roomRepository.GetRooms(room.RoomID1);
             DeleteRoom(room.RoomID1);
             CreateRoom(room);
+            roomRepository.Serialize();
 
-      }
-      
-      public void DeleteRoom(String roomID)
+        }
+
+        public void DeleteRoom(String roomID)
       {
             Rooms r = null;
             foreach (Rooms r1 in roomRepository.ReadAll())
@@ -44,6 +45,7 @@ namespace Model
             {
                 roomRepository.ReadAll().Remove(r);
             }
+            roomRepository.Serialize();
         }
       
       public List<Rooms> ReadAll()

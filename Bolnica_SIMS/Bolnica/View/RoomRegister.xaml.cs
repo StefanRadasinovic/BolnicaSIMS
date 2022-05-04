@@ -19,30 +19,38 @@ namespace Bolnica.Manager
     /// 
     public partial class RoomRegister : Window
     {
+        RoomView rv;
         public RoomsController roomsController = new RoomsController();
         private List<Rooms> rooms = new List<Rooms>();
        // Rooms room = new Rooms();
 
-        public RoomRegister()
+        public RoomRegister(RoomView rv)
         {
             InitializeComponent();
+            this.rv=rv;
             
+        }
+        void RoomRegister_Closing(object sender, EventArgs e)
+        {
             
+
+
         }
 
 
-      
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string RoomID = Convert.ToString(tb_id.Text);
             int floor = Convert.ToInt32(tb_floor.Text);
-            String roomName = Convert.ToString(tb_name);
+            String roomName = Convert.ToString(tb_name.Text);
             RoomsType roomsType = (RoomsType)cbox.SelectedIndex;
             Rooms rooms = new Rooms(RoomID, floor, roomName, roomsType);
             roomsController.Create(rooms);
-
+            rv.Refresh();
             this.Close();
+            
             
 
 

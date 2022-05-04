@@ -31,7 +31,8 @@ namespace Bolnica.Manager
             equipmentRepository.ReadAll().Add(e);
             equipmentRepository.Serialize();
 
-//za validaciju u try catch--gleda da li bi program kresovao ako da izmbaci kec
+            //za validaciju u try catch--gleda da li bi program kresovao ako da izmbaci kec
+
         }
 
         public List<Equipment> ReadAll()
@@ -44,6 +45,9 @@ namespace Bolnica.Manager
              return true;
         
         }
+
+
+
 
         private EquipmentRepository equipmentRepository = new EquipmentRepository();
     }

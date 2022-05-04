@@ -19,7 +19,7 @@ namespace Model
 
         public RoomRepository()
         {
-           // rooms = (List<Rooms>)Deserialize();
+           rooms = (List<Rooms>)Deserialize();
         }
         public Rooms GetRooms(String id)
         {
@@ -39,7 +39,7 @@ namespace Model
         }
         public IEnumerable<Rooms> Deserialize()
         {
-            return (List<Rooms>)File.ReadAllLines(projectPath + "\\Resources\\CSVFiles\\rooms.csv").Select(FromCSV);
+            return (List<Rooms>)File.ReadAllLines(projectPath + "\\Resources\\CSVFiles\\rooms.csv").Select(FromCSV).ToList();
 
         }
 
@@ -61,12 +61,12 @@ namespace Model
 
         private String ToCSV(Rooms rooms)    //serialization
         {
-            return string.Join("^", rooms.RoomID1, rooms.RoomName, rooms.Floor,rooms.RoomsType);
+            return string.Join("_", rooms.RoomID1, rooms.Floor, rooms.RoomName, rooms.RoomsType);
         }
 
         private Rooms FromCSV(String roomFormat)     //deserialization
         {
-            var tokens = roomFormat.Split("^".ToCharArray());
+            var tokens = roomFormat.Split("_".ToCharArray());
             return new Rooms(Convert.ToString(tokens[0]), Convert.ToInt32(tokens[1]), Convert.ToString(tokens[2]),(RoomsType)Enum.Parse(typeof(RoomsType), tokens[3]));
         }
        

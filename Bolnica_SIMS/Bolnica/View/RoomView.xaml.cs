@@ -23,35 +23,29 @@ namespace Bolnica.Manager
     {
        public RoomsController rc = new RoomsController();
 
-       public static ObservableCollection<Rooms> Room { get; set; }
+        public static ObservableCollection<Rooms> Room = new ObservableCollection<Rooms>();
         public RoomView()
         {
             InitializeComponent();
-
+            this.DataContext = this;
+            foreach (Rooms r in rc.GetAll())
+            {
+                Room.Add(r);
+                MessageBox.Show(r.RoomName);
+            }
+            
             DGR.ItemsSource = rc.GetAll();
-
-
-             this.DataContext = this;
-
-             DGR.ItemsSource = Room;
-
-             foreach(Rooms r in rc.GetAll())
-             {
-                 Room.Add(r);
-             }
-
-             DGR.ItemsSource = new List<Rooms>();
 
             // DGR.Items.Add(Room);
 
 
         }
-
- 
-
+        public void Refresh() {
+            DGR.Items.Refresh();
+                }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            RoomRegister roomRegister = new RoomRegister();
+            RoomRegister roomRegister = new RoomRegister(this);
             roomRegister.Show();
             DGR.Items.Refresh();
 
@@ -89,6 +83,22 @@ namespace Bolnica.Manager
             MainWindowManager mainWindowManager = new MainWindowManager();
             mainWindowManager.Show();
             
+            this.Close();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            MainWindowManager mainWindowManager = new MainWindowManager();
+            mainWindowManager.Show();
+
+            this.Close();
+        }
+
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            MainWindowManager mainWindowManager = new MainWindowManager();
+            mainWindowManager.Show();
+
             this.Close();
         }
     }

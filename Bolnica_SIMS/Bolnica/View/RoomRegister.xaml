@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bolnica.Manager"
         mc:Ignorable="d"
-        Title="RoomRegister" Height="450" Width="400" WindowStartupLocation="CenterScreen">
+        Title="RoomRegister" Height="750" Width="430" WindowStartupLocation="CenterScreen">
     <Grid x:Name="RMV" Background="PeachPuff">
-        <StackPanel Margin="50,50,50,27">
-            <Label>RoomId</Label>
-            <TextBox x:Name="tb_id" Height="24"></TextBox>
-            <Label>Floor</Label>
-            <TextBox x:Name="tb_floor" Height="24"></TextBox>
-            <Label>RoomName</Label>
-            <TextBox Name="tb_name" Height="24"></TextBox>
-            <Label>Rooms Type</Label>
-            <ComboBox Name="cbox" Width="284" Height="25">
+        <StackPanel Margin="50,50,50,180">
+            <Label FontSize="16" FontFamily="Arial">RoomId</Label>
+            <TextBox x:Name="tb_id" Height="38"></TextBox>
+            <Label FontSize="16" FontFamily="Arial">Floor</Label>
+            <TextBox x:Name="tb_floor" Height="37"></TextBox>
+            <Label FontSize="16" FontFamily="Arial">RoomName</Label>
+            <TextBox Name="tb_name" Height="34"></TextBox>
+            <Label FontSize="16" FontFamily="Arial">Rooms Type</Label>
+            <ComboBox Name="cbox" Width="318" Height="37">
                 <ComboBoxItem Content="Operating Room"></ComboBoxItem>
                 <ComboBoxItem Content="Examination Room"></ComboBoxItem>
                 <ComboBoxItem Content="Rest Room"></ComboBoxItem>
@@ -33,15 +33,15 @@
             <Separator Width="20" Background="Transparent"/>
 
 
-            <Button Click="Button_Click" Height="22">Register</Button>
+            <Button Click="Button_Click" Height="61" FontSize="22" FontFamily="Arial Black">Register</Button>
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>
-            <Button Click="Button_Click_1" Content="Back" Height="23"/>
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>
+            <Button Click="Button_Click_1" Content="Back" Height="61" RenderTransformOrigin="0.5,1.835" FontSize="22" FontFamily="Arial Black"/>
 
 
 
