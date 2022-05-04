@@ -10,9 +10,20 @@ namespace Model
 {
    public class Patient : User
    {
+       
+
       private List<String> drugs;
       private List<String> alergies;
       private List<Appointment> appointments;
-   
-   }
+
+        private string text { get; set; }
+       
+     
+      
+        public Patient(string text)
+        {
+            this.text = text;
+        }
+      
+    }
 }

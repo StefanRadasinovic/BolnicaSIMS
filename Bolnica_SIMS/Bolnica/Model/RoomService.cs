@@ -10,7 +10,7 @@ namespace Model
 {
    public class RoomService
    {
-      private List<Room> rooms;
+     /// private List<Room> rooms; Ovde baca gresku
       
       public bool CreateRoom(Rooms rooms)
       {

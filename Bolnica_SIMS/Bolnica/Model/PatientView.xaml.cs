@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Bolnica.Model;
 using Model;
 
 namespace Bolnica.Patient
@@ -24,8 +25,8 @@ namespace Bolnica.Patient
         public PatientView()
         {
             InitializeComponent();
-
             InitializeComponent();
+
 
             this.DataContext = this;
 
@@ -45,7 +46,7 @@ namespace Bolnica.Patient
 
         }
 
-        /*
+        
         private void Button_Click(object sender, RoutedEventArgs e) //OVO JE CREATE  
         {
             CreateAppointmentPatientView create = new CreateAppointmentPatientView();
@@ -53,10 +54,10 @@ namespace Bolnica.Patient
 
 
         }
-        */
+        
 
 
-        /*
+        
         private void Button_Click_1(object sender, RoutedEventArgs e) //////////OVDE IDE DUGME ZA UPDATE 
         {
 
@@ -68,8 +69,8 @@ namespace Bolnica.Patient
 
 
                 Appointment appointment = appointmentService.GetAppointmentID(promena);
-                UpdatePatientView updatePatientView = new UpdatePatientView(appointment);
-                updatePatientView.Show();
+                UpdateAppointmentPatientView UpdateAppointmentPatientView = new UpdateAppointmentPatientView(appointment);
+                UpdateAppointmentPatientView.Show();
 
 
             }
@@ -82,10 +83,10 @@ namespace Bolnica.Patient
 
 
         }
-        */
+        
 
 
-        /*
+        
         private void Button_Click_2(object sender, RoutedEventArgs e) //////////OVDE IDE DUGME ZA delete 
         {
             AppointmentService appointmentService = new AppointmentService();
@@ -99,7 +100,7 @@ namespace Bolnica.Patient
             }
 
         }
-        */
+        
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
