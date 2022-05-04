@@ -8,39 +8,59 @@ using System.Collections.Generic;
 
 namespace Model
 {
-   public class AppointmentController
-   {
-      public Appointment Create(Appointment appointment)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public void Read(String appointmentID)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public bool Update(String appointmentID)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public bool Delete(String appointmentID)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public List<Appointment> GetAll()
-      {
-         throw new NotImplementedException();
-      }
-      
-      public Appointment GetAppointmentID(String appointmentID)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public AppointmentService appointmentService;
-   
-   }
+    public class AppointmentController
+    {
+        public static Appointment Create(Appointment appointment)
+        {
+
+
+            return AppointmentService.Create(appointment);
+
+        }
+
+        public void Read(String appointmentID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Update(String appointmentID)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public static bool Update2(String appointmentID, DateTime date)
+        {
+            AppointmentService appointmentService = new AppointmentService();
+            if (appointmentService.Update2(appointmentID, date))
+                return true;
+            else return false;
+        }
+
+
+
+        public bool Delete(String appointmentID)
+        {
+            AppointmentService newappointmentService = new AppointmentService();
+            if (newappointmentService.Delete(appointmentID))
+                return true;
+            else return false;
+
+        }
+
+        public List<Appointment> GetAll()
+        {
+            return AppointmentService.GetAll();
+        }
+
+        public Appointment GetAppointmentID(String appointmentID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public AppointmentService appointmentService;
+
+    }
+
+
 }

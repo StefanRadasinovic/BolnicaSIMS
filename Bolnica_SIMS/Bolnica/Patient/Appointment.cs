@@ -7,20 +7,38 @@ using System;
 
 namespace Model
 {
-   public class Appointment : RoomsID
+   public class Appointment //: RoomsID
    {
-        public Appointment(string roomID) : base(roomID)
-        {
-        }
+      //    public Appointment(string roomID) : base(roomID)
+       //    {
+       //    }
+
+        
+        private Patient p;
+        private DateTime? date;
+        private string time;
+        private string Time;
 
         public DateTime Date { get; set; }
       public DateTime TimeStart { get; set; }
       public DateTime TimeEnd { get; set; }
       public String AppointmentID { get; set; }
-        public String RoomID { get; set; }
-
+        public String roomID { get; set; }
+        
 
         //public String RoomNumber;
+
+
+
+
+        
+
+        public Appointment(string appointmentID, DateTime? date, string time)
+        {
+            AppointmentID = appointmentID;
+            this.Date = date.Value;
+            this.Time = time;
+        }
 
     }
 }
