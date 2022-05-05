@@ -8,9 +8,9 @@ namespace Bolnica.Controller
 {
     internal class RequestController
     {
-        public void Delete(String eqName)
+        public void Delete(String eqID)
         {
-            requestService.Delete(eqName);
+            requestService.Delete(eqID);
         }
 
         public void Create(RequestEquipmentcs requestEquipmentcs)

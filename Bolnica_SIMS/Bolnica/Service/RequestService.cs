@@ -9,12 +9,12 @@ namespace Bolnica.Service
     internal class RequestService
     {
 
-        public void Delete(String eqName)
+        public void Delete(String eqID)
         {
             RequestEquipmentcs r = null;
             foreach (RequestEquipmentcs r1 in requestRepository.ReadAll())
             {
-                if (r1.EqName == eqName)
+                if (r1.EqID == eqID)
                 {
                     r = r1;
 

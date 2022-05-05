@@ -21,8 +21,6 @@ namespace Bolnica.View
     public partial class MoveRequestView : Window
     {
         EquipmentController equipmentController = new EquipmentController();
-        //quipment e = new Equipment(string id,EquipmentType,roomID);
-        // RequestEquipmentcs requestEquipmentcs = new RequestEquipmentcs(roomID,equipment,dateMove);
         RequestController requestController = new RequestController();
         RoomsController roomsController = new RoomsController();
 
@@ -32,21 +30,19 @@ namespace Bolnica.View
             DGM.ItemsSource = requestController.ReadAll();
             //cbox.ItemsSource = equipmentController.ReadAll();
             //cbox.DisplayMemberPath = ("id");
-            cbox.ItemsSource = roomsController.GetAll();
+            cbox.ItemsSource= Enum.GetValues(typeof(RoomsType));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
              
             
-                String eqName = Convert.ToString(tb_id);
+                String eqID = Convert.ToString(tb_id);
                 RoomsType roomsType = (RoomsType)cbox.SelectedItem;
                 DateTime dateTime = (DateTime)date_move.SelectedDate;
-            //if (equipmentController.MoveEq(RoomID, equipment.Id, dateTime)) { }
-            // if(requestController.)
-            RequestEquipmentcs requestEquipmentcs = new RequestEquipmentcs(eqName,roomsType,dateTime);
-            requestController.Create(requestEquipmentcs);
-            DGM.Items.Refresh();
+                RequestEquipmentcs requestEquipmentcs = new RequestEquipmentcs(eqID,roomsType,dateTime);
+                requestController.Create(requestEquipmentcs);
+                DGM.Items.Refresh();
 
 
         }

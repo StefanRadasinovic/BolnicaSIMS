@@ -15,13 +15,13 @@ namespace Bolnica.Repository
 
         public RequestRepository()
         {
-            //equipment = (List<Equipment>)Deserialize();
+            requestEquipmentcs1 = (List<RequestEquipmentcs>)Deserialize();
         }
-        public RequestEquipmentcs Read(String eqName)
+        public RequestEquipmentcs Read(String id)
         {
             foreach (RequestEquipmentcs request
                 in requestEquipmentcs1)
-                if (request.EqName== eqName)
+                if (request.EqID == id)
                     return request;
             return null;
         }
@@ -58,7 +58,7 @@ namespace Bolnica.Repository
 
         public String ToCSV(RequestEquipmentcs requestEquipmentcs)    //serialization
         {
-            return string.Join("_", requestEquipmentcs.EqName, requestEquipmentcs.RoomType, requestEquipmentcs.DateMove);
+            return string.Join("_", requestEquipmentcs.EqID, requestEquipmentcs.RoomType, requestEquipmentcs.DateMove);
         }
 
         public RequestEquipmentcs FromCSV(String eqFormat)     //deserialization

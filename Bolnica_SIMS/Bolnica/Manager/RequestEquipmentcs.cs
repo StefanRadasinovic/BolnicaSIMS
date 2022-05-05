@@ -7,18 +7,18 @@ namespace Bolnica.Manager
 {
     public class RequestEquipmentcs
     {
-        private String eqName;
+        private String eqID;
         private RoomsType roomType;
         private DateTime dateMove;
 
-        public RequestEquipmentcs(string eqName, RoomsType roomType, DateTime dateMove)
+        public RequestEquipmentcs(string eqID, RoomsType roomType, DateTime dateMove)
         {
-            this.eqName = eqName;
+            this.eqID = eqID;
             this.roomType = roomType;
             this.dateMove = dateMove;
         }
 
-        public string EqName { get => eqName; set => eqName = value; }
+        public string EqID { get => eqID; set => eqID = value; }
         public RoomsType RoomType { get => roomType; set => roomType = value; }
         public DateTime DateMove { get => dateMove; set => dateMove = value; }
 
