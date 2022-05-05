@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Model;
+using Bolnica.Serialization;
 
 //SERVICE - PROBLEM SA PATIENT (NE VIDI GA KAO TIP, VEC KAO NAMESPACE)
 namespace Service
@@ -10,10 +11,14 @@ namespace Service
     {
         private static List<Patient> patients = new List<Patient>();
 
-        public static bool RegisterPatient(Patient patient)
+        public bool RegisterPatient(Patient patient)
         {
+            //C:\Users\user\Desktop\PROJEKATJEBENI\BolnicaSIMS\Bolnica_SIMS\Bolnica\Resources
             bool ret = false;
             patients.Add(patient);
+            Serializer<Patient> ser = new Serializer<Patient>();
+            ser.toCSV("C:\\Users\\user\\Desktop\\PROJEKATJEBENI\\BolnicaSIMS\\Bolnica_SIMS\\Bolnica\\Resources\\patients.txt", patients);
+
             //PatientView.Appointments.Add(appointment);
 
             if (patients.Contains(patient))
@@ -40,6 +45,8 @@ namespace Service
 
         public List<Patient> GetAll()
         {
+            Serializer<Patient> ser = new Serializer<Patient>();
+            patients = ser.fromCSV("C:\\Users\\user\\Desktop\\PROJEKATJEBENI\\BolnicaSIMS\\Bolnica_SIMS\\Bolnica\\Resources\\patients.txt");
             return patients;
         }
 

@@ -54,7 +54,9 @@ namespace Bolnica
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-           
+            SecretaryPatientView s = new SecretaryPatientView();
+            s.Show();
+            this.Close();
         }
 
 

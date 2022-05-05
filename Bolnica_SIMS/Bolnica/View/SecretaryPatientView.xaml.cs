@@ -1,5 +1,4 @@
-﻿using Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
@@ -11,19 +10,18 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Service;
 using Model;
+using Service;
 
 namespace Bolnica.View
 {
     /// <summary>
-    /// Interaction logic for SecretaryView.xaml
+    /// Interaction logic for SecretaryPatientView.xaml
     /// </summary>
-    
-    public partial class SecretaryView : Window
+    public partial class SecretaryPatientView : Window
     {
         public static ObservableCollection<Patient> Patients { get; set; }
-        public SecretaryView()
+        public SecretaryPatientView()
         {
             InitializeComponent();
             InitializeComponent();
@@ -45,13 +43,11 @@ namespace Bolnica.View
 
         }
 
-
-        //REGISTRATION
+        //REGISTER
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           // RegisterPatientSecretaryView register = new RegisterPatientSecretaryView();
-           // register.Show();
-
+            RegisterPatientSecretaryView register = new RegisterPatientSecretaryView();
+            register.Show();
         }
 
         //UPDATE
@@ -62,8 +58,8 @@ namespace Bolnica.View
             {
                 Patient pom = ps.GetPatientByJMBG(((Patient)GridDataSecretaryView.SelectedItem).Jmbg);
                 ps.DeletePatient(((Patient)GridDataSecretaryView.SelectedItem).Jmbg);
-                //UpdatePatientSecretaryView up = new UpdatePatientSecretaryView(pom);
-                //up.Show();
+                UpdatePatientSecretaryView up = new UpdatePatientSecretaryView(pom);
+                up.Show();
                 GridDataSecretaryView.Items.Refresh();
             }
             else
@@ -95,6 +91,5 @@ namespace Bolnica.View
             mw.Show();
             this.Close();
         }
-    
     }
 }
