@@ -5,13 +5,15 @@
 
 using System;
 using System.Collections.Generic;
-using Bolnica.Patient;
+using Model;
+using Bolnica.View;
+using Repository;
 
-namespace Model
+namespace Service
 {
    public class AppointmentService
    {
-        //  private List<Appointment> allAppointments;
+        // private List<Appointment> allAppointments;
         public static List<Appointment> allAppointments = new List<Appointment>();
 
         public static Appointment Create(Appointment appointment)

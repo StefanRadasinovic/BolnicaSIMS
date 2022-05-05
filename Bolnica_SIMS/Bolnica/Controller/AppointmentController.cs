@@ -5,8 +5,10 @@
 
 using System;
 using System.Collections.Generic;
+using Model;
+using Service;
 
-namespace Model
+namespace Controller
 {
     public class AppointmentController
     {

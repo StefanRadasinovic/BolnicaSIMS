@@ -12,8 +12,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Bolnica.View;
 using Model;
+using Service;
 
-namespace Bolnica.Patient
+namespace Bolnica.View
 {
     /// <summary>
     /// Interaction logic for PatientView.xaml

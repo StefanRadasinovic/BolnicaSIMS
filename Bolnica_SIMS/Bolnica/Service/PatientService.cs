@@ -1,43 +1,61 @@
-// File:    PatientService.cs
-// Author:  user
-// Created: Saturday, April 9, 2022 9:37:50 AM
-// Purpose: Definition of Class PatientService
-
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Text;
+using Model;
 
-namespace Model
+//SERVICE - PROBLEM SA PATIENT (NE VIDI GA KAO TIP, VEC KAO NAMESPACE)
+namespace Service
 {
-   public class PatientService
-   {
-      private List<Patient> patients;
-      
-      public bool RegisterPatient(Patient patient)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public void UpdatePatient(Patient patient)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public bool DeletePatient(int jmbg)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public List<Patient> GetAll()
-      {
-         throw new NotImplementedException();
-      }
-      
-      public Patient GetPatientByJMBG(int jmbg)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public PatientRepository patientRepository;
-   
-   }
+    class PatientService
+    {
+        private static List<Patient> patients = new List<Patient>();
+
+        public static bool RegisterPatient(Patient patient)
+        {
+            bool ret = false;
+            patients.Add(patient);
+            //PatientView.Appointments.Add(appointment);
+
+            if (patients.Contains(patient))
+            {
+                ret = true;
+            }
+            return ret;
+        }
+
+        public void UpdatePatient(Patient patient)
+        {
+            //Patient p = GetPatientByJMBG(patient.Jmbg);
+
+            DeletePatient(patient.Jmbg);
+            RegisterPatient(patient);
+
+        }
+
+        public bool DeletePatient(int jmbg)
+        {
+            Patient p = GetPatientByJMBG(jmbg);
+            return patients.Remove(p);
+        }
+
+        public List<Patient> GetAll()
+        {
+            return patients;
+        }
+
+        public Patient GetPatientByJMBG(int jmbg)
+        {
+            foreach (Patient p in patients)
+            {
+                if (p.Jmbg == jmbg)
+                {
+                    return p;
+                }
+            }
+            return null;
+        }
+
+        public PatientRepository patientRepository;
+
+    }
 }

@@ -5,8 +5,10 @@
 
 using System;
 using System.Collections.Generic;
+using Service;
+using Model;
 
-namespace Model
+namespace Controller
 {
    public class PatientController
    {
@@ -35,7 +37,7 @@ namespace Model
          throw new NotImplementedException();
       }
       
-      public PatientService patientService;
+      //public PatientService patientService;
    
    }
 }

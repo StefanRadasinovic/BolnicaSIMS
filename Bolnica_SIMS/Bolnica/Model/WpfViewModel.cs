@@ -4,6 +4,7 @@
 // Purpose: Definition of Class WpfViewModel
 
 using System;
+using Controller;
 
 namespace Model
 {

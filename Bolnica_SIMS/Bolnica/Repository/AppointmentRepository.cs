@@ -5,8 +5,9 @@
 
 using System;
 using System.Collections.Generic;
+using Model;
 
-namespace Model
+namespace Repository
 {
    public class AppointmentRepository
    {

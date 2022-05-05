@@ -13,7 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Bolnica.Manager;
-using Bolnica.Patient;
 using Bolnica.View;
 
 namespace Bolnica
