@@ -1,4 +1,6 @@
-﻿using Bolnica.Manager;
+﻿using Bolnica.Controller;
+using Bolnica.Manager;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,33 +22,48 @@ namespace Bolnica.View
     {
         EquipmentController equipmentController = new EquipmentController();
         //quipment e = new Equipment(string id,EquipmentType,roomID);
-       // RequestEquipmentcs requestEquipmentcs = new RequestEquipmentcs(roomID,equipment,dateMove);
+        // RequestEquipmentcs requestEquipmentcs = new RequestEquipmentcs(roomID,equipment,dateMove);
+        RequestController requestController = new RequestController();
+        RoomsController roomsController = new RoomsController();
+
         public MoveRequestView()
         {
             InitializeComponent();
-            DGM.ItemsSource = equipmentController.ReadAll();
-            cbox.ItemsSource = equipmentController.ReadAll();
-            cbox.DisplayMemberPath = ("id");
+            DGM.ItemsSource = requestController.ReadAll();
+            //cbox.ItemsSource = equipmentController.ReadAll();
+            //cbox.DisplayMemberPath = ("id");
+            cbox.ItemsSource = roomsController.GetAll();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+             
             
-            String RoomID = Convert.ToString(tb_id);
-            Equipment equipment = (Equipment)cbox.SelectedItem;
-            DateTime dateTime = (DateTime)date_move.SelectedDate;
+                String eqName = Convert.ToString(tb_id);
+                RoomsType roomsType = (RoomsType)cbox.SelectedItem;
+                DateTime dateTime = (DateTime)date_move.SelectedDate;
             //if (equipmentController.MoveEq(RoomID, equipment.Id, dateTime)) { }
-            
+            // if(requestController.)
+            RequestEquipmentcs requestEquipmentcs = new RequestEquipmentcs(eqName,roomsType,dateTime);
+            requestController.Create(requestEquipmentcs);
+            DGM.Items.Refresh();
+
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            String eqName = Convert.ToString(tb_id);
+            requestController.Delete(eqName);
+            DGM.Items.Refresh();
 
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-
+            EquipmentView equipmentView = new EquipmentView();
+            equipmentView.Show();
+            this.Close();
         }
     }
 }

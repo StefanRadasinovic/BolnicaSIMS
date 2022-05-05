@@ -8,13 +8,15 @@
         Title="MoveRequestView" Height="450" Width="800">
     <Grid Background="MistyRose">
         <DataGrid x:Name="DGM" HorizontalAlignment="Left" Height="330" Margin="184,49,0,0" VerticalAlignment="Top" Width="286" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <Label Content="Room ID" HorizontalAlignment="Left" Height="28" Margin="548,27,0,0" VerticalAlignment="Top" Width="146"/>
+        <Label Content="Equipment Name" HorizontalAlignment="Left" Height="28" Margin="548,27,0,0" VerticalAlignment="Top" Width="146"/>
 
-        <Label Content="Equipment ID" HorizontalAlignment="Left" Height="32" Margin="548,113,0,0" VerticalAlignment="Top" Width="125"/>
+        <Label Content="Room Type " HorizontalAlignment="Left" Height="32" Margin="548,113,0,0" VerticalAlignment="Top" Width="125"/>
 
         <Label Content="DateMove" HorizontalAlignment="Left" Height="32" Margin="548,217,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBox x:Name="tb_id" HorizontalAlignment="Left" Height="34" Margin="548,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"/>
-        <ComboBox x:Name="cbox" HorizontalAlignment="Left" Height="32" Margin="548,150,0,0" VerticalAlignment="Top" Width="174"/>
+        <ComboBox x:Name="cbox" HorizontalAlignment="Left" Height="32" Margin="548,150,0,0" VerticalAlignment="Top" Width="174">
+      
+        </ComboBox>
         <DatePicker x:Name="date_move" HorizontalAlignment="Left" Height="30" Margin="548,254,0,0" VerticalAlignment="Top" Width="174"/>
         <Button Content="Back" HorizontalAlignment="Left" Height="45" Margin="28,49,0,0" VerticalAlignment="Top" Width="107" Click="Button_Click_2"/>
         <Button Content="Move" HorizontalAlignment="Left" Height="48" Margin="28,166,0,0" VerticalAlignment="Top" Width="107" Click="Button_Click"/>

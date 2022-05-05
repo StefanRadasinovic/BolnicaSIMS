@@ -1,4 +1,5 @@
-﻿using Model;
+﻿using Bolnica.View;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -94,7 +95,9 @@ namespace Bolnica.Manager
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-
+            MoveRequestView moveRequestView = new MoveRequestView();
+            moveRequestView.Show();
+            this.Close();
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)

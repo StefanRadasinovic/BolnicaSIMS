@@ -58,6 +58,8 @@ namespace Bolnica.Manager
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            EquipmentView equipmentView = new EquipmentView();
+            equipmentView.Show();
             this.Close();
         }
     }

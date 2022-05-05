@@ -16,7 +16,7 @@ namespace Bolnica.Model
 
         public RenovationRepository()
         {
-            renovation = (List<Renovation>)Deserialize();
+           // renovation = (List<Renovation>)Deserialize();
         }
         public Renovation Read(String id)
         {
@@ -64,6 +64,8 @@ namespace Bolnica.Model
         private Renovation FromCSV(String renovationFormat)     //deserialization
         {
             var tokens = renovationFormat.Split("_".ToCharArray());
+            //  return new Renovation(Convert.ToString(tokens[0]), Convert.ToDateTime(tokens[1]));
+            //parsiranje datuma
             return new Renovation(Convert.ToString(tokens[0]), Convert.ToDateTime(tokens[1]));
         }
 

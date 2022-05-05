@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,13 +7,24 @@ namespace Bolnica.Manager
 {
     public class RequestEquipmentcs
     {
-        private String RoomID;
-        private Equipment equipment;
+        private String eqName;
+        private RoomsType roomType;
         private DateTime dateMove;
 
-       // public RequestEquipmentcs() { }
+        public RequestEquipmentcs(string eqName, RoomsType roomType, DateTime dateMove)
+        {
+            this.eqName = eqName;
+            this.roomType = roomType;
+            this.dateMove = dateMove;
+        }
 
-        public RequestEquipmentcs(string roomID, Equipment equipment, DateTime dateMove)
+        public string EqName { get => eqName; set => eqName = value; }
+        public RoomsType RoomType { get => roomType; set => roomType = value; }
+        public DateTime DateMove { get => dateMove; set => dateMove = value; }
+
+        // public RequestEquipmentcs() { }
+
+        /*public RequestEquipmentcs(string roomID, Equipment equipment, DateTime dateMove)
         {
             RoomID = roomID;
             this.equipment = equipment;
@@ -21,6 +33,8 @@ namespace Bolnica.Manager
 
         public string RoomID1 { get => RoomID; set => RoomID = value; }
         public Equipment Equipment { get => equipment; set => equipment = value; }
-        public DateTime DateMove { get => dateMove; set => dateMove = value; }
+        public DateTime DateMove { get => dateMove; set => dateMove = value; }*/
+
+
     }
 }
