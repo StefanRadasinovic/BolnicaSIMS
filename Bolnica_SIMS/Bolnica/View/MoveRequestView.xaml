@@ -20,7 +20,7 @@
         <Button Content="Back" HorizontalAlignment="Left" Height="45" Margin="28,49,0,0" VerticalAlignment="Top" Width="107" Click="Button_Click_2"/>
         <Button Content="Move" HorizontalAlignment="Left" Height="48" Margin="28,166,0,0" VerticalAlignment="Top" Width="107" Click="Button_Click"/>
         <Button Content="Cancle Move" HorizontalAlignment="Left" Height="43" Margin="28,284,0,0" VerticalAlignment="Top" Width="107" Click="Button_Click_1"/>
-        <TextBox x:Name="tb_id" HorizontalAlignment="Left" Height="22" Margin="548,72,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="174"/>
+        <TextBox x:Name="tb_id" HorizontalAlignment="Left" Height="22" Margin="548,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"/>
 
     </Grid>
 

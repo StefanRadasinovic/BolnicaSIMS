@@ -64,7 +64,6 @@ namespace Bolnica.Repository
         public RequestEquipmentcs FromCSV(String eqFormat)     //deserialization
         {
             var tokens = eqFormat.Split("_".ToCharArray());
-            //return new Rooms(Convert.ToInt32(tokens[0]),Convert.ToString(tokens[1]), (RoomsType)Enum.Parse(typeof(RoomsType), tokens[1]), Convert.ToSingle(tokens[2]), Convert.ToInt32(tokens[3]), Convert.ToInt32(tokens[4]));
             return new RequestEquipmentcs(Convert.ToString(tokens[0]), (RoomsType)Enum.Parse(typeof(RoomsType), tokens[1]), Convert.ToDateTime(tokens[2]));
         }
 

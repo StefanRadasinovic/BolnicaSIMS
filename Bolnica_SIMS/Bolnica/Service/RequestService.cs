@@ -26,6 +26,7 @@ namespace Bolnica.Service
             {
                 requestRepository.ReadAll().Remove(r);
             }
+            requestRepository.Serialize();
         }
 
         public void Create(RequestEquipmentcs r)

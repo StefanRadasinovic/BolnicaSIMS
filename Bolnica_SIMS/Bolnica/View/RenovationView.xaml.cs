@@ -37,9 +37,9 @@ namespace Bolnica.Manager
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            String RoomID = Convert.ToString(tb_id.Text);
-            DateTime Time = (DateTime)date_r.SelectedDate;
-            Renovation r = new Renovation(RoomID, Time);
+            String roomID = Convert.ToString(tb_id.Text);
+            DateTime dateTime = (DateTime)date_r.SelectedDate;
+            Renovation r = new Renovation(roomID, dateTime);
             renovationController.Create(r);
             DGR.Items.Refresh();
             //this.Show();
@@ -49,8 +49,8 @@ namespace Bolnica.Manager
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            String RoomID = Convert.ToString(tb_id.Text);
-            renovationController.Delete(RoomID);
+            String roomID = Convert.ToString(tb_id.Text);
+            renovationController.Delete(roomID);
             DGR.Items.Refresh(); 
 
 

@@ -13,7 +13,7 @@
         <Label Content="RoomID" HorizontalAlignment="Left" Height="33" Margin="494,62,0,0" VerticalAlignment="Top" Width="238"/>
         <TextBox x:Name="tb_id" HorizontalAlignment="Left" Height="30" Margin="494,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238"/>
         <Label Content="Datum zauzimanja" HorizontalAlignment="Left" Height="29" Margin="494,135,0,0" VerticalAlignment="Top" Width="222"/>
-        <DatePicker x:Name="date_r" HorizontalAlignment="Left" Margin="494,169,0,0" VerticalAlignment="Top" Width="284" Height="48"/>
+        <DatePicker x:Name="date_r" HorizontalAlignment="Left" Height="30" Margin="498,187,0,0" VerticalAlignment="Top" Width="174"/>
 
 
 
