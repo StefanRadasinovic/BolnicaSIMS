@@ -10,7 +10,7 @@ namespace Bolnica.Manager
         private Equipment equipment;
         private DateTime dateMove;
 
-        public RequestEquipmentcs() { }
+       // public RequestEquipmentcs() { }
 
         public RequestEquipmentcs(string roomID, Equipment equipment, DateTime dateMove)
         {

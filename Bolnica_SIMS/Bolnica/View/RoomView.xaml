@@ -37,9 +37,13 @@
             </ToolBarTray>
 
         </DockPanel>
-        <DataGrid x:Name="DGR" HorizontalAlignment="Left" Height="499" Margin="30,38,0,0" Grid.RowSpan="4" Grid.Row="1" VerticalAlignment="Top" Width="365" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="2"/>
-       
-       
+        <DataGrid x:Name="DGR" HorizontalAlignment="Left" Height="499" Margin="30,38,0,0" Grid.RowSpan="4" Grid.Row="1" VerticalAlignment="Top" Width="365" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+
 
 
 

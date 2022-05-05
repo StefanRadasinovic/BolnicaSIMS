@@ -28,7 +28,22 @@ namespace Bolnica.Manager
 
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            String RoomID = Convert.ToString(tb_id.Text);
+            int floor = Convert.ToInt32(tb_floor.Text);
+            String roomName = Convert.ToString(tb_name.Text);
+            RoomsType roomsType = (RoomsType)cbox.SelectedIndex;
+            Rooms rooms = new Rooms(RoomID, floor, roomName, roomsType);
+            rc.Update(rooms);
+            
+            this.Close();
+
+
+        }
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             
@@ -36,27 +51,7 @@ namespace Bolnica.Manager
 
         }
 
-        public RoomsController roomsController = new RoomsController();
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            /*String id112 = RoomID.Text;
-            String name1 = roomName.Text;
-            int f1 = Convert.ToInt32(floor.Text);
-            ComboBoxItem croom1 = (ComboBoxItem)cbox.SelectedItem;*/
-            // Rooms r = new Rooms(RoomID.Text, roomName.Text, Convert.ToInt32(floor.Text), (ComboBoxItem)cbox.SelectedItem);
-            // roomController.Update(r);
-            //ManagerView.Room.Add(r);
-
-            string RoomID = Convert.ToString(tb_id.Text);
-            int floor = Convert.ToInt32(tb_floor.Text);
-            String roomName = Convert.ToString(tb_name.Text);
-            RoomsType roomsType = (RoomsType)cbox.SelectedIndex;
-            Rooms rooms = new Rooms(RoomID, floor, roomName, roomsType);
-            roomsController.Update(rooms);
-            
-            this.Close();
-
-
-        }
+     
+       
     }
 }

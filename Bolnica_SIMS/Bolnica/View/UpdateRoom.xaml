@@ -7,47 +7,24 @@
         mc:Ignorable="d"
         Title="UpdateRoom" Height="450" Width="400">
 
-    <Grid Background="PeachPuff">
-        <StackPanel Margin="50,50,50,27">
-            <Label>RoomId</Label>
-            <TextBox Name="tb_id" Height="24"></TextBox> 
-            <Label>Floor</Label>
-            <TextBox Name="tb_floor" Height="24"></TextBox>
-            <Label>RoomName</Label>
-            <TextBox Name="tb_name" Height="24"></TextBox>
-            <Label>Rooms Type</Label>
-            <ComboBox Name="cbox" Width="284" Height="25" HorizontalAlignment="Center">
-                <ComboBoxItem Content="Operating Room"></ComboBoxItem>
-                <ComboBoxItem Content="Examination Room"></ComboBoxItem>
-                <ComboBoxItem Content="Rest Room"></ComboBoxItem>
-                <ComboBoxItem Content="Waiting Room"></ComboBoxItem>
-                <ComboBoxItem Content="Meeting Room"></ComboBoxItem>
-                <ComboBoxItem Content="Laboratory"></ComboBoxItem>
+    <Grid Background="PeachPuff" Margin="0,0,0,-63">
+        <Label Content="RoomID" HorizontalAlignment="Left" Height="32" Margin="85,34,0,0" VerticalAlignment="Top" Width="227"/>
+        <TextBox x:Name="tb_id" HorizontalAlignment="Left" Height="26" Margin="85,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227"/>
+        <Label Content="Floor" HorizontalAlignment="Left" Height="32" Margin="84,102,0,0" VerticalAlignment="Top" Width="228"/>
+        <Label Content="RoomName" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" Width="228" Margin="0,170,0,0"/>
+        <Label Content="RoomType" HorizontalAlignment="Left" Height="32" Margin="85,238,0,0" VerticalAlignment="Top" Width="227"/>
+        <TextBox x:Name="tb_floor" HorizontalAlignment="Center" Height="26" Margin="0,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" />
+        <TextBox x:Name="tb_name" HorizontalAlignment="Center" Height="26" Margin="0,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228"/>
+        <ComboBox x:Name="cbox" HorizontalAlignment="Center" Height="32" Margin="0,275,0,0" VerticalAlignment="Top" Width="226">
+            <ComboBoxItem Content="Operating Room"></ComboBoxItem>
+            <ComboBoxItem Content="Examination Room"></ComboBoxItem>
+            <ComboBoxItem Content="Rest Room"></ComboBoxItem>
+            <ComboBoxItem Content="Waiting Room"></ComboBoxItem>
+            <ComboBoxItem Content="Meeting Room"></ComboBoxItem>
+            <ComboBoxItem Content="Laboratory"></ComboBoxItem>
+        </ComboBox>
+        <Button Content="Update" HorizontalAlignment="Center" Height="45" Margin="0,330,0,0" VerticalAlignment="Top" Width="228" Click="Button_Click"/>
+        <Button Content="Back" HorizontalAlignment="Left" Height="42" Margin="84,406,0,0" VerticalAlignment="Top" Width="228"  Click="Button_Click"/>
 
-            </ComboBox>
-
-            <Separator Width="20" Height="20" Background="Transparent"/>
-            <Separator Width="20" Background="Transparent"/>
-            <Separator Width="20" Background="Transparent"/>
-            <Separator Width="20" Background="Transparent"/>
-            <Separator Width="20" Background="Transparent"/>
-            <Separator Width="20" Background="Transparent"/>
-
-
-            <Button Click="Button_Click" Height="22">Register</Button>
-            <Separator Width="20" Background="Transparent"/>
-            <Separator Width="20" Background="Transparent"/>
-            <Separator Width="20" Background="Transparent"/>
-            <Separator Width="20" Background="Transparent"/>
-            <Separator Width="20" Background="Transparent"/>
-            <Button Click="Button_Click_1" Content="Back" Height="23"/>
-            <Separator Width="20" Background="Transparent"/>
-            <Separator Width="20" Background="Transparent"/>
-
-
-
-
-
-        </StackPanel>
     </Grid>
 </Window>

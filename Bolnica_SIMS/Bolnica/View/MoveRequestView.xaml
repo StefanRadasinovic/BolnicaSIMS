@@ -1,0 +1,25 @@
+﻿<Window x:Class="Bolnica.View.MoveRequestView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bolnica.View"
+        mc:Ignorable="d"
+        Title="MoveRequestView" Height="450" Width="800">
+    <Grid Background="MistyRose">
+        <DataGrid x:Name="DGM" HorizontalAlignment="Left" Height="330" Margin="184,49,0,0" VerticalAlignment="Top" Width="286" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Label Content="Room ID" HorizontalAlignment="Left" Height="28" Margin="548,27,0,0" VerticalAlignment="Top" Width="146"/>
+
+        <Label Content="Equipment ID" HorizontalAlignment="Left" Height="32" Margin="548,113,0,0" VerticalAlignment="Top" Width="125"/>
+
+        <Label Content="DateMove" HorizontalAlignment="Left" Height="32" Margin="548,217,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="tb_id" HorizontalAlignment="Left" Height="34" Margin="548,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"/>
+        <ComboBox x:Name="cbox" HorizontalAlignment="Left" Height="32" Margin="548,150,0,0" VerticalAlignment="Top" Width="174"/>
+        <DatePicker x:Name="date_move" HorizontalAlignment="Left" Height="30" Margin="548,254,0,0" VerticalAlignment="Top" Width="174"/>
+        <Button Content="Back" HorizontalAlignment="Left" Height="45" Margin="28,49,0,0" VerticalAlignment="Top" Width="107" Click="Button_Click_2"/>
+        <Button Content="Move" HorizontalAlignment="Left" Height="48" Margin="28,166,0,0" VerticalAlignment="Top" Width="107" Click="Button_Click"/>
+        <Button Content="Cancle Move" HorizontalAlignment="Left" Height="43" Margin="28,284,0,0" VerticalAlignment="Top" Width="107" Click="Button_Click_1"/>
+
+    </Grid>
+
+</Window>

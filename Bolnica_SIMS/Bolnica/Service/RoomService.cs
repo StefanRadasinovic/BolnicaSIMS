@@ -21,10 +21,18 @@ namespace Model
       
       public void UpdateRoom(Rooms room)
       {
-            roomRepository.GetRooms(room.RoomID1);
-            DeleteRoom(room.RoomID1);
-            CreateRoom(room);
+             roomRepository.GetRooms(room.RoomID1);
+
+             DeleteRoom(room.RoomID1);
+
+             CreateRoom(room);
+
+           /* roomRepository.GetRooms(room.RoomID1);
+            roomRepository.ReadAll().Remove(room);
+            roomRepository.ReadAll().Add(room);*/
+            
             roomRepository.Serialize();
+            
 
         }
 

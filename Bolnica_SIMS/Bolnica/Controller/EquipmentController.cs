@@ -8,9 +8,9 @@ namespace Bolnica.Manager
     {
 
 
-        public void Delete(String RoomID)
+        public void Delete(String id)
         {
-            equipmentService.Delete(RoomID);
+            equipmentService.Delete(id);
         }
 
         public void Create(Equipment e)

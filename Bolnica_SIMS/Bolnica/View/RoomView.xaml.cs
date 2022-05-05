@@ -28,21 +28,25 @@ namespace Bolnica.Manager
         {
             InitializeComponent();
             this.DataContext = this;
-            foreach (Rooms r in rc.GetAll())
-            {
-                Room.Add(r);
-                MessageBox.Show(r.RoomName);
-            }
-            
-            DGR.ItemsSource = rc.GetAll();
+            /* foreach (Rooms r in rc.GetAll())
+             {
+                 Room.Add(r);
 
-            // DGR.Items.Add(Room);
+
+                // MessageBox.Show(r.RoomName);
+             }
+
+             DGR.ItemsSource = rc.GetAll();*/
+
+            DGR.ItemsSource = rc.GetAll();
+            
 
 
         }
         public void Refresh() {
             DGR.Items.Refresh();
                 }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             RoomRegister roomRegister = new RoomRegister(this);
@@ -55,11 +59,13 @@ namespace Bolnica.Manager
         {
 
             if (DGR.SelectedIndex != -1)
+
             {
-               Rooms r = rc.GetRoomID(((Rooms)DGR.SelectedItem).RoomID1);
+              Rooms r = rc.GetRoomID(((Rooms)DGR.SelectedItem).RoomID1);
                 UpdateRoom updateRoom = new UpdateRoom();
                 updateRoom.Show();
                 DGR.Items.Refresh();
+              
             }
             
 
@@ -69,13 +75,18 @@ namespace Bolnica.Manager
         {
 
             if (DGR.SelectedIndex != 1)
-            {
-               rc.Delete(((Rooms)DGR.SelectedItem).RoomID1);
+             {
+               Rooms r = rc.GetRoomID(((Rooms)DGR.SelectedItem).RoomID1);
+                rc.Delete(r.RoomID1);
+                DGR.Items.Refresh();
+
 
             }
-            else {
-                MessageBox.Show("You must click on exsiisting Rooms");
-            }
+             else {
+                 MessageBox.Show("You must click on exsiisting Rooms");
+             }
+
+           
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)

@@ -30,7 +30,7 @@ namespace Bolnica.Manager
 
             DGR.ItemsSource = renovationController.ReadAll();
             //cbox.ItemsSource = renovationController.ReadAll();
-            //date_r.DataContext = renovationController.ReadAll();
+           // date_r.DataContext = renovationController.ReadAll();
 
 
         }
@@ -38,11 +38,11 @@ namespace Bolnica.Manager
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             String RoomID = Convert.ToString(tb_id.Text);
-            DateTime Time = Convert.ToDateTime(DateTime.Now);
+            DateTime Time = (DateTime)date_r.SelectedDate;
             Renovation r = new Renovation(RoomID, Time);
             renovationController.Create(r);
             DGR.Items.Refresh();
-            this.Show();
+            //this.Show();
 
 
         }
@@ -51,7 +51,7 @@ namespace Bolnica.Manager
         {
             String RoomID = Convert.ToString(tb_id.Text);
             renovationController.Delete(RoomID);
-            DGR.Items.Refresh(); ;
+            DGR.Items.Refresh(); 
 
 
         }
@@ -60,10 +60,5 @@ namespace Bolnica.Manager
         {
             this.Close();
         }
-
-      /*  private void cbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }*/
     }
 }

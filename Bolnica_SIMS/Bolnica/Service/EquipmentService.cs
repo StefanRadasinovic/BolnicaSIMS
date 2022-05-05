@@ -7,12 +7,12 @@ namespace Bolnica.Manager
     public class EquipmentService
     {
 
-        public void Delete(String RoomID)
+        public void Delete(String id)
         {
             Equipment e = null;
             foreach (Equipment e1 in equipmentRepository.ReadAll())
             {
-                if (e1.RoomID == RoomID)
+                if (e1.Id == id)
                 {
                     e = e1;
 
@@ -24,6 +24,7 @@ namespace Bolnica.Manager
             {
                 equipmentRepository.ReadAll().Remove(e);
             }
+            equipmentRepository.Serialize();
         }
 
         public void Create(Equipment e)

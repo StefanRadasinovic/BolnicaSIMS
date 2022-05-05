@@ -36,9 +36,9 @@ namespace Bolnica.Manager
 
 
             cbox_et.ItemsSource = Enum.GetValues(typeof(EquipmentType));
-            cbox_e.ItemsSource = equipmentController.ReadAll();
-            cbox.ItemsSource = roomsController.GetAll();
-            cbox.DisplayMemberPath=("RoomID");
+           // cbox_e.ItemsSource = equipmentController.ReadAll();
+           // cbox.ItemsSource = roomsController.GetAll();
+           // cbox.DisplayMemberPath=("RoomID");
 
 
 
@@ -52,29 +52,41 @@ namespace Bolnica.Manager
 
         }
 
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            String id = (String)cbox_e.SelectedItem;
+            /* String id = (String)cbox_e.SelectedItem;
+             EquipmentType et = (EquipmentType)cbox_et.SelectedItem;
+             String roomID = (String)cbox.SelectedItem;
+             Equipment eq = new Equipment(id, et, roomID);
+             equipmentController.Create(eq);
+             DGE.Items.Refresh();*/
+
+            String id = Convert.ToString(tb_id.Text);
             EquipmentType et = (EquipmentType)cbox_et.SelectedItem;
-            String roomID = (String)cbox.SelectedItem;
-            Equipment eq = new Equipment(id,et, roomID);
+            String roomID = Convert.ToString(tb_rid.Text);
+            Equipment eq = new Equipment(id, et, roomID);
             equipmentController.Create(eq);
             DGE.Items.Refresh();
-
 
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            String id = (String)cbox_e.SelectedItem;
+           
+
+            String id = Convert.ToString(tb_id.Text);
             equipmentController.Delete(id);
             DGE.Items.Refresh();
 
+            /*
+            String id = (String)cbox_e.SelectedItem;
+            equipmentController.Delete(id);
+            DGE.Items.Refresh();*/
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-          
             MainWindowManager mainWindowManager = new MainWindowManager();
             mainWindowManager.Show();
             this.Close();
@@ -82,15 +94,14 @@ namespace Bolnica.Manager
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            RenovationView renovationView = new RenovationView();
-            renovationView.Show();
-            
+
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            //da li da vreme ovde napravim kao piker i onda da odabiram odatle ili moze kao datepicker??
-            //mozda je combo bolji??
+            RenovationView renovation = new RenovationView();
+            renovation.Show();
+            this.Close();
         }
     }
 }

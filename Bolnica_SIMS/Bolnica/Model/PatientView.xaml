@@ -30,9 +30,9 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="AppointmentID" Binding="{Binding AppointmentID}"/>
                 <DataGridTextColumn Header="DocotorID" Binding="{Binding DocotorID}" />
-                <DataGridTextColumn Header="Patient" Binding="{Binding Patient.Name}"/>
+                <DataGridTextColumn Header="Patient" Binding="{Binding Patient}"/>
                 <DataGridTextColumn Header="Date" Binding="{Binding Date }"/>
-                <DataGridTextColumn Header="TimeStart" Binding="{Binding TimeStart}"/>
+                <DataGridTextColumn Header="TimeStart" Binding="{Binding Time}"/>
                 <DataGridTextColumn Header="TimeEnd" Binding="{Binding TimeEnd}"/>
                 <DataGridTextColumn Header="RoomNumber" Binding="{Binding RoomNumber}"/>
 

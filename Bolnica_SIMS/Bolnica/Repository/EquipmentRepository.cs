@@ -18,7 +18,7 @@ namespace Bolnica.Manager
         public Equipment Read(String id)
         {
             foreach (Equipment e in equipment)
-                if (e.RoomID == id)
+                if (e.Id == id)
                     return e;
             return null;
         }
@@ -33,7 +33,7 @@ namespace Bolnica.Manager
         }
         public IEnumerable<Equipment> Deserialize()
         {
-            return (List<Equipment>)File.ReadAllLines(projectPath + "\\Resources\\CSVFiles\\equipment.csv").Select(FromCSV);
+            return (List<Equipment>)File.ReadAllLines(projectPath + "\\Resources\\CSVFiles\\equipment.csv").Select(FromCSV).ToList();
 
         }
 
@@ -55,12 +55,12 @@ namespace Bolnica.Manager
 
         public String ToCSV(Equipment equipment)    //serialization
         {
-            return string.Join("^", equipment.RoomID, equipment.EquipmentType);
+            return string.Join("_", equipment.Id, equipment.EquipmentType, equipment.RoomID1);
         }
 
         public Equipment FromCSV(String eqFormat)     //deserialization
         {
-            var tokens = eqFormat.Split("^".ToCharArray());
+            var tokens = eqFormat.Split("_".ToCharArray());
             //return new Rooms(Convert.ToInt32(tokens[0]),Convert.ToString(tokens[1]), (RoomsType)Enum.Parse(typeof(RoomsType), tokens[1]), Convert.ToSingle(tokens[2]), Convert.ToInt32(tokens[3]), Convert.ToInt32(tokens[4]));
             return new Equipment(Convert.ToString(tokens[0]),(EquipmentType)Enum.Parse(typeof(EquipmentType),tokens[1]),Convert.ToString(tokens[2]));
         }

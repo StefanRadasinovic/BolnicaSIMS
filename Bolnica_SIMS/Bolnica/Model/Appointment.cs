@@ -7,11 +7,12 @@ using System;
 
 namespace Model
 {
-   public class Appointment : RoomsID
+   public class Appointment //: RoomsID
    {
-        public Appointment(string roomID) : base(roomID)
+       /* public Appointment(string roomID) : base(roomID)
         {
         }
+       */
 
         public DateTime Date { get; set; }
       public DateTime TimeStart { get; set; }

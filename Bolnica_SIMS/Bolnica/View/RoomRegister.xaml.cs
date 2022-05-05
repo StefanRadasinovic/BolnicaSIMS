@@ -30,15 +30,7 @@ namespace Bolnica.Manager
             this.rv=rv;
             
         }
-        void RoomRegister_Closing(object sender, EventArgs e)
-        {
-            
-
-
-        }
-
-
-
+       
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

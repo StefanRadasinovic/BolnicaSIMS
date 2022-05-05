@@ -23,45 +23,31 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-
-        <DataGrid x:Name="DGE" IsReadOnly="true"
-                  SelectionMode="Single" Grid.RowSpan="5" Margin="59,53,90,60" Background="White"
-                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" AutoGenerateColumns="False" RowHeight="30" ColumnWidth="100" BorderThickness="1" >
+        <DataGrid x:Name="DGE" HorizontalAlignment="Left" Height="278" Margin="259,0,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="272" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.Row="1" Grid.ColumnSpan="2">
 
 
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="EquipmentID" Binding="{Binding id}"/>
-                <DataGridTextColumn Header="Equipment Type" Binding="{Binding equipmentType}" />
-                <DataGridTextColumn Header="RoomID"  Binding="{Binding roomID}" />
-                <DataGridTextColumn Header="Date"  Binding="{Binding roomID}" />
-
-            </DataGrid.Columns>
         </DataGrid>
+        <Label Grid.Column="1" Content="EquipmentID" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="27" Margin="67,50,0,0" VerticalAlignment="Top" Width="112"/>
+        <TextBox x:Name="tb_id" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="28" Margin="46,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="158"/>
 
-        <Label Grid.ColumnSpan="2" Margin="21,43,-357,44" Grid.RowSpan="2" Grid.Column="1">Equipment ID</Label>
-        <ComboBox x:Name="cbox_e" Width="164" HorizontalAlignment="Left" Margin="21,74,0,75" Grid.RowSpan="2" RenderTransformOrigin="0.294,0.837" Grid.ColumnSpan="2" Grid.Column="1">
-            
-        </ComboBox>
-        <Label Grid.ColumnSpan="2" Margin="21,25,-357,61" Grid.RowSpan="2" Grid.Row="1" Grid.Column="1">Equipment Type</Label>
-        <ComboBox Name="cbox_et" Width="164" HorizontalAlignment="Left" Margin="21,62,0,86" Grid.Row="1" Grid.RowSpan="2" RenderTransformOrigin="0.294,0.837" Grid.ColumnSpan="2" Grid.Column="1">
-        </ComboBox>
-        <ComboBox x:Name="cbox" Width="164" HorizontalAlignment="Left" Margin="15,37,0,23" Grid.Row="2" RenderTransformOrigin="0.294,0.837" Grid.ColumnSpan="2" Grid.Column="1">
-            
-        </ComboBox>
-        
+        <Label Grid.Column="1" Content="EquipmentType" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="34" Margin="67,43,0,0" Grid.Row="1" VerticalAlignment="Top" Width="112"/>
+        <ComboBox x:Name="cbox_et" Grid.Column="1" HorizontalAlignment="Left" Margin="46,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="158" Grid.ColumnSpan="2"/>
+        <ComboBoxItem>
+
+        </ComboBoxItem>
+
+        <Label Grid.Column="1" Content="RoomID" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="27" Margin="67,52,0,0" Grid.Row="2" VerticalAlignment="Top" Width="137"/>
+        <TextBox x:Name="tb_rid" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="28" Margin="46,1,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="158"/>
+
+        <Button Content="Create" HorizontalAlignment="Left" Margin="63,77,0,49" Grid.RowSpan="2" Width="122" Click="Button_Click"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Height="43" Margin="63,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="122" Click="Button_Click_1"/>
+        <Button Content="Back" HorizontalAlignment="Left" Height="39" Margin="63,76,0,0" Grid.RowSpan="2" Grid.Row="2" VerticalAlignment="Top" Width="122" Click="Button_Click_2"/>
+        <Button Content="Move" HorizontalAlignment="Left" Height="54" Margin="63,77,0,0" Grid.RowSpan="2" Grid.Row="3" VerticalAlignment="Top" Width="122" Click="Button_Click_3"/>
+        <Button Content="Renovation" HorizontalAlignment="Left" Height="38" Margin="80,87,0,0" Grid.Row="3" VerticalAlignment="Top" Width="112" Click="Button_Click_4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
 
 
-        <Label Grid.ColumnSpan="2" Margin="21,10,-297,76" Grid.RowSpan="2" Grid.Row="2" Grid.Column="1">Rooms ID</Label>
-
-        <Label Grid.ColumnSpan="2" Margin="21,4,-289,83" Grid.Row="3" Grid.Column="1" Grid.RowSpan="2">Datum zauzimanja</Label>
-        <DatePicker x:Name="date_r" HorizontalAlignment="Left" Margin="21,40,0,0" Grid.Row="3" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="171" Height="47" Grid.Column="1"/>
 
 
-        <Button Content="Create" Margin="100,19,371,44" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click" Background="White"/>
-        <Button Content="Delete" Margin="305,18,160,45" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_1" Background="White" RenderTransformOrigin="-4.361,-5.179"/>
-        <Button Content="Back" Margin="87,44,32,23" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_2" Background="White" RenderTransformOrigin="-0.382,0.811" Grid.Column="2" Grid.Row="4"/>
-        <Button Content="Renovation" HorizontalAlignment="Left" Margin="46,40,0,0" VerticalAlignment="Top" Height="29" Width="72" RenderTransformOrigin="0.46,-0.077" Click="Button_Click_3" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Button Content="Move" Margin="43,87,166,62" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_4" Background="White" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="3"/>
-       
+
     </Grid>
 </Window>

@@ -36,7 +36,7 @@ namespace Bolnica.Model
         }
        public IEnumerable<Renovation> Deserialize()
         {
-           return (List<Renovation>)File.ReadAllLines(projectPath + "\\Resources\\CSVFiles\\renovations.csv").Select(FromCSV);
+           return (List<Renovation>)File.ReadAllLines(projectPath + "\\Resources\\CSVFiles\\renovations.csv").Select(FromCSV).ToList();
 
         }
 
@@ -58,12 +58,12 @@ namespace Bolnica.Model
 
         private String ToCSV(Renovation renovation)    //serialization
         {
-            return string.Join("^", renovation.RoomID1, renovation.Time1);
+            return string.Join("_", renovation.RoomID1, renovation.Time1);
         }
 
         private Renovation FromCSV(String renovationFormat)     //deserialization
         {
-            var tokens = renovationFormat.Split("^".ToCharArray());
+            var tokens = renovationFormat.Split("_".ToCharArray());
             return new Renovation(Convert.ToString(tokens[0]), Convert.ToDateTime(tokens[1]));
         }
 
