@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Model;
+using Service;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -26,34 +28,28 @@ namespace Bolnica.View
 
         public int OperationID { get => operationID; set => operationID = value; }
 
-        /*
-        public UpdateOperationView(Model.Operation op)
+        
+        public UpdateOperationView(Operation op)
         {
             
+            patient.Text = op.PatientID.ToString();
+            doctor.Text = op.DoctorID.ToString();
+            dateStart.Text = op.TimeStart.ToString();
+            dateEnd.Text = op.TimeEnd;
+            room.Text = op.RoomID.ToString();
+            operationID = op.OperationID;
             InitializeComponent();
-            patient.Text = op.PatientID
-            doctor.Text = op.DoctorID
-            dateStart.Text = op.DateStart
-            dateEnd.Text = op.DateEnd
-            room.Text = op.RoomID
-            operationID = op.OperationID
         }
 
 
         private void Button_Click(object sender, RoutedEventArgs e) //ovako bi trebalo za update Ali imam problem sa prosledjivanjem parametar u konstruktoru UpdateOperationView(Operation op) koji ne znam da resim(nisam se nikad sretao sa tim)
         {
             
-            PatientService ps = new PatientService();
-            Patient pom = new Patient(name.Text, surname.Text, trenutniJMBG, birthDate.Text, phone.Text, email.Text, username.Text, password.Text);
-            ps.UpdatePatient(pom);
+            OperationService ps = new OperationService();
+            Operation pom = new Operation(operationID, Int32.Parse(patient.Text), dateStart.Text ,dateEnd.Text, Int32.Parse(doctor.Text), Int32.Parse(room.Text));
+            OperationController.Update(pom);
 
             this.Close();
-
-        }
-        */
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
 
         }
 

@@ -18,7 +18,7 @@ namespace Bolnica.View
     /// </summary>
     public partial class CreateOperationView : Window
     {
-        private int operationID = 0;
+        //private static int operationID = 0;
         public CreateOperationView()
         {
             InitializeComponent();
@@ -37,12 +37,13 @@ namespace Bolnica.View
              }
             */
 
-
+            Random rnd = new Random();
+            int operationID = rnd.Next(1, 200);
             int patientID = Int32.Parse(patient.Text);
             int doctorID = Int32.Parse(doctor.Text);
             int roomID = Int32.Parse(room.Text);
 
-            Operation op = new Operation(++operationID, doctorID, dateStart.Text, dateEnd.Text, roomID, patientID);
+            Operation op = new Operation(operationID, doctorID, dateStart.Text, dateEnd.Text, roomID, patientID);
             OperationController.Create(op);
 
             DoctorViewMain.Operations.Add(op);

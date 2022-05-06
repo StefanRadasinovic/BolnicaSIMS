@@ -15,7 +15,7 @@ namespace Model
             return Model.OperationService.Create(operation);
         }
 
-        public bool Update(Model.Operation operation)
+        public static bool Update(Model.Operation operation)
         {
             return Model.OperationService.Update(operation);
         }
