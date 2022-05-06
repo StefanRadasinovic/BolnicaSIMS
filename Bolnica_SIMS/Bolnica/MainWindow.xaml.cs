@@ -52,9 +52,10 @@ namespace Bolnica
 
         }
 
+        //SECRETARY
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            SecretaryPatientView s = new SecretaryPatientView();
+            SecretaryView s = new SecretaryView();
             s.Show();
             this.Close();
         }

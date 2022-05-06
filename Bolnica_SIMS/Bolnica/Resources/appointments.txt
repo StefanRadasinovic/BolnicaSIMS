@@ -1,0 +1,5 @@
+A1|12331|dsasda|dsadsa|ads|fdas|False
+EA1|3213213|dsadas|fsasa|sadas|asdda|True
+A2|5343|dasdsadsa|dsadasdsa|0909|ldasd|False
+A1|12313|dsaads|adsda|dsaddsa|00000|False
+EA1|998|dd|aaa|ddd|ssss|True

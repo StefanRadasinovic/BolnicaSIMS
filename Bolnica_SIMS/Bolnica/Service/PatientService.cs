@@ -13,7 +13,6 @@ namespace Service
 
         public bool RegisterPatient(Patient patient)
         {
-            //C:\Users\user\Desktop\PROJEKATJEBENI\BolnicaSIMS\Bolnica_SIMS\Bolnica\Resources
             bool ret = false;
             patients.Add(patient);
             Serializer<Patient> ser = new Serializer<Patient>();

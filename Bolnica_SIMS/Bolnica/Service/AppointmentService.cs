@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using Model;
 using Bolnica.View;
 using Repository;
+using Model;
+using Bolnica.Serialization;
 
 namespace Service
 {
@@ -15,6 +17,8 @@ namespace Service
    {
         // private List<Appointment> allAppointments;
         public static List<Appointment> allAppointments = new List<Appointment>();
+
+        public static List<Appointment> apointments = new List<Appointment>();
 
         public static Appointment Create(Appointment appointment)
       {
@@ -30,8 +34,25 @@ namespace Service
                 return null;
             }
         }
-      
-      public void Read(String appointmentID)
+
+        public static bool Create2(Appointment appointment)
+        {
+            
+            bool ret = false;
+            apointments.Add(appointment);
+            Serializer<Appointment> ser = new Serializer<Appointment>();
+            ser.toCSV("C:\\Users\\user\\Desktop\\PROJEKATJEBENI\\BolnicaSIMS\\Bolnica_SIMS\\Bolnica\\Resources\\appointments.txt", apointments);
+
+            //PatientView.Appointments.Add(appointment);
+
+            if (apointments.Contains(appointment))
+            {
+                ret = true;
+            }
+            return ret;
+        }
+
+        public void Read(String appointmentID)
       {
          throw new NotImplementedException();
       }
@@ -53,6 +74,20 @@ namespace Service
             return true;
         }
 
+        public static void UpdateAppointment(Appointment appointment)
+        {
+            //Patient p = GetPatientByJMBG(patient.Jmbg);
+
+            DeleteAppointment(appointment.AppID);
+            Create2(appointment);
+
+        }
+        public static bool DeleteAppointment(String id)
+        {
+            Appointment a = GetAppID(id);
+            return apointments.Remove(a);
+        }
+
         public bool Update2(String appointmentID, DateTime date) //DateTime time
         {
             Appointment appointment = GetAppointmentID(appointmentID);
@@ -71,7 +106,7 @@ namespace Service
         }
 
 
-        public bool Delete(String appointmentID)
+        public static bool Delete(String appointmentID)
         {
             Appointment appointment = GetAppointmentID(appointmentID);
             allAppointments.Remove(appointment);
@@ -85,10 +120,27 @@ namespace Service
 
         public static List<Appointment> GetAll()
         {
+
             return allAppointments;
         }
 
-        public Appointment GetAppointmentID(String appointmentID)
+        public static List<Appointment> GetAll2()
+        {
+            Serializer<Appointment> ser = new Serializer<Appointment>();
+            apointments = ser.fromCSV("C:\\Users\\user\\Desktop\\PROJEKATJEBENI\\BolnicaSIMS\\Bolnica_SIMS\\Bolnica\\Resources\\appointments.txt");
+            return apointments;
+        }
+        public static Appointment GetAppID(String appointmentID)
+        {
+            foreach (Appointment appointment in apointments)
+            {
+                if (appointment.AppID.Equals(appointmentID))
+                    return appointment;
+            }
+            return null;
+        }
+
+        public static Appointment GetAppointmentID(String appointmentID)
         {
             foreach (Appointment appointment in allAppointments)
             {
@@ -98,7 +150,7 @@ namespace Service
             return null;
         }
 
-        public AppointmentRepository appointmentRepository;
+       // public AppointmentRepository appointmentRepository;
 
     }
 }

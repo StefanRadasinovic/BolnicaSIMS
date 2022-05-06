@@ -44,7 +44,7 @@ namespace Controller
         public bool Delete(String appointmentID)
         {
             AppointmentService newappointmentService = new AppointmentService();
-            if (newappointmentService.Delete(appointmentID))
+            if (AppointmentService.Delete(appointmentID))
                 return true;
             else return false;
 

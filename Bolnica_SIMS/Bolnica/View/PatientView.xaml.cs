@@ -69,7 +69,7 @@ namespace Bolnica.View
                 String promena = (((Appointment)GridDataPatientView.SelectedItem).AppointmentID);
 
 
-                Appointment appointment = appointmentService.GetAppointmentID(promena);
+                Appointment appointment = AppointmentService.GetAppointmentID(promena);
                 UpdateAppointmentPatientView updatePatientView = new UpdateAppointmentPatientView(appointment);
                 updatePatientView.Show();
 
@@ -93,7 +93,7 @@ namespace Bolnica.View
             AppointmentService appointmentService = new AppointmentService();
             if (GridDataPatientView.SelectedIndex != -1)
             {
-                appointmentService.Delete(((Appointment)GridDataPatientView.SelectedItem).AppointmentID);
+                AppointmentService.Delete(((Appointment)GridDataPatientView.SelectedItem).AppointmentID);
             }
             else
             {

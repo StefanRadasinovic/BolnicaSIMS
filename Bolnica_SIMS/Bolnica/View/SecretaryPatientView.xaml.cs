@@ -32,7 +32,7 @@ namespace Bolnica.View
 
             Patients = new ObservableCollection<Patient>();
 
-            GridDataSecretaryView.ItemsSource = Patients;
+            GridDataSecretaryPatientView.ItemsSource = Patients;
             PatientService ps = new PatientService();
 
             foreach (Patient p in ps.GetAll())
@@ -54,13 +54,13 @@ namespace Bolnica.View
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             PatientService ps = new PatientService();
-            if (GridDataSecretaryView.SelectedIndex != -1)
+            if (GridDataSecretaryPatientView.SelectedIndex != -1)
             {
-                Patient pom = ps.GetPatientByJMBG(((Patient)GridDataSecretaryView.SelectedItem).Jmbg);
-                ps.DeletePatient(((Patient)GridDataSecretaryView.SelectedItem).Jmbg);
+                Patient pom = ps.GetPatientByJMBG(((Patient)GridDataSecretaryPatientView.SelectedItem).Jmbg);
+                ps.DeletePatient(((Patient)GridDataSecretaryPatientView.SelectedItem).Jmbg);
                 UpdatePatientSecretaryView up = new UpdatePatientSecretaryView(pom);
                 up.Show();
-                GridDataSecretaryView.Items.Refresh();
+                GridDataSecretaryPatientView.Items.Refresh();
             }
             else
             {
@@ -72,10 +72,10 @@ namespace Bolnica.View
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             PatientService ps = new PatientService();
-            if (GridDataSecretaryView.SelectedIndex != -1)
+            if (GridDataSecretaryPatientView.SelectedIndex != -1)
             {
-                Patient pom = ps.GetPatientByJMBG(((Patient)GridDataSecretaryView.SelectedItem).Jmbg);
-                ps.DeletePatient(((Patient)GridDataSecretaryView.SelectedItem).Jmbg);
+                Patient pom = ps.GetPatientByJMBG(((Patient)GridDataSecretaryPatientView.SelectedItem).Jmbg);
+                ps.DeletePatient(((Patient)GridDataSecretaryPatientView.SelectedItem).Jmbg);
                 Patients.Remove(pom);
             }
             else
@@ -87,8 +87,8 @@ namespace Bolnica.View
         //BACK
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            MainWindow mw = new MainWindow();
-            mw.Show();
+            SecretaryView sw = new SecretaryView();
+            sw.Show();
             this.Close();
         }
     }
