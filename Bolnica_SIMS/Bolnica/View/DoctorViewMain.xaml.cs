@@ -21,7 +21,7 @@ namespace Bolnica.View
     {
         private static ObservableCollection<Operation> operations;
 
-        internal static ObservableCollection<Operation> Operations { get; set; }
+        public static ObservableCollection<Operation> Operations { get; set; }
 
 
 
@@ -70,7 +70,7 @@ namespace Bolnica.View
 
 
                 Operation op = OperationService.GetOperation(id);
-                UpdateOperationView updateOperationView = new UpdateOperationView();
+                UpdateOperationView updateOperationView = new UpdateOperationView(op);
                 updateOperationView.Show();
 
 

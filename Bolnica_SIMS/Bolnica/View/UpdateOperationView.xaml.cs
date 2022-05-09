@@ -31,14 +31,14 @@ namespace Bolnica.View
         
         public UpdateOperationView(Operation op)
         {
-            
+            InitializeComponent();
             patient.Text = op.PatientID.ToString();
             doctor.Text = op.DoctorID.ToString();
             dateStart.Text = op.TimeStart.ToString();
             dateEnd.Text = op.TimeEnd;
             room.Text = op.RoomID.ToString();
             operationID = op.OperationID;
-            InitializeComponent();
+           
         }
 
 
@@ -46,7 +46,7 @@ namespace Bolnica.View
         {
             
             OperationService ps = new OperationService();
-            Operation pom = new Operation(operationID, Int32.Parse(patient.Text), dateStart.Text ,dateEnd.Text, Int32.Parse(doctor.Text), Int32.Parse(room.Text));
+            Operation pom = new Operation(operationID, Int32.Parse(doctor.Text), dateStart.Text ,dateEnd.Text, Int32.Parse(room.Text), Int32.Parse(patient.Text));
             OperationController.Update(pom);
 
             this.Close();

@@ -10,6 +10,7 @@ namespace Service
     class PatientService
     {
         private static List<Patient> patients = new List<Patient>();
+        private String fileName = "C:\\Users\\Branislav\\Desktop\\FAKS\\SIMS\\Projekat konacan\\BolnicaSIMS\\Bolnica_SIMS\\Bolnica\\Resources\\patients.txt";
 
         public bool RegisterPatient(Patient patient)
         {
@@ -17,7 +18,7 @@ namespace Service
             bool ret = false;
             patients.Add(patient);
             Serializer<Patient> ser = new Serializer<Patient>();
-            ser.toCSV("C:\\Users\\user\\Desktop\\PROJEKATJEBENI\\BolnicaSIMS\\Bolnica_SIMS\\Bolnica\\Resources\\patients.txt", patients);
+            ser.toCSV(fileName, patients);
 
             //PatientView.Appointments.Add(appointment);
 
@@ -46,7 +47,7 @@ namespace Service
         public List<Patient> GetAll()
         {
             Serializer<Patient> ser = new Serializer<Patient>();
-            patients = ser.fromCSV("C:\\Users\\user\\Desktop\\PROJEKATJEBENI\\BolnicaSIMS\\Bolnica_SIMS\\Bolnica\\Resources\\patients.txt");
+            patients = ser.fromCSV(fileName);
             return patients;
         }
 
