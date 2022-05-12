@@ -30,7 +30,7 @@ namespace Bolnica
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            DoctorViewMain mainWindowDoc = new DoctorViewMain();
+            DoctorSelectWindowView mainWindowDoc = new DoctorSelectWindowView();
             mainWindowDoc.Show();
             this.Close();
         }

@@ -1,0 +1,27 @@
+﻿<Window x:Class="Bolnica.View.DoctorDaysOffWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bolnica.View"
+        mc:Ignorable="d"
+        Title="DoctorDaysOffWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Background="LightSkyBlue">
+        <DatePicker x:Name="datePicker1" HorizontalAlignment="Left" Margin="173,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="30" Width="176">
+            <DatePicker.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.101"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DatePicker.RenderTransform>
+        </DatePicker>
+        <DatePicker x:Name="datePicker2" HorizontalAlignment="Left" Margin="173,0,0,0" VerticalAlignment="Center" Height="30" Width="175"/>
+        <Label x:Name="label" Content="Date starting " Margin="28,96,680,308"/>
+        <Label x:Name="label_Copy" Content="Date ending" Margin="28,202,680,202"/>
+        <Button x:Name="button" Content="Send Request" HorizontalAlignment="Left" Margin="604,209,0,0" VerticalAlignment="Top" Height="50" Width="80" Click="button_Click"/>
+        <Button x:Name="button1" Content="Back" HorizontalAlignment="Left" Margin="604,326,0,0" VerticalAlignment="Top" Height="50" Width="80" Click="button1_Click"/>
+
+    </Grid>
+</Window>

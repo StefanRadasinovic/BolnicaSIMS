@@ -110,7 +110,7 @@ namespace Bolnica.View
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
 
-            MainWindow mw = new MainWindow();
+            DoctorSelectWindowView mw = new DoctorSelectWindowView();
             this.Close();
             mw.Show();
 
