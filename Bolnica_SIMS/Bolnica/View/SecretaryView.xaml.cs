@@ -41,7 +41,9 @@ namespace Bolnica.View
         //ALERGIES CRUD
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            //
+            SecretaryAlergieView sa = new SecretaryAlergieView();
+            sa.Show();
+            this.Close();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
