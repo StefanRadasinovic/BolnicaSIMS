@@ -18,7 +18,7 @@ namespace Bolnica.View
     /// </summary>
     public partial class CreateOperationView : Window
     {
-        private static int operationID = 1;
+        public static int operationID = 1;
 
         public int makeID()
         {

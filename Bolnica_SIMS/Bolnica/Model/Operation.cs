@@ -10,6 +10,7 @@ namespace Model
 {
    public class Operation : Serializable
    {
+
         private int operationID;
         private int doctorID;
         private string timeStart;

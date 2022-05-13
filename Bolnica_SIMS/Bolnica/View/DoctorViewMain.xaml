@@ -44,6 +44,7 @@
         <Button Grid.Column="1" Grid.Row="1" Content="Update Operation"  Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_1"  Background="White"/>
         <Button Grid.Column="1" Grid.Row="2" Content="Cancel Operation"  Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_2"  Background="White"/>
         <Button Grid.Column="1" Grid.Row="3" Content="Back"  Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_3"  Background="White"/>
+        <Button Grid.Column="0" Grid.Row="4" Content="Start Appointment"  Margin="34.6,22,430,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_4"  Background="White"/>
 
 
 

@@ -115,5 +115,22 @@ namespace Bolnica.View
             mw.Show();
 
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            if (GridDataDoctorView.SelectedIndex != -1)
+            {
+                Operation op = OperationService.GetOperation(((Operation)GridDataDoctorView.SelectedItem).OperationID);
+                //OperationService.Delete(((Operation)GridDataDoctorView.SelectedItem).OperationID);
+                DoctorApointmentInProgressView dAiPView = new DoctorApointmentInProgressView(op);
+                dAiPView.Show();
+                //Operations.Remove(op);
+
+            }
+            else
+            {
+                MessageBox.Show("You must click on existing Appointment");
+            }
+        }
     }
 }

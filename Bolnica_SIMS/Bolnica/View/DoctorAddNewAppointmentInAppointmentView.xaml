@@ -12,8 +12,6 @@
             <ColumnDefinition Width="33*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Margin="50,50,50,50">
-            <Label>Reason</Label>
-            <TextBox Name="reason"></TextBox>
             <Label>Doctor</Label>
             <TextBox Name="doctor"></TextBox>
             <Label>Date</Label>

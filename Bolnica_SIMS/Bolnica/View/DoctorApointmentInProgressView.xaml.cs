@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,8 +18,10 @@ namespace Bolnica.View
     /// </summary>
     public partial class DoctorApointmentInProgressView : Window
     {
-        public DoctorApointmentInProgressView()
+        int id;
+        public DoctorApointmentInProgressView(Operation op)
         {
+            this.id = op.OperationID;
             InitializeComponent();
         }
 
@@ -29,7 +32,9 @@ namespace Bolnica.View
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            Operation op = OperationService.GetOperation(id);
+            DoctorAddNewAppointmentInAppointmentView newApp = new DoctorAddNewAppointmentInAppointmentView(op);
+            newApp.Show();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -44,10 +49,10 @@ namespace Bolnica.View
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            DoctorSelectWindowView mw = new DoctorSelectWindowView();
+            //DoctorViewMain mw = new DoctorViewMain();
             this.Close();
-            mw.Show();
+            
         }
     }
-    }
+  
 }

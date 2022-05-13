@@ -53,6 +53,7 @@ namespace Service
 
         public Patient GetPatientByJMBG(int jmbg)
         {
+            patients = GetAll();
             foreach (Patient p in patients)
             {
                 if (p.Jmbg == jmbg)
