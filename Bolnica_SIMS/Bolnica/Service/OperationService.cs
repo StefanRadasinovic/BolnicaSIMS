@@ -3,6 +3,7 @@
 // Created: Wednesday, April 13, 2022 1:18:00 PM
 // Purpose: Definition of Class OperationService
 
+using Bolnica.Serialization;
 using System;
 using System.Collections.Generic;
 
@@ -10,6 +11,7 @@ namespace Model
 {
    public class OperationService
    {
+        private const string FileName = "C:\\Users\\Branislav\\Desktop\\FAKS\\SIMS\\Projekat konacan\\BolnicaSIMS\\Bolnica_SIMS\\Bolnica\\Resources\\operations.txt";
         private static List<Operation> operations = new List<Operation>();
 
         public static bool Create(Model.Operation operation)
@@ -24,6 +26,8 @@ namespace Model
                     }
                 }
                 operations.Add(operation);
+                Serializer<Operation> ser = new Serializer<Operation>();
+                ser.toCSV(FileName, operations);
                 return true;
             }
             else
@@ -31,6 +35,9 @@ namespace Model
         }
         public static bool Update(Model.Operation operation)
         {
+            Delete(operation.OperationID);
+            return Create(operation);
+            /*
             if (operation != null)
             {
                 Operation op = GetOperation(operation.OperationID);
@@ -47,7 +54,7 @@ namespace Model
             }
             else
                 return false;
-
+            */
         }
 
         public static bool Delete(int operationID)
@@ -78,6 +85,8 @@ namespace Model
 
         public static List<Operation> GetAll()
         {
+            Serializer<Operation> ser = new Serializer<Operation>();
+            operations = ser.fromCSV(FileName);
             return operations;
         }
 
