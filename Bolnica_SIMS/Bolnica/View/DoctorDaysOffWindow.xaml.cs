@@ -19,9 +19,18 @@ namespace Bolnica.View
     /// </summary>
     public partial class DoctorDaysOffWindow : Window
     {
+        List<DaysOffRequest> daysOff = new List<DaysOffRequest>();
         public DoctorDaysOffWindow()
         {
             InitializeComponent();
+
+            foreach (DaysOffRequest op in DoctorDayOffRequestController.GetAll())
+            {
+
+
+
+                daysOff.Add(op);
+            }
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

@@ -11,6 +11,15 @@ namespace Bolnica.Service
         private const string FileName = "C:\\Users\\Branislav\\Desktop\\FAKS\\SIMS\\Projekat konacan\\BolnicaSIMS\\Bolnica_SIMS\\Bolnica\\Resources\\daysOffRequests.txt";
         private static List<DaysOffRequest> operations = new List<DaysOffRequest>();
 
+
+        public static List<DaysOffRequest> GetAll()
+        {
+            Serializer<DaysOffRequest> ser = new Serializer<DaysOffRequest>();
+            operations = ser.fromCSV(FileName);
+            return operations;
+        }
+
+
         public static bool Create(DaysOffRequest request)
         {
             if (request != null)

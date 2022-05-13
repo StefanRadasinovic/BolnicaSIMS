@@ -12,5 +12,10 @@ namespace Bolnica.Controller
         {
             return DoctorDayOffRequestService.Create(operation);
         }
+
+        public static List<DaysOffRequest> GetAll()
+        {
+            return DoctorDayOffRequestService.GetAll();
+        }
     }
 }
