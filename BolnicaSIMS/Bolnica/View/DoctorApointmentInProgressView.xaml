@@ -1,0 +1,34 @@
+﻿<Window x:Class="Bolnica.View.DoctorApointmentInProgressView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bolnica.View"
+        mc:Ignorable="d"
+        Title="DoctorApointmentInProgressView"  Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Background="LightSkyBlue">
+
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Column="1" Grid.Row="0" Content="Medical record" Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click"  Background="White"/>
+        <Button Grid.Column="1" Grid.Row="1" Content="Add new appointment"  Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_1"  Background="White"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="Write a prescription"  Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_2"  Background="White"/>
+        <Button Grid.Column="1" Grid.Row="3" Content="Patient info"  Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_3"  Background="White"/>
+
+        <Button Grid.Column="1" Grid.Row="4" Content="Back"  Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_4"  Background="White"/>
+
+
+    </Grid>
+</Window>

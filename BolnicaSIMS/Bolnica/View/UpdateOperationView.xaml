@@ -1,0 +1,55 @@
+﻿<Window x:Class="Bolnica.View.UpdateOperationView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bolnica.View"
+        mc:Ignorable="d"
+        Title="UpdateOperationView" Height="530" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid Background="LightSkyBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400*"/>
+            <ColumnDefinition Width="33*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="50,50,50,50">
+            <Label>Patient</Label>
+            <TextBox Name="patient"></TextBox>
+            <Label>Doctor</Label>
+            <TextBox Name="doctor"></TextBox>
+            <Label>Date</Label>
+            <TextBox Name="dateStart"></TextBox>
+            <Label>Time</Label>
+            <TextBox Name="dateEnd"></TextBox>
+            <Label>Room</Label>
+            <TextBox Name="room"></TextBox>
+            <Separator Width="20" Height="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+
+
+            <Button Click="Button_Click">Confirm</Button>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+
+            <Button Click="Button_Click_1">Back</Button>
+
+
+
+
+
+        </StackPanel>
+
+
+
+
+
+    </Grid>
+</Window>

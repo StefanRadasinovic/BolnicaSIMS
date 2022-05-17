@@ -1,0 +1,34 @@
+﻿<Window x:Class="Bolnica.View.DoctorSelectWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bolnica.View"
+        mc:Ignorable="d"
+        Title="DoctorSelectWindowView" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Background="LightSkyBlue">
+
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Button Grid.Column="1" Grid.Row="0" Content="Operations" Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click"  Background="White"/>
+        <Button Grid.Column="1" Grid.Row="1" Content="Patients"  Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_1"  Background="White"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="Request days off"  Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_2"  Background="White"/>
+        <Button Grid.Column="1" Grid.Row="3" Content="Check drugs"  Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_3"  Background="White"/>
+
+        <Button Grid.Column="1" Grid.Row="4" Content="Back"  Margin="34.6,22,36.2,22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click_4"  Background="White"/>
+
+
+    </Grid>
+</Window>

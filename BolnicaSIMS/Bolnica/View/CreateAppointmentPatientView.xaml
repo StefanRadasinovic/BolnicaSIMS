@@ -1,0 +1,88 @@
+﻿<Window x:Class="Bolnica.View.CreateAppointmentPatientView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bolnica.View"
+        mc:Ignorable="d"
+        Title="CreateAppointmentPatientView" Height="570" Width="430" WindowStartupLocation="CenterScreen">
+    <Grid Background="LightSkyBlue">
+        <StackPanel Margin="40">
+
+            <Label>Date</Label>
+            <DatePicker Name="date" Width="327"></DatePicker>
+            
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+           
+            <Label>Time</Label>
+            <ComboBox Name="time" Margin="00 00 00 20" Width="327">
+                <ComboBoxItem HorizontalAlignment="Center">06:30</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">07:00</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">07:30</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">08:00</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">08:30</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">09:00</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">09:30</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">10:00</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">10:30</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">11:00</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">11:30</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">12:00</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">12:30</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">13:00</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">13:30</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">14:00</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">14:30</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">15:00</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">15:30</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">16:00</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">16:30</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">17:00</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">17:30</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">18:00</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">18:30</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">19:00</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">19:30</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">20:00</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">21:00</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">21:30</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">22:00</ComboBoxItem>
+
+
+
+            </ComboBox>
+            <Separator Width="20" Height="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+
+
+            <Button Click="Button_Confirm" >Confirm</Button>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+
+            <Button Click="Button_Back" >Back</Button>
+
+
+
+
+
+        </StackPanel>
+
+
+
+
+
+    </Grid>
+</Window>
