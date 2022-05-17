@@ -1,0 +1,53 @@
+﻿<Window x:Class="Bolnica.Manager.UpdateRoom"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bolnica.Manager"
+        mc:Ignorable="d"
+        Title="UpdateRoom" Height="450" Width="400">
+
+    <Grid Background="PeachPuff">
+        <StackPanel Margin="50,50,50,27">
+            <Label>RoomId</Label>
+            <TextBox Name="tb_id" Height="24"></TextBox> 
+            <Label>Floor</Label>
+            <TextBox Name="tb_floor" Height="24"></TextBox>
+            <Label>RoomName</Label>
+            <TextBox Name="tb_name" Height="24"></TextBox>
+            <Label>Rooms Type</Label>
+            <ComboBox Name="cbox" Width="284" Height="25" HorizontalAlignment="Center">
+                <ComboBoxItem Content="Operating Room"></ComboBoxItem>
+                <ComboBoxItem Content="Examination Room"></ComboBoxItem>
+                <ComboBoxItem Content="Rest Room"></ComboBoxItem>
+                <ComboBoxItem Content="Waiting Room"></ComboBoxItem>
+                <ComboBoxItem Content="Meeting Room"></ComboBoxItem>
+                <ComboBoxItem Content="Laboratory"></ComboBoxItem>
+
+            </ComboBox>
+
+            <Separator Width="20" Height="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+
+
+            <Button Click="Button_Click" Height="22">Register</Button>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Button Click="Button_Click_1" Content="Back" Height="23"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+
+
+
+
+
+        </StackPanel>
+    </Grid>
+</Window>
