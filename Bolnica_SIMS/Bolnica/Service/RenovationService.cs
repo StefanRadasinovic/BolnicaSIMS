@@ -7,39 +7,39 @@ namespace Bolnica.Manager
         internal class RenovationService
         {
 
-            public void Delete(String RoomID)
+        public void Delete(String RoomID)
+        {
+            Renovation renovations = null;
+            foreach (Renovation renovation in renovationRepository.ReadAll())
             {
-                Renovation renovations = null;
-                foreach (Renovation renovation in renovationRepository.ReadAll())
+                if (renovation.RoomID == RoomID)
                 {
-                    if (renovation.RoomID1 == RoomID)
-                    {
-                        renovations = renovation;
-
-                    }
+                    renovations = renovation;
 
                 }
 
-                if (renovations != null)
-                {
-                    renovationRepository.ReadAll().Remove(renovations);
-                }
             }
 
-            public void Create(Renovation renovation)
+            if (renovations != null)
             {
-                renovationRepository.ReadAll().Add(renovation);
-                renovationRepository.Serialize();
-
-
+                renovationRepository.ReadAll().Remove(renovations);
             }
+        }
 
-            public List<Renovation> ReadAll()
-            {
-                return renovationRepository.ReadAll();
-            }
+        public void Create(Renovation renovation)
+        {
+            renovationRepository.ReadAll().Add(renovation);
+            renovationRepository.Serialize();
 
-            private RenovationRepository renovationRepository = new RenovationRepository();
+
+        }
+
+        public List<Renovation> ReadAll()
+        {
+            return renovationRepository.ReadAll();
+        }
+
+        private RenovationRepository renovationRepository = new RenovationRepository();
 
     }
 }

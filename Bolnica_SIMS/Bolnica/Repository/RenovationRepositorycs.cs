@@ -19,7 +19,7 @@ namespace Bolnica.Model
         public Renovation Read(String id)
         {
             foreach (Renovation renovation in renovation)
-                if (renovation.RoomID1 == id)
+                if (renovation.RoomID == id)
                     return renovation;
             return null;
         }
@@ -56,7 +56,7 @@ namespace Bolnica.Model
 
         private String ToCSV(Renovation renovation)    //serialization
         {
-            return string.Join("_", renovation.RoomID1, renovation.Time1);
+            return string.Join("_", renovation.RoomID, renovation.Time);
         }
 
         private Renovation FromCSV(String renovationFormat)     //deserialization
