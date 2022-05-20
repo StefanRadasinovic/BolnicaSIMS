@@ -55,8 +55,8 @@ namespace Bolnica
         //SECRETARY
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            SecretaryView s = new SecretaryView();
-            s.Show();
+            LoginView lw = new LoginView();
+            lw.Show();
             this.Close();
         }
 

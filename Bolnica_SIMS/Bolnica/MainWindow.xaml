@@ -17,19 +17,19 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Button Background="White" Grid.Column="0" Grid.Row="0" Width="200" Height="60" Margin="30" Click="Button_Click_1" FontFamily="Times New Roman" FontSize="20px">
+        <Button Background="White" Foreground="Black" Grid.Column="0" Grid.Row="0" Width="200" Height="60" Margin="30" Click="Button_Click_1" FontFamily="Times New Roman" FontSize="20px">
             <Bold>Doctor</Bold>
         </Button>
 
-        <Button Background="White" Grid.Column="1" Grid.Row="0" Width="200" Height="60" Margin="30" Click="Button_Click_2" FontFamily="Times New Roman" FontSize="20px">
+        <Button Background="White" Foreground="Black" Grid.Column="1" Grid.Row="0" Width="200" Height="60" Margin="30" Click="Button_Click_2" FontFamily="Times New Roman" FontSize="20px">
             <Bold>Patient</Bold>
         </Button>
 
-        <Button Background="White" Grid.Column="0" Grid.Row="1" Width="200" Height="60" Margin="30" Click="Button_Click_3" FontFamily="Times New Roman" FontSize="20px">
+        <Button Background="White" Foreground="Black" Grid.Column="0" Grid.Row="1" Width="200" Height="60" Margin="30" Click="Button_Click_3" FontFamily="Times New Roman" FontSize="20px">
             <Bold>Upravnik</Bold>
         </Button>
 
-        <Button Background="White" Grid.Column="1" Grid.Row="1" Width="200" Height="60" Margin="30" Click="Button_Click_4" FontFamily="Times New Roman" FontSize="20px">
+        <Button Background="White" Foreground="Black" Grid.Column="1" Grid.Row="1" Width="200" Height="60" Margin="30" Click="Button_Click_4" FontFamily="Times New Roman" FontSize="20px">
             <Bold>Sekretar</Bold>
         </Button>
 

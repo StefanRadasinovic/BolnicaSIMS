@@ -1,0 +1,2 @@
+Mihailo|Popadic|1234|27.02.2001.|1049123|pop@mail.com|pop21|pop22|SEKRETAR
+Stefan|Radasinovic|3123|02.02.2000.|1049123|pop@mail.com|stefan|stefan|PACIJENT

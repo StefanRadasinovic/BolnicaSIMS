@@ -4,10 +4,19 @@
 // Purpose: Definition of Class User
 
 using System;
+using Bolnica.Serialization;
+
+public enum Role
+{
+    UPRAVNIK,
+    DOKTOR,
+    SEKRETAR,
+    PACIJENT
+}
 
 namespace Model
 {
-   public class User
+   public class User : Serializable
    {
       private String name;
       private String surname;
@@ -17,6 +26,7 @@ namespace Model
       private String email;
       private String username;
       private String password;
+        private Role role;
       
       public Adress adress;
 
@@ -28,6 +38,25 @@ namespace Model
         public string Email { get => email; set => email = value; }
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
+        public Role Role { get => role; set => role = value; }
+
+        public string[] toCSV()
+        {
+            return null;
+        }
+
+        public void fromCSV(string[] values)
+        {
+            Name = values[0];
+            Surname = values[1];
+            Jmbg = Convert.ToInt32(values[2]);
+            BirthDate = values[3];
+            PhoneNum = values[4];
+            Email = values[5];
+            Username = values[6];
+            Password = values[7];
+            Role = (Role)Enum.Parse(typeof(Role), values[8]);
+        }
 
     }
 }

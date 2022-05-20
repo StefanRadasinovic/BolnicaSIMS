@@ -22,21 +22,6 @@ namespace Bolnica.View
             InitializeComponent();
         }
 
-        //PATIENTS CRUD
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            SecretaryPatientView sp = new SecretaryPatientView();
-            sp.Show();
-            this.Close();
-        }
-
-        //APPOINTMENTS MANAGEMENT
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            SecretaryAppointmentView sa = new SecretaryAppointmentView();
-            sa.Show();
-            this.Close();
-        }
 
         //ALERGIES CRUD
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -50,6 +35,54 @@ namespace Bolnica.View
         {
             MainWindow mw = new MainWindow();
             mw.Show();
+            this.Close();
+        }
+
+        //PATIENTS CRUD
+        private void btnPatients_Click(object sender, RoutedEventArgs e)
+        {
+            SecretaryPatientView sp = new SecretaryPatientView();
+            sp.Show();
+            this.Close();
+        }
+
+        //APPOINTMENTS
+        private void btnAppointments_Click(object sender, RoutedEventArgs e)
+        {
+            SecretaryAppointmentView sa = new SecretaryAppointmentView();
+            sa.Show();
+            this.Close();
+        }
+
+        private void btnWeeklyReport_Click(object sender, RoutedEventArgs e)
+        {
+            //
+        }
+
+        private void btnSuplies_Click(object sender, RoutedEventArgs e)
+        {
+            //
+        }
+
+        private void btnMeetings_Click(object sender, RoutedEventArgs e)
+        {
+            //
+        }
+
+        private void btnRequests_Click(object sender, RoutedEventArgs e)
+        {
+            //
+        }
+
+        private void btnTest_Click(object sender, RoutedEventArgs e)
+        {
+            //btnLogout_Click
+        }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            LoginView lw = new LoginView();
+            lw.Show();
             this.Close();
         }
     }

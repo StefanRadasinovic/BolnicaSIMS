@@ -4,8 +4,9 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{09BFC268-CC6F-465C-AB2F-AC48AAFA7BFD}" Name="BolnicaClass" OpenedReadOnly="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="ClassDiagramBolnica.oom"/>
-		<Model Expanded="Yes" ID="{EB4EC45E-E871-4100-B2F6-4B215884CB60}" Name="ObjectOrientedModel_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="ObjectOrientedModel_1.oom"/>
+		<Model Expanded="Yes" ID="{09BFC268-CC6F-465C-AB2F-AC48AAFA7BFD}" Name="BolnicaClass" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="ClassDiagramBolnica2.oom"/>
+		<Model Expanded="Yes" ID="{3FA28AE7-621B-49EC-B057-F91FCD6D32EC}" Name="ObjectOrientedModel_1" Selected="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="ActivityDiagram-sekretar.oom"/>
+		<Model Expanded="Yes" ID="{EB4EC45E-E871-4100-B2F6-4B215884CB60}" Loaded="No" Name="ObjectOrientedModel_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="ObjectOrientedModel_1.oom"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
