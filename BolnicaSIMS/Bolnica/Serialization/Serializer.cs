@@ -18,7 +18,7 @@ namespace Bolnica.Serialization
                 streamWriter.WriteLine(line);
             }
         }
-
+        
         public List<T> fromCSV(string fileName)
         {
             List<T> objects = new List<T>();
@@ -33,5 +33,6 @@ namespace Bolnica.Serialization
 
             return objects;
         }
+        
     }
 }

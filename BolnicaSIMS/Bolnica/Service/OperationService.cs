@@ -14,6 +14,9 @@ namespace Model
         private const string FileName = "C:\\Users\\Branislav\\Desktop\\FAKS\\SIMS\\Projekat konacan\\BolnicaSIMS\\Bolnica_SIMS\\Bolnica\\Resources\\operations.txt";
         private static List<Operation> operations = new List<Operation>();
 
+
+        public static List<Operation> allNeededOperations { get; set; } = new List<Operation>();
+
         public static bool Create(Model.Operation operation)
         {
             if (operation != null)

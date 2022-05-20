@@ -30,6 +30,12 @@ namespace Model
             //appointments = new List<String>();
         }
         public Patient() { }
+
+        public Patient(string username)
+        {
+            this.Username = username;
+        }
+        
         public void fromCSV(string[] values)
         {
             

@@ -18,6 +18,35 @@ namespace Model
         private int roomID;
         private int patientID;
 
+        public Boolean Held { get; set; } = false; /// da li je uopste doslo do operacije 
+        
+        public bool RatedSurvey { get; set; } /// za ocenjivanje ankete
+
+        public Boolean Blocked { get; set; } /// da li je korisnik blokiran ZA ANTRITROL
+        
+
+        public int Abuse { get; set; } // ISTO ZA ANTITROL
+        public String AppointmentID { get; set; }
+
+        public Appointment Appointment { get; set; }
+
+
+        //public String RoomNumber;
+
+
+        public Operation() { }
+
+
+
+        public Operation(string appointmentID, Appointment appointment)
+        {
+            this.AppointmentID = appointmentID;
+            this.Appointment = appointment;
+            RatedSurvey = false;
+        }
+
+
+
         public Operation(int operationID, int doctorID, string timeStart, string timeEnd, int roomID, int patientID)
         {
             this.operationID = operationID;
@@ -28,7 +57,7 @@ namespace Model
             this.patientID = patientID;
         }
 
-        public Operation() { }
+        
 
         public int OperationID { get => operationID; set => operationID = value; }
         public int DoctorID { get => doctorID; set => doctorID = value; }

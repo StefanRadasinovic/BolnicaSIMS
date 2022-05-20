@@ -23,11 +23,17 @@ namespace Bolnica.View
     {
 
         public static ObservableCollection<Appointment> Appointments { get; set; }
+        public static Grid MainContent { get; private set; }
+
+        public static Patient logIN = null;   /// <summary> !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        ///  OVO TI SLUZI ZA LOG in-mozda bude zezao oko SurveyView Linija 35 PatientView.logIN
+        /// </summary>
+
         public PatientView()
         {
             InitializeComponent();
 
-            InitializeComponent();
+            
 
             this.DataContext = this;
 
@@ -111,9 +117,33 @@ namespace Bolnica.View
 
         }
 
-        
 
-        
+
+        private void Button_RateDoctor2(object sender, RoutedEventArgs e)
+        {
+
+            AppointmentService appointmentService = new AppointmentService();
+            if (GridDataPatientView.SelectedIndex != -1)
+            {
+
+                String promena2 = (((Appointment)GridDataPatientView.SelectedItem).AppointmentID);
+
+
+                Appointment Forappointment = appointmentService.GetAppointmentID(promena2);
+                RATEDOCTOR2 rATEDOCTOR2 = new RATEDOCTOR2(Forappointment);
+                rATEDOCTOR2.Show();
+
+
+            }
+            else
+                MessageBox.Show("You must click on existing Appointment");
+
+
+
+
+
+            
+        }
 
 
 
@@ -175,6 +205,21 @@ namespace Bolnica.View
             contactView.Show(); 
         }
 
+
+        private void Button_Survey(object sender, RoutedEventArgs e)
+        {
+            SurveyView surveyView = new SurveyView();
+            surveyView.Show();
+        }
+
+
+        public void PromeniPrikaz(UserControl userControl)
+        {
+            MainPanel.Children.Clear();
+            MainPanel.Children.Add(userControl);
+        }
+
+
         private void ComboBoxItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
 
@@ -187,6 +232,16 @@ namespace Bolnica.View
             mw.Show();
 
         }
+
+
+        public static Grid GetMainContent()
+        {
+            return MainContent;
+        }
+
+
+       
+
     }
         
 }

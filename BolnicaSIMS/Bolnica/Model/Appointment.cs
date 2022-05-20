@@ -39,16 +39,36 @@ namespace Model
         public string AppID { get => appID; set => appID = value; }
 
 
+        public  Patient Patient { get; set; }
+
+        public Boolean Held { get; set; } = false;
+        public bool RatedSurvey { get; set; }
+
+        public Boolean Blocked { get; set; } 
+
+        public int Abuse { get; set; }
+
+        public Operation Operation { get; set; }
+
+
         //public String RoomNumber;
 
 
+        public Appointment() { }
 
 
+
+        public Appointment(string appointmentID, Operation operation)
+        {
+            this.AppointmentID = appointmentID;
+            this.Operation = operation;
+            RatedSurvey = false;
+        }
 
 
         public Appointment(string appointmentID, DateTime? date, string? time)
         {
-            AppointmentID = appointmentID;
+            this.AppointmentID = appointmentID;
             this.Date = date.Value;
             this.Time = time;
         }

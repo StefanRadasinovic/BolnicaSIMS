@@ -1,0 +1,80 @@
+﻿<Window x:Class="Bolnica.View.SurveyView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bolnica.View"
+        mc:Ignorable="d"
+         Height="700" Width="600">
+    <StackPanel Background="White">
+        <Label Margin="20 00" FontFamily="Times New Roman" FontSize="15">Available Surveys</Label>
+        <ListBox x:Name="PatientSurvey" SelectionMode="Single" Height="413" Margin="25,0,25.4,0" Width="542">
+
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+
+                    <WrapPanel Background="#49bf8e">
+                        <StackPanel  Width="260"  >
+
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+
+                                </Grid.RowDefinitions>
+
+
+
+
+                                <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Appointment.Date , StringFormat={}{0:dd/MM/yyyy}}"/>
+
+
+                                <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Appointment.TimeStart}"/>
+
+
+                                <TextBlock Grid.Column="1" Grid.Row="2"  Text="{Binding Appointment.DoctorID}" />
+
+
+                            </Grid>
+
+
+
+
+                        </StackPanel>
+
+                    </WrapPanel>
+
+
+
+
+
+
+                </DataTemplate>
+
+
+
+            </ListBox.ItemTemplate>
+
+
+        </ListBox>
+
+        <Label Margin="25,0,0.4,0">*choose one Survey from the list</Label>
+        <Button Margin="25 10"  x:Name="FillSurvey"  Background="#FF31577E" Height="30" Click="FillSurvey_Click">
+            <Run Foreground="AntiqueWhite">Fill Survey</Run>
+        </Button>
+        <Button Margin="25 10"  x:Name="RateBolnica"  Background="#FF31577E" Height="30" Click="RateBolnica_Click">
+            <Run Foreground="AntiqueWhite">Rate Bolnica</Run>
+        </Button>
+
+
+    </StackPanel>
+</Window>
