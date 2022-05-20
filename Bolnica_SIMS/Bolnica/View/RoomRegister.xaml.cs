@@ -1,15 +1,8 @@
 ﻿using Model;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Bolnica.Manager
 {
@@ -22,15 +15,18 @@ namespace Bolnica.Manager
         RoomView rv;
         public RoomsController roomsController = new RoomsController();
         private List<Rooms> rooms = new List<Rooms>();
-       // Rooms room = new Rooms();
+        private ObservableCollection<Rooms> soba;
+        private Rooms room = new Rooms();
 
-        public RoomRegister(RoomView rv)
+        public RoomRegister()
         {
             InitializeComponent();
-            this.rv=rv;
-            
+            //this.rv=rv;
+
+
+
         }
-       
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -40,10 +36,10 @@ namespace Bolnica.Manager
             RoomsType roomsType = (RoomsType)cbox.SelectedIndex;
             Rooms rooms = new Rooms(RoomID, floor, roomName, roomsType);
             roomsController.Create(rooms);
-            rv.Refresh();
+            RoomView.Room.Add(rooms);
             this.Close();
-            
-            
+
+
 
 
 
@@ -53,5 +49,7 @@ namespace Bolnica.Manager
         {
             this.Close();
         }
+
+
     }
 }

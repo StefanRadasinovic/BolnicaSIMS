@@ -6,4 +6,88 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="img\anketa.jpg" />
+    <None Remove="img\ankete.png" />
+    <None Remove="img\application.png" />
+    <None Remove="img\arrow.gif" />
+    <None Remove="img\arroww.gif" />
+    <None Remove="img\backk.jpg" />
+    <None Remove="img\beat.gif" />
+    <None Remove="img\bolnica.png" />
+    <None Remove="img\delete.png" />
+    <None Remove="img\drugs.png" />
+    <None Remove="img\edit.png" />
+    <None Remove="img\equipment.jpg" />
+    <None Remove="img\finger.png" />
+    <None Remove="img\heartRate.gif" />
+    <None Remove="img\kanta.png" />
+    <None Remove="img\lek.png" />
+    <None Remove="img\logo.gif" />
+    <None Remove="img\managerr.jpeg" />
+    <None Remove="img\move.png" />
+    <None Remove="img\odustanak.png" />
+    <None Remove="img\oprema.png" />
+    <None Remove="img\personn.png" />
+    <None Remove="img\plus.png" />
+    <None Remove="img\plusss.png" />
+    <None Remove="img\room.png" />
+    <None Remove="img\rooms.png" />
+    <None Remove="img\rukavice.png" />
+    <None Remove="img\save.png" />
+    <None Remove="img\soba.png" />
+    <None Remove="img\tacke.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\anketa.jpg" />
+    <Resource Include="img\ankete.png" />
+    <Resource Include="img\application.png" />
+    <Resource Include="img\arrow.gif" />
+    <Resource Include="img\arroww.gif" />
+    <Resource Include="img\backk.jpg" />
+    <Resource Include="img\beat.gif" />
+    <Resource Include="img\bolnica.png" />
+    <Resource Include="img\drugs.png" />
+    <Resource Include="img\edit.png" />
+    <Resource Include="img\equipment.jpg" />
+    <Resource Include="img\finger.png" />
+    <Resource Include="img\heartRate.gif" />
+    <Resource Include="img\kanta.png" />
+    <Resource Include="img\lek.png" />
+    <Resource Include="img\logo.gif" />
+    <Resource Include="img\managerr.jpeg" />
+    <Resource Include="img\move.png" />
+    <Resource Include="img\odustanak.png" />
+    <Resource Include="img\oprema.png" />
+    <Resource Include="img\personn.png" />
+    <Resource Include="img\plusss.png" />
+    <Resource Include="img\room.png" />
+    <Resource Include="img\rooms.png" />
+    <Resource Include="img\rukavice.png" />
+    <Resource Include="img\save.png" />
+    <Resource Include="img\soba.png" />
+    <Resource Include="img\sobaAnimacija.gif">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <PackageReference Include="MaterialDesignThemes" Version="4.5.0" />
+    <PackageReference Include="XamlAnimatedGif" Version="2.0.2" />
+    <Resource Include="img\tacke.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

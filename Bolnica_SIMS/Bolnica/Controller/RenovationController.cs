@@ -2,23 +2,22 @@
 using Bolnica.Model;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Bolnica.Controller
 {
     internal class RenovationController
     {
 
-        RenovationService renovationService= new RenovationService();
+        RenovationService renovationService = new RenovationService();
 
         public void Delete(String RoomID)
         {
             renovationService.Delete(RoomID);
         }
 
-        public void Create(Renovation r)
+        public void Create(Renovation renovation)
         {
-            renovationService.Create(r);
+            renovationService.Create(renovation);
 
 
         }
@@ -28,7 +27,7 @@ namespace Bolnica.Controller
             return renovationService.ReadAll();
         }
 
-        
+
     }
-    
+
 }

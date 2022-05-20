@@ -15,5 +15,5 @@ namespace Model
         {
             RoomID = roomID;
         }
-    }  
+    }
 }

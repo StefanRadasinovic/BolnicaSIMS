@@ -1,16 +1,7 @@
-﻿using Model;
-using System;
-using System.Collections.Generic;
+﻿using Bolnica.View;
+using Model;
 using System.Collections.ObjectModel;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Bolnica.Manager
 {
@@ -18,16 +9,16 @@ namespace Bolnica.Manager
     /// Interaction logic for ManagerView.xaml
     /// </summary>
     public partial class RoomView : Window
-
-       
     {
-       public RoomsController rc = new RoomsController();
 
-        public static ObservableCollection<Rooms> Room = new ObservableCollection<Rooms>();
+        private RoomRepository room = new RoomRepository();
+        private RoomsController rc = new RoomsController();
+
+        public static ObservableCollection<Rooms> Room { get; set; }
         public RoomView()
         {
             InitializeComponent();
-            this.DataContext = this;
+            //this.DataContext = this;
             /* foreach (Rooms r in rc.GetAll())
              {
                  Room.Add(r);
@@ -38,20 +29,34 @@ namespace Bolnica.Manager
 
              DGR.ItemsSource = rc.GetAll();*/
 
-            DGR.ItemsSource = rc.GetAll();
-            
+            this.DataContext = this;
+
+            Room = new ObservableCollection<Rooms>();
+
+            DGR.ItemsSource = Room;
+            //RoomsController roomsController = new RoomsController();
+
+            foreach (Rooms r in rc.GetAll())
+            {
+                Room.Add(r);
+            }
+
+            DGR.Items.Refresh();
+
+
 
 
         }
-        public void Refresh() {
+        public void Refresh()
+        {
             DGR.Items.Refresh();
-                }
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            RoomRegister roomRegister = new RoomRegister(this);
+            RoomRegister roomRegister = new RoomRegister();
             roomRegister.Show();
-            DGR.Items.Refresh();
+            // DGR.Items.Refresh();
 
         }
 
@@ -61,13 +66,19 @@ namespace Bolnica.Manager
             if (DGR.SelectedIndex != -1)
 
             {
-              Rooms r = rc.GetRoomID(((Rooms)DGR.SelectedItem).RoomID1);
-                UpdateRoom updateRoom = new UpdateRoom();
-                updateRoom.Show();
+                Rooms r = rc.GetRoomID(((Rooms)DGR.SelectedItem).RoomID1);
+                rc.Delete(((Rooms)DGR.SelectedItem).RoomID1);
+                UpdateRoom up = new UpdateRoom(r);
+                up.Show();
                 DGR.Items.Refresh();
-              
+
+
             }
-            
+            else
+            {
+                MessageBox.Show("You must click on exsiisting Rooms");
+            }
+
 
         }
 
@@ -75,35 +86,31 @@ namespace Bolnica.Manager
         {
 
             if (DGR.SelectedIndex != 1)
-             {
-               Rooms r = rc.GetRoomID(((Rooms)DGR.SelectedItem).RoomID1);
-                rc.Delete(r.RoomID1);
-                DGR.Items.Refresh();
+            {
+                Rooms r = rc.GetRoomID(((Rooms)DGR.SelectedItem).RoomID1);
+                rc.Delete(((Rooms)DGR.SelectedItem).RoomID1);
+                Room.Remove(((Rooms)DGR.SelectedItem));
+                // DGR.Items.Refresh();
 
 
             }
-             else {
-                 MessageBox.Show("You must click on exsiisting Rooms");
-             }
+            else
+            {
+                MessageBox.Show("You must click on exsiisting Rooms");
+            }
 
-           
+
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             MainWindowManager mainWindowManager = new MainWindowManager();
             mainWindowManager.Show();
-            
-            this.Close();
-        }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-            MainWindowManager mainWindowManager = new MainWindowManager();
-            mainWindowManager.Show();
 
             this.Close();
         }
+
+
 
         private void Back(object sender, RoutedEventArgs e)
         {
@@ -112,5 +119,57 @@ namespace Bolnica.Manager
 
             this.Close();
         }
+
+
+
+        private void Soba(object sender, RoutedEventArgs e)
+        {
+
+            RoomsController roomsController = new RoomsController();
+            RoomView roomView = new RoomView();
+            roomView.Show();
+            this.Close();
+        }
+
+        private void Oprema(object sender, RoutedEventArgs e)
+        {
+            EquipmentController equipmentController = new EquipmentController();
+            EquipmentView equipmentView = new EquipmentView();
+            equipmentView.Show();
+            this.Close();
+        }
+
+        private void Lekovi(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Anketa(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            MainWindowManager mainWindowManager = new MainWindowManager();
+            mainWindowManager.Show();
+            this.Close();
+
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            ManagerView managerView = new ManagerView();
+            managerView.Show();
+            this.Close();
+
+        }
+
+
     }
 }

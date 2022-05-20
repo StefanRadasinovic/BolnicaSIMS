@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Bolnica.Manager
 {
@@ -9,7 +8,7 @@ namespace Bolnica.Manager
         private String id;
         private EquipmentType equipmentType;
         private String RoomID;
-        private List<RequestEquipmentcs> request=new List<RequestEquipmentcs>();
+        private List<RequestEquipmentcs> request = new List<RequestEquipmentcs>();
 
         public Equipment(string id, EquipmentType equipmentType, string roomID)
         {

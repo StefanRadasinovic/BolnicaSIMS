@@ -1,17 +1,7 @@
 ﻿using Bolnica.Controller;
 using Bolnica.Manager;
 using Model;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Bolnica.View
 {
@@ -30,28 +20,24 @@ namespace Bolnica.View
             DGM.ItemsSource = requestController.ReadAll();
             //cbox.ItemsSource = equipmentController.ReadAll();
             //cbox.DisplayMemberPath = ("id");
-            cbox.ItemsSource= Enum.GetValues(typeof(RoomsType));
+            // cbox.ItemsSource= Enum.GetValues(typeof(RoomsType));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-             
-            
-                String eqID = Convert.ToString(tb_id);
-                RoomsType roomsType = (RoomsType)cbox.SelectedItem;
-                DateTime dateTime = (DateTime)date_move.SelectedDate;
-                RequestEquipmentcs requestEquipmentcs = new RequestEquipmentcs(eqID,roomsType,dateTime);
-                requestController.Create(requestEquipmentcs);
-                DGM.Items.Refresh();
+
+            RequestRegister requestRegister = new RequestRegister();
+            requestRegister.Show();
+            this.Close();
 
 
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            String eqName = Convert.ToString(tb_id);
-            requestController.Delete(eqName);
-            DGM.Items.Refresh();
+            /* String eqName = Convert.ToString(tb_id);
+             requestController.Delete(eqName);
+             DGM.Items.Refresh();*/
 
         }
 
@@ -61,5 +47,33 @@ namespace Bolnica.View
             equipmentView.Show();
             this.Close();
         }
+
+        private void Soba(object sender, RoutedEventArgs e)
+        {
+
+            RoomsController roomsController = new RoomsController();
+            RoomView roomView = new RoomView();
+            roomView.Show();
+            this.Close();
+        }
+
+        private void Oprema(object sender, RoutedEventArgs e)
+        {
+            EquipmentController equipmentController = new EquipmentController();
+            EquipmentView equipmentView = new EquipmentView();
+            equipmentView.Show();
+            this.Close();
+        }
+
+        private void Lekovi(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Anketa(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

@@ -1,9 +1,7 @@
-﻿using Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 
 namespace Bolnica.Model
 {
@@ -16,7 +14,7 @@ namespace Bolnica.Model
 
         public RenovationRepository()
         {
-           // renovation = (List<Renovation>)Deserialize();
+            renovation = (List<Renovation>)Deserialize();
         }
         public Renovation Read(String id)
         {
@@ -34,9 +32,9 @@ namespace Bolnica.Model
         {
             AllToCSV(renovation);
         }
-       public IEnumerable<Renovation> Deserialize()
+        public IEnumerable<Renovation> Deserialize()
         {
-           return (List<Renovation>)File.ReadAllLines(projectPath + "\\Resources\\CSVFiles\\renovations.csv").Select(FromCSV).ToList();
+            return (List<Renovation>)File.ReadAllLines(projectPath + "\\Resources\\CSVFiles\\renovations.csv").Select(FromCSV).ToList();
 
         }
 

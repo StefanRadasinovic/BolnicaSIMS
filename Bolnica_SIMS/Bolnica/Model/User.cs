@@ -7,18 +7,18 @@ using System;
 
 namespace Model
 {
-   public class User
-   {
-      private String name;
-      private String surname;
-      private int jmbg;
-      private DateTime birthDate;
-      private String phoneNum;
-      private String email;
-      private String username;
-      private String password;
-      
-      public Adress adress;
-   
-   }
+    public class User
+    {
+        private String name;
+        private String surname;
+        private int jmbg;
+        private DateTime birthDate;
+        private String phoneNum;
+        private String email;
+        private String username;
+        private String password;
+
+        public Adress adress;
+
+    }
 }

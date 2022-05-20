@@ -7,11 +7,11 @@ using System;
 
 namespace Model
 {
-   public class Adress
-   {
-      private String streetNum;
-      private String city;
-      private String country;
-   
-   }
+    public class Adress
+    {
+        private String streetNum;
+        private String city;
+        private String country;
+
+    }
 }

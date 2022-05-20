@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Bolnica.Manager
 {
@@ -25,8 +24,9 @@ namespace Bolnica.Manager
             return equipmentService.ReadAll();
         }
 
-        public bool MoveEq(RequestEquipmentcs requestEquipmentcs,string id) {
-            equipmentService.MoveEquipment(requestEquipmentcs,id);
+        public bool MoveEq(RequestEquipmentcs requestEquipmentcs, string id)
+        {
+            equipmentService.MoveEquipment(requestEquipmentcs, id);
             return true;
         }
 

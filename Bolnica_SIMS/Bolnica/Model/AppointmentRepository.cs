@@ -8,39 +8,39 @@ using System.Collections.Generic;
 
 namespace Model
 {
-   public class AppointmentRepository
-   {
-      private String path;
-      
-      public Appointment Create(Appointment appointment)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public void Read(String appointmentID)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public bool Update(String appointmentID)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public bool Delete(String appointmentID)
-      {
-         throw new NotImplementedException();
-      }
-      
-      public List<Appointment> GetAll()
-      {
-         throw new NotImplementedException();
-      }
-      
-      public Appointment GetAppointmentID(String appointmentID)
-      {
-         throw new NotImplementedException();
-      }
-   
-   }
+    public class AppointmentRepository
+    {
+        private String path;
+
+        public Appointment Create(Appointment appointment)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Read(String appointmentID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Update(String appointmentID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Delete(String appointmentID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Appointment> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Appointment GetAppointmentID(String appointmentID)
+        {
+            throw new NotImplementedException();
+        }
+
+    }
 }

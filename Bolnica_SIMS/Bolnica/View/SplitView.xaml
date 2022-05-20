@@ -1,0 +1,25 @@
+﻿<Window x:Class="Bolnica.View.SplitView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bolnica.View"
+        mc:Ignorable="d"
+        Title="SplitView" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="DGS" HorizontalAlignment="Left" Height="305" Margin="106,62,0,0" VerticalAlignment="Top" Width="294" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+
+
+        <Label Content="RoomID" HorizontalAlignment="Left" Height="33" Margin="494,62,0,0" VerticalAlignment="Top" Width="238">
+
+        </Label>
+        <Label Content="Datum zauzimanja" HorizontalAlignment="Left" Height="29" Margin="494,135,0,0" VerticalAlignment="Top" Width="222"/>
+        <DatePicker x:Name="date_r" HorizontalAlignment="Left" Height="30" Margin="498,187,0,0" VerticalAlignment="Top" Width="174"/>
+        <Label Content="RoomID" HorizontalAlignment="Left" Height="33" Margin="494,237,0,0" VerticalAlignment="Top" Width="238"/>
+        <Button Content="Split" HorizontalAlignment="Left" Height="39" Margin="518,343,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click"/>
+        <TextBox x:Name="tbox" HorizontalAlignment="Left" Height="35" Margin="498,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" />
+        <TextBox x:Name="tbox2" HorizontalAlignment="Left" Height="35" Margin="503,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204"/>
+        <Button Content="Back" HorizontalAlignment="Left" Height="39" Margin="672,343,0,0" VerticalAlignment="Top" Width="96" Click="Button_Click_1"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Height="39" Margin="425,343,0,0" VerticalAlignment="Top" Width="71" Click="Button_Click_2"/>
+    </Grid>
+</Window>

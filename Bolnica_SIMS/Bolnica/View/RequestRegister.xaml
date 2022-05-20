@@ -1,0 +1,68 @@
+﻿<Window x:Class="Bolnica.View.RequestRegister"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Bolnica.View"
+      mc:Ignorable="d"
+      Title="RequestRegister" WindowStartupLocation="CenterScreen" Height="750" Width="450">
+
+    <Grid Background="White">
+        <StackPanel Margin="50,125,70,253">
+            <Label FontSize="18" FontFamily="Arial" Content="Equipment ID"/>
+            <TextBox x:Name="tb_id" Height="38"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Label FontSize="18" FontFamily="Arial" Content="Rooms Type"/>
+            <ComboBox x:Name="cbox" Width="310" Height="37">
+                <ComboBoxItem Content="Operating Room"/>
+                <ComboBoxItem Content="Examination Room"/>
+                <ComboBoxItem Content="Rest Room"/>
+                <ComboBoxItem Content="Waiting Room"/>
+                <ComboBoxItem Content="Meeting Room"/>
+                <ComboBoxItem Content="Laboratory"/>
+
+            </ComboBox>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Label FontSize="18" FontFamily="Arial" Content="Date Move"/>
+            <DatePicker x:Name="date_move" Height="41" Width="326"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+
+
+            <Separator Width="20" Height="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+
+        </StackPanel>
+        <Button Click="Button_Click" FontSize="22" FontFamily="Arial Black"  Margin="108,499,272,165" BorderBrush="White" Width="70" Height="70">
+            <Button.Background>
+                <ImageBrush ImageSource="/img/save.png"/>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="70" Click="Button_Click_1" Margin="244,498,0,0" BorderBrush="White" RenderTransformOrigin="0.429,0.808">
+            <Button.Background>
+                <ImageBrush ImageSource="/img/odustanak.png"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

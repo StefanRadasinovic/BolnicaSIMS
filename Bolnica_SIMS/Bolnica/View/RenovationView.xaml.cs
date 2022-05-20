@@ -1,16 +1,8 @@
 ﻿using Bolnica.Controller;
 using Bolnica.Model;
+using Bolnica.View;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Bolnica.Manager
 {
@@ -30,7 +22,7 @@ namespace Bolnica.Manager
 
             DGR.ItemsSource = renovationController.ReadAll();
             //cbox.ItemsSource = renovationController.ReadAll();
-           // date_r.DataContext = renovationController.ReadAll();
+            // date_r.DataContext = renovationController.ReadAll();
 
 
         }
@@ -51,7 +43,7 @@ namespace Bolnica.Manager
         {
             String roomID = Convert.ToString(tb_id.Text);
             renovationController.Delete(roomID);
-            DGR.Items.Refresh(); 
+            DGR.Items.Refresh();
 
 
         }
@@ -61,6 +53,24 @@ namespace Bolnica.Manager
             EquipmentView equipmentView = new EquipmentView();
             equipmentView.Show();
             this.Close();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            SplitView splitView = new SplitView();
+            splitView.Show();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            MergeViews mergeViews = new MergeViews();
+            mergeViews.Show();
+            
+        }
+
+        private void ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            //if(cbox.SelectionBoxItem.Equals())
         }
     }
 }

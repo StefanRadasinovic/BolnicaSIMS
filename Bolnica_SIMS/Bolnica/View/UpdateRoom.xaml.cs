@@ -1,16 +1,7 @@
 ﻿using Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Bolnica.Manager
 {
@@ -22,9 +13,13 @@ namespace Bolnica.Manager
     public partial class UpdateRoom : Window
     {
         public RoomsController rc = new RoomsController();
-        public UpdateRoom()
+        private ObservableCollection<Rooms> Room;
+        private Rooms r;
+
+        public UpdateRoom(Rooms r)
         {
-            InitializeComponent();   
+            InitializeComponent();
+
 
         }
 
@@ -38,7 +33,7 @@ namespace Bolnica.Manager
             RoomsType roomsType = (RoomsType)cbox.SelectedIndex;
             Rooms rooms = new Rooms(RoomID, floor, roomName, roomsType);
             rc.Update(rooms);
-            
+            //RoomView.Room.Add(rooms);
             this.Close();
 
 
@@ -46,12 +41,12 @@ namespace Bolnica.Manager
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            
+
             this.Close();
 
         }
 
-     
-       
+
+
     }
 }

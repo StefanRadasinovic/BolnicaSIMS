@@ -3,7 +3,6 @@
 // Created: Tuesday, April 5, 2022 5:55:23 PM
 // Purpose: Definition of Class RoomsController
 
-using Bolnica.Manager;
 using System;
 using System.Collections.Generic;
 
@@ -14,14 +13,14 @@ namespace Model
         public static List<Rooms> rooms = new List<Rooms>();
 
         private RoomService roomService = new RoomService();
-             
+
         public void Create(Rooms room)
         {
             roomService.CreateRoom(room);
 
         }
 
-    public void Update(Rooms room)
+        public void Update(Rooms room)
         {
             roomService.UpdateRoom(room);
 
@@ -37,12 +36,20 @@ namespace Model
             return roomService.ReadAll();
         }
 
-       public  Rooms GetRoomID(String roomID)
+        public Rooms GetRoomID(String roomID)
         {
             return roomService.GetRoomID(roomID);
         }
 
-        
+        public bool MergeRooms(Rooms room, string roomID)
+        {
+            return roomService.MergeRooms(room, roomID);
+        }
+
+        public bool SplitRooms(Rooms room, string roomID)
+        {
+            return roomService.SplitRooms(room, roomID);
+        }
 
     }
 }

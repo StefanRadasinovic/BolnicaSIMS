@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 
 namespace Bolnica.Manager
 {
@@ -13,7 +12,7 @@ namespace Bolnica.Manager
 
         public EquipmentRepository()
         {
-           //equipment = (List<Equipment>)Deserialize();
+            equipment = (List<Equipment>)Deserialize();
         }
         public Equipment Read(String id)
         {
@@ -62,7 +61,8 @@ namespace Bolnica.Manager
         {
             var tokens = eqFormat.Split("_".ToCharArray());
             //return new Rooms(Convert.ToInt32(tokens[0]),Convert.ToString(tokens[1]), (RoomsType)Enum.Parse(typeof(RoomsType), tokens[1]), Convert.ToSingle(tokens[2]), Convert.ToInt32(tokens[3]), Convert.ToInt32(tokens[4]));
-            return new Equipment(Convert.ToString(tokens[0]),(EquipmentType)Enum.Parse(typeof(EquipmentType),tokens[1]),Convert.ToString(tokens[2]));
+            //return new Equipment(Convert.ToString(tokens[0]),(EquipmentType)Enum.Parse(typeof(EquipmentType),tokens[1]),Convert.ToString(tokens[2]));
+            return new Equipment(Convert.ToString(tokens[0]), (EquipmentType)Enum.Parse(typeof(EquipmentType), tokens[1]), Convert.ToString(tokens[2]));
         }
 
         public List<Equipment> equipment = new List<Equipment>();

@@ -1,15 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using Model;
 
 
 
@@ -41,10 +31,10 @@ namespace Bolnica.Model
             //OVAKO : izmenio si u Patient klasi objekat patient da ti unosi samo ime kako da unesem ime + prezime ?? ?  ? ? ?  
 
 
-        //   Patient p = new Patient(patient.Text);
+            //   Patient p = new Patient(patient.Text);
 
-            
-          
+
+
 
 
 
@@ -63,7 +53,7 @@ namespace Bolnica.Model
             String Time = time.Text;
 
 
-         //   String roomNumber = null;
+            //   String roomNumber = null;
 
 
 
@@ -71,11 +61,11 @@ namespace Bolnica.Model
 
             //Appointment a = new Appointment(appointmentID, p, date, Time);
 
-          //  Appointment a = new Appointment(appointmentID, date, Time);
+            //  Appointment a = new Appointment(appointmentID, date, Time);
 
 
 
-           // AppointmentService.Create(a);
+            // AppointmentService.Create(a);
 
             this.Close();
 

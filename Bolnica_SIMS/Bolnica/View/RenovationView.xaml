@@ -20,6 +20,8 @@
         <Button Content="Create" HorizontalAlignment="Left" Height="31" Margin="554,251,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click"/>
         <Button Content="Delete" HorizontalAlignment="Left" Height="31" Margin="554,309,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click_1"/>
         <Button Content="Back" HorizontalAlignment="Left" Height="31" Margin="553,367,0,0" VerticalAlignment="Top" Width="119" Click="Button_Click_2"/>
+        <Button Content="Split" HorizontalAlignment="Left" Height="31" Margin="706,251,0,0" VerticalAlignment="Top" Width="84" Click="Button_Click_3"/>
+        <Button Content="Merge" HorizontalAlignment="Left" Height="31" Margin="706,309,0,0" VerticalAlignment="Top" Width="84" Click="Button_Click_4"/>
 
 
 

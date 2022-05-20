@@ -3,14 +3,70 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="https://github.com/XamlAnimatedGif/XamlAnimatedGif" 
+        xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Bolnica.Manager"
         mc:Ignorable="d"
-        Title="MainWindowManager" Height="750" Width="430" WindowStartupLocation="CenterScreen">
-    <Grid Background="MistyRose">
-        <Button Content="Rooms" HorizontalAlignment="Center" Height="124" Margin="0,63,0,0" VerticalAlignment="Top" Width="362" Click="Button_Click" Background="White" FontSize="20" FontFamily="Arial Black"/>
-        <Button Content="Equipment" HorizontalAlignment="Center" Height="124" Margin="0,222,0,0" VerticalAlignment="Top" Width="362" Click="Button_Click_1" RenderTransformOrigin="-1.473,1.094" Background="White" FontSize="20" FontFamily="Arial Black" FontWeight="Bold"/>
-        <Button Content="Ankete" HorizontalAlignment="Center" Height="124" Margin="0,544,0,0" VerticalAlignment="Top" Width="362" RenderTransformOrigin="-1.967,3.802" Click="Button_Click_2" Background="White" FontFamily="Arial Black" FontSize="20"/>
-        <Button Content="Drugs" HorizontalAlignment="Center" Height="124" Margin="0,386,0,0" VerticalAlignment="Top" Width="362" RenderTransformOrigin="-1.967,3.802" Click="Button_Click_3" Background="White" FontSize="20" FontFamily="Arial Black"/>
+        Title="MainWindowManager" Height="750" Width="430" WindowStartupLocation="CenterScreen"
+    xmlns:System="clr-namespace:System;assembly=System.Runtime">
+    <Window.Resources>
+        <System:Double x:Key="ButtonOpacity1">1</System:Double>
+    </Window.Resources>
+    <Grid Background="white">
 
+
+        <Image Source="/img/managerr.jpeg" Margin="12,3,12,586"/>
+        <Button HorizontalAlignment="Center" Height="91" Margin="0,472,0,0" VerticalAlignment="Top" Width="362" RenderTransformOrigin="-1.967,3.802" Click="Button_Click_2" Background="#FFABADFB" FontSize="20" FontFamily="Arial Black"
+                 materialDesign:ButtonProgressAssist.Value="-1"
+                 materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                 materialDesign:ButtonProgressAssist.IsIndeterminate="True">
+            <TextBlock FontSize="40" Foreground="#FF170844">MEDICAMENTS</TextBlock>
+        </Button>
+
+        <Button  HorizontalAlignment="Center" Height="91" Margin="0,597,0,0" VerticalAlignment="Top" Width="362" Click="Button_Click_3" Background="#FFABADFB"
+                 materialDesign:ButtonProgressAssist.Value="-1"
+                 materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                 materialDesign:ButtonProgressAssist.IsIndeterminate="True">
+            <TextBlock FontSize="40" Foreground="#FF170844" FontWeight="Bold" FontFamily="Arial Black">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="0"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="0"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>POOLS</TextBlock>
+        </Button>
+
+        <Button  HorizontalAlignment="Center" Height="91" VerticalAlignment="Top" Width="362" Click="Button_Click" Background="#FFABADFB" Margin="0,214,0,0"
+                 materialDesign:ButtonProgressAssist.Value="-1"
+                 materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                 materialDesign:ButtonProgressAssist.IsIndeterminate="True">
+            
+            <TextBlock Foreground="#FF170844" FontSize="40" FontFamily="Arial Black" FontWeight="Bold">ROOMS</TextBlock>
+        </Button>
+
+        <Button  HorizontalAlignment="Center" Height="91" VerticalAlignment="Top" Width="362" Click="Button_Click_1" Background="#FFABADFB" Margin="0,342,0,0"
+                 materialDesign:ButtonProgressAssist.Value="-1"
+                 materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                 materialDesign:ButtonProgressAssist.IsIndeterminate="True">
+            <TextBlock Foreground="#FF170844" FontSize="40" FontFamily="Arial Black" FontWeight="Bold">EQUIPMENT</TextBlock>
+        </Button>
+        <Button HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" VerticalAlignment="Top" Width="29" Click="Button_Click_4" BorderBrush="White">
+            <Button.Background>
+                <ImageBrush ImageSource="/img/backk.jpg"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Odaberite stavku:"  HorizontalAlignment="Left" Height="29" Margin="86,167,0,0" VerticalAlignment="Top" Width="152"  BorderThickness="1" FontFamily="Arial" FontStyle="Italic" FontSize="16" FontWeight="Bold"/>
+        <Image Source="/img/finger.png" Margin="49,167,322,512" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-178.75"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 </Window>

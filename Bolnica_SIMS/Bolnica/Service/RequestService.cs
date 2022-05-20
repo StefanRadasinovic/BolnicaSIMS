@@ -2,7 +2,6 @@
 using Bolnica.Repository;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Bolnica.Service
 {
@@ -37,25 +36,25 @@ namespace Bolnica.Service
 
         }
 
-       /* public void CheckTime(DateTime date)
-        {
-            RequestEquipmentcs r = null;
-            foreach (RequestEquipmentcs r1 in requestRepository.ReadAll())
-            {
-                if (r1.DateMove == date)
-                {
-                    r = r1;
-                  
-                }
-              
+        /* public void CheckTime(DateTime date)
+         {
+             RequestEquipmentcs r = null;
+             foreach (RequestEquipmentcs r1 in requestRepository.ReadAll())
+             {
+                 if (r1.DateMove == date)
+                 {
+                     r = r1;
 
-            }
+                 }
 
-            if (r != null)
-            {
-                requestRepository.ReadAll().Add(r);
-            }
-        }*/
+
+             }
+
+             if (r != null)
+             {
+                 requestRepository.ReadAll().Add(r);
+             }
+         }*/
 
 
         public List<RequestEquipmentcs> ReadAll()
@@ -64,6 +63,6 @@ namespace Bolnica.Service
         }
 
         private RequestRepository requestRepository = new RequestRepository();
-       
-         }
+
     }
+}

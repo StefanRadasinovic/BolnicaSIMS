@@ -3,19 +3,19 @@
 // Created: Thursday, April 7, 2022 2:12:02 PM
 // Purpose: Definition of Class AppointmentService
 
+using Bolnica.Patient;
 using System;
 using System.Collections.Generic;
-using Bolnica.Patient;
 
 namespace Model
 {
-   public class AppointmentService
-   {
+    public class AppointmentService
+    {
         //  private List<Appointment> allAppointments;
         public static List<Appointment> allAppointments = new List<Appointment>();
 
         public static Appointment Create(Appointment appointment)
-      {
+        {
             allAppointments.Add(appointment);
             PatientView.Appointments.Add(appointment);
 
@@ -28,11 +28,11 @@ namespace Model
                 return null;
             }
         }
-      
-      public void Read(String appointmentID)
-      {
-         throw new NotImplementedException();
-      }
+
+        public void Read(String appointmentID)
+        {
+            throw new NotImplementedException();
+        }
 
         public bool Update(String appointmentID, DateTime date, DateTime time)
         {
@@ -61,8 +61,8 @@ namespace Model
             if (!appointment.Date.Equals(date))
                 appointment.Date = date;
 
-           // if (!appointment.TimeStart.Equals(time))
-             //   appointment.TimeStart = time;
+            // if (!appointment.TimeStart.Equals(time))
+            //   appointment.TimeStart = time;
 
             Delete(appointmentID);
             Create(appointment);

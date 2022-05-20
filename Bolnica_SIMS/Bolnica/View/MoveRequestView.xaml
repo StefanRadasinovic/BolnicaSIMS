@@ -5,22 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bolnica.View"
         mc:Ignorable="d"
-        Title="MoveRequestView" Height="450" Width="800">
-    <Grid Background="MistyRose">
-        <DataGrid x:Name="DGM" HorizontalAlignment="Left" Height="330" Margin="184,49,0,0" VerticalAlignment="Top" Width="286" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <Label Content="Equipment ID" HorizontalAlignment="Left" Height="28" Margin="548,27,0,0" VerticalAlignment="Top" Width="146"/>
+        Title="MoveRequestView" Height="750" Width="450">
+    <Grid Background="White">
+        <DataGrid x:Name="DGM" HorizontalAlignment="Left" Height="416" Margin="16,179,0,0" VerticalAlignment="Top" Width="416" d:ItemsSource="{d:SampleData ItemCount=5}" RenderTransformOrigin="0.5,0.5" IsSynchronizedWithCurrentItem="True"
+               CanUserResizeColumns="False"
+                  ColumnWidth="*"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  VerticalScrollBarVisibility="Hidden"
+                  AutoGenerateColumns="False"
+                  >
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.156"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.497"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding EqID}" Header="ID"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding RoomType}" Header="Room Type"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding DateMove}" Header="Date Move"></DataGridTextColumn>
 
-        <Label Content="Room Type " HorizontalAlignment="Left" Height="32" Margin="548,113,0,0" VerticalAlignment="Top" Width="125"/>
-
-        <Label Content="DateMove" HorizontalAlignment="Left" Height="32" Margin="548,217,0,0" VerticalAlignment="Top" Width="100"/>
-        <ComboBox x:Name="cbox" HorizontalAlignment="Left" Height="32" Margin="548,150,0,0" VerticalAlignment="Top" Width="174">
-      
-        </ComboBox>
-        <DatePicker x:Name="date_move" HorizontalAlignment="Left" Height="30" Margin="548,254,0,0" VerticalAlignment="Top" Width="174"/>
-        <Button Content="Back" HorizontalAlignment="Left" Height="45" Margin="28,49,0,0" VerticalAlignment="Top" Width="107" Click="Button_Click_2"/>
-        <Button Content="Move" HorizontalAlignment="Left" Height="48" Margin="28,166,0,0" VerticalAlignment="Top" Width="107" Click="Button_Click"/>
-        <Button Content="Cancle Move" HorizontalAlignment="Left" Height="43" Margin="28,284,0,0" VerticalAlignment="Top" Width="107" Click="Button_Click_1"/>
-        <TextBox x:Name="tb_id" HorizontalAlignment="Left" Height="22" Margin="548,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="" HorizontalAlignment="Left" Height="58" Margin="113,101,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/img/move.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Height="58" Margin="257,101,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="/img/kanta.png"/>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Height="65" Margin="38,661,0,0" VerticalAlignment="Top" Width="66" OpacityMask="#FF0C0808" BorderBrush="white" Click="Soba" Foreground="#FF040404">
+            <Button.Background>
+                <ImageBrush ImageSource="/img/soba.png"/>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Height="65" Margin="136,661,0,0" VerticalAlignment="Top" Width="65" OpacityMask="#FF0C0808" BorderBrush="white" Click="Oprema" Foreground="#FF040404">
+            <Button.Background>
+                <ImageBrush ImageSource="/img/oprema.png"/>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Height="65" Margin="236,661,0,0" VerticalAlignment="Top" Width="65" OpacityMask="#FF0C0808" BorderBrush="white" Click="Lekovi" Foreground="#FF040404">
+            <Button.Background>
+                <ImageBrush ImageSource="/img/lek.png"/>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Left" Height="65" Margin="325,661,0,0" VerticalAlignment="Top" Width="65" OpacityMask="#FF0C0808" BorderBrush="white" Click="Anketa" Foreground="#FF040404">
+            <Button.Background>
+                <ImageBrush ImageSource="/img/anketa.jpg"/>
+            </Button.Background>
+        </Button>
+        <Separator HorizontalAlignment="Center" Height="10" Margin="0,646,0,0" VerticalAlignment="Top" Width="450" Background="#FF225052" OpacityMask="#FF0C0808"/>
+        <Label Content="MOVE REQUEST" Height="74" VerticalAlignment="Top" Foreground="#FF131B5B" FontSize="36" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontFamily="Arial" FontWeight="Bold" Background="#FFF7819C" BorderBrush="Brown" BorderThickness="1" HorizontalAlignment="Left" Width="450" Margin="53,0,0,0"/>
 
     </Grid>
 

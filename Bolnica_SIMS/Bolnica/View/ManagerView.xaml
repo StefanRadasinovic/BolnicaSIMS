@@ -1,0 +1,22 @@
+﻿<Window x:Class="Bolnica.View.ManagerView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Bolnica.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="750" d:DesignWidth="430"
+      Title="ManagerView">
+
+    <Grid Background="White">
+        <Label Content="Ime:" HorizontalAlignment="Left" Height="43" Margin="43,160,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label Content="Prezime:" HorizontalAlignment="Left" Height="43" Margin="43,230,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label HorizontalAlignment="Left" Height="43" Margin="43,309,0,0" VerticalAlignment="Top" Width="132" Content="Broj telefona:"/>
+        <Label Content="E=mail:" HorizontalAlignment="Left" Height="43" Margin="43,375,0,0" VerticalAlignment="Top" Width="132"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="215,160,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="185"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="215,230,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="185"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="215,308,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="185"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="215,374,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="185"/>
+
+    </Grid>
+</Window>

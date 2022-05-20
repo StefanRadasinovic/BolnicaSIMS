@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Bolnica.Manager
+﻿namespace Bolnica.Manager
 {
     internal enum EqTypeID
     {
-       A1,
-       A2,
-       A3,
-       A4,
-       A5
+        A1,
+        A2,
+        A3,
+        A4,
+        A5
     }
 }

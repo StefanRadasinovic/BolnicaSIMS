@@ -1,41 +1,45 @@
 ﻿using Bolnica.Model;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Bolnica.Manager
 {
-    internal class RenovationService
-    {
-
-        public void Delete(String RoomID)
+        internal class RenovationService
         {
-            Renovation r = null;
-            foreach (Renovation r1 in renovationRepository.ReadAll()) {
-                if (r1.RoomID1 == RoomID) {
-                    r = r1;
+
+            public void Delete(String RoomID)
+            {
+                Renovation renovations = null;
+                foreach (Renovation renovation in renovationRepository.ReadAll())
+                {
+                    if (renovation.RoomID1 == RoomID)
+                    {
+                        renovations = renovation;
+
+                    }
 
                 }
 
+                if (renovations != null)
+                {
+                    renovationRepository.ReadAll().Remove(renovations);
+                }
             }
 
-            if (r != null) {
-                renovationRepository.ReadAll().Remove(r);
+            public void Create(Renovation renovation)
+            {
+                renovationRepository.ReadAll().Add(renovation);
+                renovationRepository.Serialize();
+
+
             }
-        }
 
-        public void Create(Renovation r) {
-            renovationRepository.ReadAll().Add(r);
-            renovationRepository.Serialize();
+            public List<Renovation> ReadAll()
+            {
+                return renovationRepository.ReadAll();
+            }
 
-
-        }
-
-        public List<Renovation> ReadAll() {
-            return renovationRepository.ReadAll();
-        }
-
-        private RenovationRepository renovationRepository = new RenovationRepository();
+            private RenovationRepository renovationRepository = new RenovationRepository();
 
     }
 }

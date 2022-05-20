@@ -3,25 +3,39 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:gif="https://github.com/XamlAnimatedGif/XamlAnimatedGif"
+        xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Bolnica.Manager"
         mc:Ignorable="d"
         Title="RoomRegister" Height="750" Width="430" WindowStartupLocation="CenterScreen">
-    <Grid x:Name="RMV" Background="PeachPuff">
-        <StackPanel Margin="50,50,50,180">
-            <Label FontSize="16" FontFamily="Arial">RoomId</Label>
-            <TextBox x:Name="tb_id" Height="38"></TextBox>
-            <Label FontSize="16" FontFamily="Arial">Floor</Label>
-            <TextBox x:Name="tb_floor" Height="37"></TextBox>
-            <Label FontSize="16" FontFamily="Arial">RoomName</Label>
-            <TextBox Name="tb_name" Height="34"></TextBox>
-            <Label FontSize="16" FontFamily="Arial">Rooms Type</Label>
-            <ComboBox Name="cbox" Width="318" Height="37">
-                <ComboBoxItem Content="Operating Room"></ComboBoxItem>
-                <ComboBoxItem Content="Examination Room"></ComboBoxItem>
-                <ComboBoxItem Content="Rest Room"></ComboBoxItem>
-                <ComboBoxItem Content="Waiting Room"></ComboBoxItem>
-                <ComboBoxItem Content="Meeting Room"></ComboBoxItem>
-                <ComboBoxItem Content="Laboratory"></ComboBoxItem>
+    <Grid x:Name="RMV" Background="white">
+        <StackPanel Margin="49,191,51,187">
+            <Label FontSize="18" FontFamily="Arial" Content="RoomId"/>
+            <TextBox x:Name="tb_id" Height="38"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Label FontSize="18" FontFamily="Arial" Content="Floor" />
+            <TextBox x:Name="tb_floor" Height="37"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Label FontSize="18" FontFamily="Arial" Content="RoomName"/>
+            <TextBox x:Name="tb_name" Height="34"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Label FontSize="18" FontFamily="Arial" Content="Rooms Type"/>
+            <ComboBox x:Name="cbox" Width="310" Height="37">
+                <ComboBoxItem Content="Operating Room"/>
+                <ComboBoxItem Content="Examination Room"/>
+                <ComboBoxItem Content="Rest Room"/>
+                <ComboBoxItem Content="Waiting Room"/>
+                <ComboBoxItem Content="Meeting Room"/>
+                <ComboBoxItem Content="Laboratory"/>
 
             </ComboBox>
 
@@ -32,8 +46,6 @@
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>
 
-
-            <Button Click="Button_Click" Height="61" FontSize="22" FontFamily="Arial Black">Register</Button>
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>
@@ -41,12 +53,20 @@
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>
-            <Button Click="Button_Click_1" Content="Back" Height="61" RenderTransformOrigin="0.5,1.835" FontSize="22" FontFamily="Arial Black"/>
-
-
-
-
 
         </StackPanel>
+        <Button Click="Button_Click" FontSize="22" FontFamily="Arial Black"  Margin="108,587,244,59" BorderBrush="White">
+            <Button.Background>
+                <ImageBrush ImageSource="/img/save.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Create" HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="359" FontSize="36" HorizontalContentAlignment="Left" FontFamily="Arial" VerticalContentAlignment="Center" BorderBrush="DarkBlue" BorderThickness="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Foreground="White" Margin="71,0,0,0" Background="#FF174DA4" Padding="5,5,8,5"/>
+        <Button HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="67" Click="Button_Click_1" Margin="244,586,0,0" BorderBrush="White" RenderTransformOrigin="0.429,0.808">
+            <Button.Background>
+                <ImageBrush ImageSource="/img/odustanak.png"/>
+            </Button.Background>
+        </Button>
+        <Image gif:AnimationBehavior.SourceUri="/img/logo.gif" Margin="-1,3,344,649"/>
+        <Image gif:AnimationBehavior.SourceUri="/img/arroww.gif" Margin="42,81,30,532"/>
     </Grid>
 </Window>

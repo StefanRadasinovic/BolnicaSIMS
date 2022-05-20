@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Bolnica.Manager
 {
@@ -41,10 +40,11 @@ namespace Bolnica.Manager
             return equipmentRepository.ReadAll();
         }
 
-        public bool MoveEquipment(RequestEquipmentcs requestEquipmentcs,string id) {
-            equipmentRepository.Read(id).Request.Add(requestEquipmentcs);               
-             return true;
-        
+        public bool MoveEquipment(RequestEquipmentcs requestEquipmentcs, string id)
+        {
+            equipmentRepository.Read(id).Request.Add(requestEquipmentcs);
+            return true;
+
         }
 
 
