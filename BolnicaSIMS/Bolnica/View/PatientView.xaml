@@ -88,14 +88,14 @@
 
 
         <DataGrid x:Name="GridDataPatientView" ItemsSource="{Binding Appointments}" IsReadOnly="true"
-                  SelectionMode="Single" Grid.RowSpan="5" Margin="68,253,67,106" Background="White"
+                  SelectionMode="Single" Grid.RowSpan="5" Margin="68,253,159,106" Background="White"
                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" AutoGenerateColumns="False" Grid.Row="3">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="AppointmentID" Binding="{Binding AppointmentID}" Width="97">
                 </DataGridTextColumn>
                 <DataGridTextColumn Header="DocotorID" Binding="{Binding DocotorID}" Width="97"   />
-                <DataGridTextColumn Header="Patient" Binding="{Binding Patient}" Width="97" />
+
                 <DataGridTextColumn Header="Date" Binding="{Binding Date }" Width="130"/>
                 <DataGridTextColumn Header="TimeStart" Binding="{Binding Time}" Width="117"/>
                 <DataGridTextColumn Header="TimeEnd" Binding="{Binding TimeEnd}" Width="124"/>
@@ -113,19 +113,19 @@
 
         </Button>
 
-        
+
 
 
         <StackPanel Grid.Row="3" Grid.Column="2" Margin="89,19,31,84">
             <Label Content="User  Profile:" FontSize="23" HorizontalAlignment="Center" Width="148"></Label>
             <Image  HorizontalAlignment="Center" Source="/Pictures/Patient/user.png" Height="109" Width="117"/>
-            
+
             <ComboBox   HorizontalAlignment="Center" Name="Combobox" Height="23" Width="40" Background="LightGray">
                 <ComboBoxItem Width="125" Background="Transparent">
                     <Button Content="Manage Profile" HorizontalContentAlignment="Center" Width="120" Background="LightGray" Click="Button_Back"></Button>
-                    
+
                 </ComboBoxItem>
-                
+
                 <Separator Width="143"  />
                 <ComboBoxItem Width="125" Background="Transparent">
                     <Button Content="Log Out" HorizontalContentAlignment="Center" Click="Button_Back" Width="120" Background="LightGray"></Button>
@@ -148,12 +148,16 @@
 
 
 
-
+        <Button Grid.Column="1" Grid.Row="9" Content="Rate Doctor" Click="Button_RateDoctor2" FontSize="25" Background="#FF31577E"  Margin="55,36,114,26" />
+        
         <Button Grid.Column="1" Grid.Row="5" Content="Medical Record" Click="Button_Medical_Record" FontSize="25" Background="#FF31577E"  Margin="55,36,114,26" />
         <Button Grid.Column="1" Grid.Row="6" Margin="55,36,114,26"  Content="Therapy"  Click="Button_Therapy" FontSize="25" Background="#FF31577E" />
         <Button  Grid.Column="1" Grid.Row="7" Margin="55,36,114,26" Content="Notes"  Click="Button_Notes"  FontSize="25" Background="#FF31577E" />
+        <Button  Grid.Column="1" Grid.Row="8" Margin="55,36,114,26" Content="Survey"  Click="Button_Survey"  FontSize="25" Background="#FF31577E" />
 
-        <Label Grid.Column="1" Grid.Row="4" FontWeight="Bold" Margin="10,20,68,20" Content="Other OPTIONS :" FontSize="25"  HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" />
+        
+
+        <Label Grid.Column="1" Grid.Row="3" FontWeight="Bold" Margin="27,265,51,25" Content="Other OPTIONS :" FontSize="25"  HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" />
 
         <StackPanel  Height="209" VerticalAlignment="Top"  Background="LightSkyBlue" Grid.Column="0" Margin="62,39,67,0" Grid.Row="3">
             <Label Content=" WELCOME TO BOLNICA" Width="465" Height="56" FontSize="40" FontWeight="Bold"/>
@@ -173,18 +177,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+        <Grid x:Name="MainPanel"/>
 
 
 

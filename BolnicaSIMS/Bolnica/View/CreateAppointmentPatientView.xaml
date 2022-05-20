@@ -8,7 +8,20 @@
         Title="CreateAppointmentPatientView" Height="570" Width="430" WindowStartupLocation="CenterScreen">
     <Grid Background="LightSkyBlue">
         <StackPanel Margin="40">
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            
+            <Label>Priority</Label>
+            <ComboBox Name="priority" Margin="00 00 00 20" Width="327">
+                <ComboBoxItem HorizontalAlignment="Center">Date</ComboBoxItem>
+                <ComboBoxItem HorizontalAlignment="Center">Doctor</ComboBoxItem>
+            </ComboBox>
 
+            <Separator Width="20" Background="Transparent"/>
+            <Separator Width="20" Background="Transparent"/>
+            
+           
             <Label>Date</Label>
             <DatePicker Name="date" Width="327"></DatePicker>
             
