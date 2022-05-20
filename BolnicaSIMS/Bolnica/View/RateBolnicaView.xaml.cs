@@ -68,6 +68,7 @@ namespace Bolnica.View
             //     PatientView.GetMainContent().Children.Add(new SurveyView());
 
             //SurveyView sv = new SurveyView();
+            MessageBox.Show("You Successfully Rated Bolnica!");
             this.Close();
            // sv.Show();
 

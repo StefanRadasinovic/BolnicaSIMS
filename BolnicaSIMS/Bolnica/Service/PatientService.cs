@@ -10,6 +10,9 @@ namespace Service
     class PatientService
     {
         private static List<Patient> patients = new List<Patient>();
+        private static List<Patient> Allpatients = new List<Patient>();
+
+
         private String fileName = "C:\\Users\\Branislav\\Desktop\\FAKS\\SIMS\\Projekat konacan\\BolnicaSIMS\\Bolnica_SIMS\\Bolnica\\Resources\\patients.txt";
 
         public bool RegisterPatient(Patient patient)
@@ -38,6 +41,8 @@ namespace Service
 
         }
 
+       
+
         public bool DeletePatient(int jmbg)
         {
             Patient p = GetPatientByJMBG(jmbg);
@@ -63,6 +68,21 @@ namespace Service
             }
             return null;
         }
+
+        public static Patient SearchID(String id)
+        {
+            foreach (Patient p in patients)
+            {
+                if (p.Username.Equals(id))
+                {
+
+                    return p;
+                }
+            }
+            return null;
+        }
+
+
 
         public PatientRepository patientRepository;
 

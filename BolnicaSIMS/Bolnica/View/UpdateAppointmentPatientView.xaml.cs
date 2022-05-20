@@ -49,10 +49,20 @@ namespace Bolnica.View
 
             
 
+            AppointmentService.CheckPatientAccount(PatientView.logIN);
+
+            if (PatientView.logIN.Blocked)
+            {
+                MessageBox.Show("You are blocked ");
+                return;
+            }
+            
+
+
             this.Close();
 
 
-
+            
         }
 
 

@@ -13,6 +13,8 @@ namespace Service
 {
    public class AppointmentService
    {
+
+        public static int MAX_NUM = 5;
         // private List<Appointment> allAppointments;
         public static List<Appointment> allAppointments = new List<Appointment>();
 
@@ -52,8 +54,20 @@ namespace Service
 
             return true;
         }
+        
+        public static bool CheckPatientAccount(Patient patient)
+        {
+            int num = patient.Abuse + 1;
+            patient.Abuse = num;
+            if (patient.Abuse > MAX_NUM)
+            {
+                patient.Blocked = true;
+                return true;
+            }
+            return false;
 
-       
+        }
+        
 
 
         public bool Delete(String appointmentID)

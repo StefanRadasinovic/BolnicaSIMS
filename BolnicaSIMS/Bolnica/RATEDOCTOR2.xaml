@@ -122,7 +122,7 @@
         </Grid>
         <Label Margin="10 0" FontSize="12" >Additional comments:</Label>
         <TextBox x:Name="MoreComment" Margin="10 0" Height="115"></TextBox>
-        <Button Name="PosaljiAnketu" Click="Confirm_Click"  Height="30"  Margin="5 10 10 30" Background="#FF31577E" Width="370" >
+        <Button Name="Confirm" Click="Confirm_Click"  Height="30"  Margin="5 10 10 30" Background="#FF31577E" Width="370" >
             <Run Foreground="AntiqueWhite">Confirm</Run>
         </Button>
 

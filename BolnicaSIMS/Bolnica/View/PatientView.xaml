@@ -6,7 +6,7 @@
        
         xmlns:local="clr-namespace:Bolnica.View"
         mc:Ignorable="d"
-        Title="PatientView" Height="1080" Width="1920" WindowStartupLocation="CenterScreen">
+        Title="PatientView" Height="1030" Width="1620" WindowStartupLocation="CenterScreen">
     <Grid Background="LightSkyBlue">
 
 
@@ -157,7 +157,7 @@
 
         
 
-        <Label Grid.Column="1" Grid.Row="3" FontWeight="Bold" Margin="27,265,51,25" Content="Other OPTIONS :" FontSize="25"  HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" />
+        <Label Grid.Column="1" Grid.Row="3" FontWeight="Bold" Margin="27,265,51,10" Content="Other OPTIONS :" FontSize="25"  HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" />
 
         <StackPanel  Height="209" VerticalAlignment="Top"  Background="LightSkyBlue" Grid.Column="0" Margin="62,39,67,0" Grid.Row="3">
             <Label Content=" WELCOME TO BOLNICA" Width="465" Height="56" FontSize="40" FontWeight="Bold"/>

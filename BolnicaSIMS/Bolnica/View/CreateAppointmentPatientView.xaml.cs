@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Model;
 using Controller;
+using Service;
 
 namespace Bolnica.View
 {
@@ -32,6 +33,11 @@ namespace Bolnica.View
         }
         private void Button_Confirm(object sender, RoutedEventArgs e)
         {
+
+           
+
+
+
 
             String appointmentID = "A" + (increase().ToString());
 
@@ -69,6 +75,23 @@ namespace Bolnica.View
             //  Appointment a = (appointmentID,DoctorID, p, date,  format, TimeStart, roomNumber); ////kako ove objekte da formatiram a da mi budu ko u Appointmenttu
 
             AppointmentController.Create(a);
+
+
+
+
+            
+            AppointmentService.CheckPatientAccount(PatientView.logIN);
+
+            if (PatientView.logIN.Blocked)
+            {
+                MessageBox.Show("You are blocked ");
+                return;
+            }
+
+            
+
+
+
 
             this.Close();
 

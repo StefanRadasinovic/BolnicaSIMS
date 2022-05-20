@@ -29,11 +29,11 @@ namespace Bolnica.View
         ///  OVO TI SLUZI ZA LOG in-mozda bude zezao oko SurveyView Linija 35 PatientView.logIN
         /// </summary>
 
-        public PatientView()
+        public PatientView(String PatientID)
         {
             InitializeComponent();
 
-            
+            logIN = PatientService.SearchID(PatientID);
 
             this.DataContext = this;
 
@@ -52,6 +52,8 @@ namespace Bolnica.View
 
 
         }
+
+
 
         
         private void Button_Create(object sender, RoutedEventArgs e) //OVO JE CREATE  

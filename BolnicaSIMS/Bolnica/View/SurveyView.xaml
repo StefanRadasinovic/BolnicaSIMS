@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bolnica.View"
         mc:Ignorable="d"
-         Height="700" Width="600">
+         Height="700" Width="600" WindowStartupLocation="CenterScreen">
     <StackPanel Background="White">
         <Label Margin="20 00" FontFamily="Times New Roman" FontSize="15">Available Surveys</Label>
         <ListBox x:Name="PatientSurvey" SelectionMode="Single" Height="413" Margin="25,0,25.4,0" Width="542">

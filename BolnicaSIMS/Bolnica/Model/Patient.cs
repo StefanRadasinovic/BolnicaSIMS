@@ -15,6 +15,11 @@ namespace Model
         //private List<String> alergies;
         //private List<String> appointments;
 
+        public int Abuse { get; set; }
+        public bool Blocked { get; set; }
+
+
+
         public Patient(String name, String surname, int jmbg, String date, String phone, String email, String username, String pass)
         {
             Name = name;
@@ -25,20 +30,18 @@ namespace Model
             Email = email;
             Username = username;
             Password = pass;
+
+            Abuse = 0;
+            Blocked = false;
+
             //drugs = new List<String>();
             //alergies = new List<String>();
             //appointments = new List<String>();
         }
         public Patient() { }
-
-        public Patient(string username)
-        {
-            this.Username = username;
-        }
-        
         public void fromCSV(string[] values)
         {
-            
+
             Name = values[0];
             Surname = values[1];
             Jmbg = int.Parse(values[2]);

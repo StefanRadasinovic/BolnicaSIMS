@@ -74,10 +74,10 @@ namespace Bolnica
             SurveyService.AddSurvey(new Model.Survey(PatientView.logIN, DateTime.Now, operationSurvey, SurveyService.questionsAboutOperation, MoreComment.Text));
             SurveyService.ReadSurvey();
 
-           // PatientView.GetMainContent().Children.Clear();
-           // PatientView.GetMainContent().Children.Add(new SurveyView());
+            // PatientView.GetMainContent().Children.Clear();
+            // PatientView.GetMainContent().Children.Add(new SurveyView());
 
-            
+            MessageBox.Show("You Successfully Rated Doctor!");
             this.Close();
            
 

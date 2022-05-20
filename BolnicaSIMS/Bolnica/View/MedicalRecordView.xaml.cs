@@ -22,12 +22,13 @@ namespace Bolnica.View
             InitializeComponent();
         }
 
+        public string PatientID { get; private set; }
 
         private void Button_Back(object sender, RoutedEventArgs e)
         {
-            PatientView patientView = new PatientView();
+         //   PatientView patientView = new PatientView(PatientID);
             this.Close();
-            patientView.Show();
+          //  patientView.Show();
 
         }
 
