@@ -57,8 +57,8 @@ namespace Bolnica.View
                 UpdateMedicament up = new UpdateMedicament(m);
                 up.Show();
                 nevalidationMedicaments.DGNVM.Items.Refresh();
-               // DGM.Items.Refresh();
-
+                // DGM.Items.Refresh();
+                
 
             }
             else

@@ -20,12 +20,26 @@ namespace Bolnica.View
     /// </summary>
     public partial class NevalidationMedicaments : Window
     {
-        private ObservableCollection<Medicament> Medicament;
+        private ObservableCollection<NoValidation> Medicament;
         MedicamentController mc = new MedicamentController();
+        NoValidationController noValidation = new NoValidationController();
         public NevalidationMedicaments()
         {
             InitializeComponent();
-            //DGNVM.ItemsSource = mc.GetAll();
+            DGNVM.ItemsSource = noValidation.GetAll();
+
+            this.DataContext = this;
+
+            Medicament = new ObservableCollection<NoValidation>();
+
+            DGNVM.ItemsSource = Medicament;
+
+
+            foreach (NoValidation m in noValidation.GetAll())
+            {
+                Medicament.Add(m);
+            }
+
         }
 
 

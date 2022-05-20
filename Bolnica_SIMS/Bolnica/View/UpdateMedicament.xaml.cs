@@ -42,7 +42,7 @@ namespace Bolnica.View
             MedicamentCategoria MedicamentsCategoria = (MedicamentCategoria)cbox_categoria.SelectedIndex;
             Medicament medicaments = new Medicament(MedicamentID, MedicamentName, MedicamentType, Substances, MedicamentsCategoria);
             medicamentController.Update(medicaments);
-            
+           // MessageBox.Show("Prikazi");
             this.Close();
 
         }

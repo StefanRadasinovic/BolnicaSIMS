@@ -10,6 +10,10 @@ namespace Bolnica.Service
         MedicamentRepository medicamentRepository = new MedicamentRepository();
         List<Medicament> medicaments = new List<Medicament>();
         List<String> listOfSubstances = new List<String>();
+        NotValidationRepository notValidationRepository = new NotValidationRepository();
+        NoValidationService noValidationService = new NoValidationService();
+        NoValidation noValidation = new NoValidation();
+        //NoValidation noValidation;
 
         public void Create(Medicament medicament)
         {
@@ -70,7 +74,8 @@ namespace Bolnica.Service
             medicamentRepository.GetMedicament(medicament.MedicamentID1);
             Delete(medicament.MedicamentID1);
             Create(medicament);
-            medicamentRepository.Serialize();
+            //noValidationService.Create(noValidation);
+          //  medicamentRepository.Serialize();
 
         }
 
