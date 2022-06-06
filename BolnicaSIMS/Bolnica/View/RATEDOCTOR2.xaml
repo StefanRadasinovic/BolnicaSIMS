@@ -1,12 +1,12 @@
-﻿<Window x:Class="Bolnica.View.RateBolnicaView"
+﻿<Window x:Class="Bolnica.RATEDOCTOR2"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Bolnica.View"
+        xmlns:local="clr-namespace:Bolnica"
         mc:Ignorable="d"
-        Title="RateBolnicaView" Height="1030" Width="1630" WindowStartupLocation="CenterScreen">
-    <StackPanel Background="#42A5F5" >
+        Title="RATEDOCTOR2" Height="1030" Width="1630" WindowStartupLocation="CenterScreen">
+    <StackPanel Background="#42A5F5" Margin="0,0,0,-16" >
 
         <Grid>
 
@@ -84,7 +84,7 @@
         </Grid>
 
 
-        <Label Margin="10 0" FontSize="35" FontWeight="Bold" HorizontalAlignment="Left">Rate Bolnica</Label>
+        <Label Margin="10 0" FontSize="35" FontWeight="Bold" HorizontalAlignment="Left">Rate Doctor</Label>
         <StackPanel Width="1586" Height="99" RenderTransformOrigin="0.5,0.5">
 
             <Image  HorizontalAlignment="Right" Source="/Pictures/Patient/user.png" Height="97" Width="121" RenderTransformOrigin="0.5,0.5">
@@ -115,10 +115,11 @@
         </StackPanel>
 
 
-        <Separator Height="7"  Background="#42A5F5"></Separator>
+
+        <Separator Height="3"  Background="#42A5F5"></Separator>
         <Separator></Separator>
-        <StackPanel Orientation="Horizontal" Width="1626">
-            <StackPanel Width="1188" Height="159">
+        <StackPanel Orientation="Horizontal" Width="1600">
+            <StackPanel Width="1240" Height="159">
 
                 <Separator Height="15"  Background="#42A5F5"></Separator>
                 <Label Margin="10 0" FontSize="12" HorizontalContentAlignment="Left">1 - Poor</Label>
@@ -128,7 +129,7 @@
                 <Label Margin="10 0" FontSize="12"  HorizontalContentAlignment="Left">5- Excellent</Label>
             </StackPanel>
 
-            <StackPanel Height="151" RenderTransformOrigin="0.5,0.5" Width="222">
+            <StackPanel Height="151" RenderTransformOrigin="0.5,0.5" Width="167">
                 <StackPanel.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -137,7 +138,7 @@
                         <TranslateTransform Y="-0.396"/>
                     </TransformGroup>
                 </StackPanel.RenderTransform>
-                <Image Source="/Pictures/Patient/rate.png" Height="150" Width="198" RenderTransformOrigin="1.096,0.506"/>
+                <Image Source="/Pictures/Patient/IMG_4557.jpeg" Height="145" Width="182" RenderTransformOrigin="0.5,0.5"/>
 
 
             </StackPanel>
@@ -145,16 +146,16 @@
 
 
         </StackPanel>
-        <Separator Height="8"></Separator>
-        <Separator Height="8"  Background="#42A5F5"></Separator>
-        <Grid Margin="10,0,10.4,0" RenderTransformOrigin="0.667,0.509" Height="237">
+        <Separator Height="4"></Separator>
+        <Separator Height="4"  Background="#42A5F5"></Separator>
+        <Grid Margin="10,0,10.4,0" RenderTransformOrigin="0.667,0.509" Height="237" Width="1592">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="88*"></ColumnDefinition>
+                <ColumnDefinition Width="87*"></ColumnDefinition>
                 <ColumnDefinition Width="21*"/>
-                <ColumnDefinition Width="64*"/>
-                <ColumnDefinition Width="1004*"/>
-                <ColumnDefinition Width="0*"></ColumnDefinition>
-                <ColumnDefinition Width="432*"/>
+                <ColumnDefinition Width="63*"/>
+                <ColumnDefinition Width="892*"/>
+                <ColumnDefinition Width="19*"></ColumnDefinition>
+                <ColumnDefinition Width="510*"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
@@ -167,8 +168,8 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Label Grid.Column="0" Grid.Row="0" Margin="0,0,6,34" FontSize="13" Grid.RowSpan="2" FontWeight="DemiBold" Grid.ColumnSpan="4"  >1. Appearance of Bolnica</Label>
-            <ComboBox Grid.Column="5" Grid.Row="0" Margin="27,5,237,5" Name="question1">
+            <Label Grid.Column="0" Grid.Row="0" Margin="0,0,6,34" FontSize="13" Grid.RowSpan="2" FontWeight="DemiBold" Grid.ColumnSpan="4"  >1. Doctor apperance</Label>
+            <ComboBox Grid.Column="5" Grid.Row="0" Margin="163,5,191,5" Name="question1">
                 <ComboBoxItem>1</ComboBoxItem>
                 <ComboBoxItem>2</ComboBoxItem>
                 <ComboBoxItem>3</ComboBoxItem>
@@ -176,8 +177,8 @@
                 <ComboBoxItem>5</ComboBoxItem>
             </ComboBox>
 
-            <Label Grid.Column="0" Grid.Row="1" Margin="0,0,6,34" FontSize="13" FontWeight="DemiBold" Grid.ColumnSpan="4" Grid.RowSpan="2"  >2. Bolnica hygiene</Label>
-            <ComboBox Grid.Column="5" Grid.Row="1" Margin="27,5,237,5" Name="question2">
+            <Label Grid.Column="0" Grid.Row="1" Margin="0,0,6,34" FontSize="13" FontWeight="DemiBold" Grid.ColumnSpan="4" Grid.RowSpan="2"  >2. Doctor professionalism</Label>
+            <ComboBox Grid.Column="5" Grid.Row="1" Margin="163,5,191,5" Name="question2">
                 <ComboBoxItem>1</ComboBoxItem>
                 <ComboBoxItem>2</ComboBoxItem>
                 <ComboBoxItem>3</ComboBoxItem>
@@ -185,8 +186,8 @@
                 <ComboBoxItem>5</ComboBoxItem>
             </ComboBox>
 
-            <Label Grid.Column="0" Grid.Row="2" Margin="0,0,6,33" FontSize="13" Grid.RowSpan="2" FontWeight="DemiBold" Grid.ColumnSpan="4" >3. Bolnica location</Label>
-            <ComboBox Grid.Column="5" Grid.Row="2" Margin="27,5,237,5" Name="question3">
+            <Label Grid.Column="0" Grid.Row="2" Margin="0,0,6,33" FontSize="13" Grid.RowSpan="2" FontWeight="DemiBold" Grid.ColumnSpan="4" >3. Waiting time</Label>
+            <ComboBox Grid.Column="5" Grid.Row="2" Margin="163,5,191,5" Name="question3">
                 <ComboBoxItem>1</ComboBoxItem>
                 <ComboBoxItem>2</ComboBoxItem>
                 <ComboBoxItem>3</ComboBoxItem>
@@ -194,8 +195,8 @@
                 <ComboBoxItem>5</ComboBoxItem>
             </ComboBox>
 
-            <Label Grid.Column="0" Grid.Row="3" Margin="0,0,6,0" FontSize="13" FontWeight="DemiBold" Grid.ColumnSpan="4">4. Parking lots</Label>
-            <ComboBox Grid.Column="5" Grid.Row="3" Margin="27,5,237,5" Name="question4">
+            <Label Grid.Column="0" Grid.Row="3" Margin="0,0,6,0" FontSize="13" FontWeight="DemiBold" Grid.ColumnSpan="4">4. Room hygiene</Label>
+            <ComboBox Grid.Column="5" Grid.Row="3" Margin="163,5,191,5" Name="question4">
                 <ComboBoxItem>1</ComboBoxItem>
                 <ComboBoxItem>2</ComboBoxItem>
                 <ComboBoxItem>3</ComboBoxItem>
@@ -203,8 +204,8 @@
                 <ComboBoxItem>5</ComboBoxItem>
             </ComboBox>
 
-            <Label Grid.Column="0" Grid.Row="3" Margin="0,33,6,33" FontSize="13" Grid.RowSpan="3" FontWeight="DemiBold" Grid.ColumnSpan="4" >5.Bolnica application</Label>
-            <ComboBox Grid.Column="5" Grid.Row="4" Margin="27,5,237,5" Name="question5">
+            <Label Grid.Column="0" Grid.Row="3" Margin="0,33,6,33" FontSize="13" Grid.RowSpan="3" FontWeight="DemiBold" Grid.ColumnSpan="4" >5.Staff friendliness</Label>
+            <ComboBox Grid.Column="5" Grid.Row="4" Margin="163,5,191,5" Name="question5">
                 <ComboBoxItem>1</ComboBoxItem>
                 <ComboBoxItem>2</ComboBoxItem>
                 <ComboBoxItem>3</ComboBoxItem>
@@ -212,8 +213,8 @@
                 <ComboBoxItem>5</ComboBoxItem>
             </ComboBox>
 
-            <Label Grid.Column="0" Grid.Row="5" Margin="0,1,6,0" FontSize="13" FontWeight="DemiBold" Grid.ColumnSpan="4" >6. Bolnica staff evaluation</Label>
-            <ComboBox Grid.Column="5" Grid.Row="5" Margin="27,5,237,5" Name="question6" >
+            <Label Grid.Column="0" Grid.Row="5" Margin="0,1,6,0" FontSize="13" FontWeight="DemiBold" Grid.ColumnSpan="4" >6.Operation satisfaction</Label>
+            <ComboBox Grid.Column="5" Grid.Row="5" Margin="163,5,191,5" Name="question6" >
                 <ComboBoxItem>1</ComboBoxItem>
                 <ComboBoxItem>2</ComboBoxItem>
                 <ComboBoxItem>3</ComboBoxItem>
@@ -221,8 +222,8 @@
                 <ComboBoxItem>5</ComboBoxItem>
             </ComboBox>
 
-            <Label Grid.Column="0" Grid.Row="5" Margin="0,34,6,0" FontSize="13" Grid.RowSpan="2" FontWeight="DemiBold" Grid.ColumnSpan="4"  >7.Overall Bolnica evaluation</Label>
-            <ComboBox Grid.Column="5" Grid.Row="6" Margin="27,5,237,5" Name="question7" >
+            <Label Grid.Column="0" Grid.Row="5" Margin="0,34,6,0" FontSize="13" Grid.RowSpan="2" FontWeight="DemiBold" Grid.ColumnSpan="4"  >7.Overall Doctor evaluation</Label>
+            <ComboBox Grid.Column="5" Grid.Row="6" Margin="163,5,191,5" Name="question7" >
                 <ComboBoxItem>1</ComboBoxItem>
                 <ComboBoxItem>2</ComboBoxItem>
                 <ComboBoxItem>3</ComboBoxItem>
@@ -238,11 +239,11 @@
         <Label Margin="10 0" FontSize="12" Width="1490" >Additional Comments and advices (optinal):</Label>
         <Separator Height="5"  Background="#42A5F5"></Separator>
 
-        <TextBox x:Name="MoreComment"  Width="1481" Height="116"/>
+        <TextBox x:Name="MoreComment"  Width="1374" Height="116"/>
         <Separator Height="16"  Background="#42A5F5"></Separator>
 
-        <Separator Height="27"  Background="#42A5F5"></Separator>
-        <Button x:Name="RateBolnica" Click="RateBolnica_Click"  Height="40" Background="#FF31577E" Width="274" >
+        <Separator Height="18"  Background="#42A5F5"></Separator>
+        <Button x:Name="RateBolnica" Click="Confirm_Click"  Height="35" Background="#FF31577E" Width="273" >
             <Run  FontSize="25" Text="Confirm"/>
         </Button>
         <Separator Height="40"  Background="#42A5F5"></Separator>
@@ -251,7 +252,8 @@
 
 
 
+
+
+
     </StackPanel>
-
-
 </Window>

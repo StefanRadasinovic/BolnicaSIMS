@@ -11,7 +11,9 @@ namespace Model
 {
    public class OperationService
    {
-        private const string FileName = "C:\\Users\\Branislav\\Desktop\\FAKS\\SIMS\\Projekat konacan\\BolnicaSIMS\\Bolnica_SIMS\\Bolnica\\Resources\\operations.txt";
+        // private const string FileName = "C:\\Users\\Branislav\\Desktop\\FAKS\\SIMS\\Projekat konacan\\BolnicaSIMS\\Bolnica_SIMS\\Bolnica\\Resources\\operations.txt";
+       // private const string FileName = " C:\\Users\\User\\BolnicaSIMS\\BolnicaSIMS\\Bolnica\\Resources\\users.txt";
+
         private static List<Operation> operations = new List<Operation>();
 
 
@@ -30,7 +32,7 @@ namespace Model
                 }
                 operations.Add(operation);
                 Serializer<Operation> ser = new Serializer<Operation>();
-                ser.toCSV(FileName, operations);
+             //   ser.toCSV(FileName, operations);
                 return true;
             }
             else
@@ -89,7 +91,7 @@ namespace Model
         public static List<Operation> GetAll()
         {
             Serializer<Operation> ser = new Serializer<Operation>();
-            operations = ser.fromCSV(FileName);
+           // operations = ser.fromCSV(FileName);
             return operations;
         }
 

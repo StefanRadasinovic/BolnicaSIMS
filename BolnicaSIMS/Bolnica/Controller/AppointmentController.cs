@@ -12,6 +12,8 @@ namespace Controller
 {
     public class AppointmentController
     {
+        AppointmentService appointmentService1 = new AppointmentService();  
+
         public static Appointment Create(Appointment appointment)
         {
 
@@ -19,10 +21,10 @@ namespace Controller
             return AppointmentService.Create(appointment);
 
         }
-
-        public void Read(String appointmentID)
+        
+        public List<Appointment> Read()
         {
-            throw new NotImplementedException();
+            return appointmentService1.Read();
         }
 
         public bool Update(String appointmentID, DateTime date, String? time)
@@ -54,10 +56,10 @@ namespace Controller
 
         public Appointment GetAppointmentID(String appointmentID)
         {
-            throw new NotImplementedException();
+            return appointmentService1.GetAppointmentID(appointmentID);
         }
 
-        public AppointmentService appointmentService;
+       
 
     }
 

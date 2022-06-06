@@ -6,11 +6,12 @@
         xmlns:local="clr-namespace:Bolnica.View"
         mc:Ignorable="d"
         Title="UpdateAppointmentPatientView" Height="570" Width="430" WindowStartupLocation="CenterScreen">
-    <Grid  Background="LightSkyBlue">
+    <Grid  Background="#42A5F5">
 
         <StackPanel Margin="40">
             <Label>New Date</Label>
-            <DatePicker Name="date" Width="327" ></DatePicker>
+            <DatePicker Name="date" Width="327" DisplayDateStart="6/3/22"
+                        DisplayDateEnd="7/13/22"/>
 
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>

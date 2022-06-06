@@ -74,10 +74,10 @@ namespace Bolnica
             SurveyService.AddSurvey(new Model.Survey(PatientView.logIN, DateTime.Now, operationSurvey, SurveyService.questionsAboutOperation, MoreComment.Text));
             SurveyService.ReadSurvey();
 
-           // PatientView.GetMainContent().Children.Clear();
-           // PatientView.GetMainContent().Children.Add(new SurveyView());
+            // PatientView.GetMainContent().Children.Clear();
+            // PatientView.GetMainContent().Children.Add(new SurveyView());
 
-            
+            MessageBox.Show("You Successfully Rated Doctor!");
             this.Close();
            
 
@@ -85,6 +85,67 @@ namespace Bolnica
 
 
 
+        private void Button_Forward(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void Button_Back(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void Manage_Profile(object sender, RoutedEventArgs e)
+        {
+            ManageProfileView manageProfileView = new ManageProfileView();
+
+            this.Close();
+            manageProfileView.Show();
+
+        }
+
+
+        private void Button_LogOut(object sender, RoutedEventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            this.Close();
+            mw.Show();
+
+        }
+
+
+        private void Button_Home(object sender, RoutedEventArgs e)
+        {
+            HomeView homeView = new HomeView();
+            homeView.Show();
+        }
+
+        private void Button_Help(object sender, RoutedEventArgs e)
+        {
+            HelpView helpView = new HelpView();
+            helpView.Show();
+        }
+
+        private void Button_About(object sender, RoutedEventArgs e)
+        {
+            AboutView aboutView = new AboutView();
+            aboutView.Show();
+
+        }
+
+        private void Button_Review(object sender, RoutedEventArgs e)
+        {
+            ReviewView reviewView = new ReviewView();
+            reviewView.Show();
+        }
+
+        private void Button_Contact(object sender, RoutedEventArgs e)
+        {
+            ContactView contactView = new ContactView();
+            contactView.Show();
+        }
 
 
 

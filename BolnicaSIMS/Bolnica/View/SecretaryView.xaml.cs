@@ -13,25 +13,13 @@ using System.Windows.Shapes;
 namespace Bolnica.View
 {
     /// <summary>
-    /// Interaction logic for NotesView.xaml
+    /// Interaction logic for SecretaryView.xaml
     /// </summary>
-    public partial class NotesView : Window
+    public partial class SecretaryView : Window
     {
-        public NotesView()
+        public SecretaryView()
         {
             InitializeComponent();
         }
-
-        public string PatientID { get; private set; }
-
-        private void Button_Back(object sender, RoutedEventArgs e)
-        {
-          //  PatientView patientView = new PatientView(PatientID);
-            this.Close();
-           // patientView.Show();
-
-        }
-
-
     }
 }

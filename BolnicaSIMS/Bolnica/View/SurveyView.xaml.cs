@@ -51,6 +51,52 @@ namespace Bolnica.View
             PatientView.GetMainContent().Children.Clear();
             PatientView.GetMainContent().Children.Add(new FillSurveyView(((Operation)PatientSurvey.SelectedItem)));
         }
+        private void Button_Back(object sender, RoutedEventArgs e)
+        {
+            
+            this.Close();
+           
+
+        }
+
+        private void Button_Home(object sender, RoutedEventArgs e)
+        {
+            HomeView homeView = new HomeView();
+            homeView.Show();
+        }
+
+        private void Button_Help(object sender, RoutedEventArgs e)
+        {
+            HelpView helpView = new HelpView();
+            helpView.Show();
+        }
+
+        private void Button_About(object sender, RoutedEventArgs e)
+        {
+            AboutView aboutView = new AboutView();
+            aboutView.Show();
+
+        }
+
+        private void Button_Review(object sender, RoutedEventArgs e)
+        {
+            ReviewView reviewView = new ReviewView();
+            reviewView.Show();
+        }
+
+        private void Button_Contact(object sender, RoutedEventArgs e)
+        {
+            ContactView contactView = new ContactView();
+            contactView.Show();
+        }
+
+
+
+        private void Button_Forward(object sender, RoutedEventArgs e)
+        {
+        
+
+        }
 
 
         private void RateBolnica_Click(object sender, RoutedEventArgs e)
@@ -75,11 +121,16 @@ namespace Bolnica.View
 
             else
             {
-
+                
                 /*****************/
                 RateBolnicaView rateBolnicaView = new RateBolnicaView();
                 rateBolnicaView.Show();
+                
             }
+
+            
+
+
         }
 
 

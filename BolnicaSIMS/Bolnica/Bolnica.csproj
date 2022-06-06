@@ -13,6 +13,10 @@
     <None Remove="Pictures\forwardPravi.png" />
     <None Remove="Pictures\google.png" />
     <None Remove="Pictures\hospital.jpg" />
+    <None Remove="Pictures\Patient\anc.png" />
+    <None Remove="Pictures\Patient\IMG_4557.jpeg" />
+    <None Remove="Pictures\Patient\pdf.png" />
+    <None Remove="Pictures\Patient\rate.png" />
     <None Remove="Pictures\reload.png" />
     <None Remove="Pictures\search.png" />
     <None Remove="Pictures\user.png" />
@@ -32,6 +36,10 @@
     <Content Include="Pictures\Patient\google.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Pictures\Patient\anc.png" />
+    <Resource Include="Pictures\Patient\IMG_4557.jpeg" />
+    <Resource Include="Pictures\Patient\pdf.png" />
+    <Resource Include="Pictures\Patient\rate.png" />
     <Content Include="Pictures\Patient\reload.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -51,5 +59,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="if exist &quot;$(TargetPath).locked&quot; del &quot;$(TargetPath).locked&quot;&#xD;&#xA;if exist &quot;$(TargetPath)&quot; if not exist &quot;$(TargetPath).locked&quot; move &quot;$(TargetPath)&quot; &quot;$(TargetPath).locked&quot;" />
+  </Target>
 
 </Project>

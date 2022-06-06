@@ -13,25 +13,37 @@ using System.Windows.Shapes;
 namespace Bolnica.View
 {
     /// <summary>
-    /// Interaction logic for NotesView.xaml
+    /// Interaction logic for ForggotPassword.xaml
     /// </summary>
-    public partial class NotesView : Window
+    public partial class ForggotPassword : Window
     {
-        public NotesView()
+        public ForggotPassword()
         {
             InitializeComponent();
         }
 
-        public string PatientID { get; private set; }
 
-        private void Button_Back(object sender, RoutedEventArgs e)
+
+        private void Close_Click(object sender, RoutedEventArgs e)
         {
-          //  PatientView patientView = new PatientView(PatientID);
-            this.Close();
-           // patientView.Show();
 
+            this.Close();
         }
 
 
+
+        private void Confirm_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Verification code has been send to your email");
+
+            this.Close();
+        }
+
+
+
+
+
     }
+
+
 }

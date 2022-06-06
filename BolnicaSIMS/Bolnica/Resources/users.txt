@@ -1,0 +1,4 @@
+Stefan|Radasinovic|3123|02.02.2000.|1049123|pop@mail.com|stefan22|stefan22|PACIJENT
+Stefan|Radasinovic|3123|02.02.2000.|1049123|pop@mail.com|stefan33|stefan33|PACIJENT
+Stefan|Radasinovic|3123|02.02.2000.|1049123|pop@mail.com|stefan44|stefan44|PACIJENT
+Branislav|Madzar|3123|02.02.2000.|1049123|pop@mail.com|madzar11|madzar11|DOKTOR
