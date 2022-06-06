@@ -75,21 +75,70 @@ namespace Bolnica.View
             
         }
 
-
-
-        /*
-        private void Button_Back(object sender, RoutedEventArgs e)
+        private void Button_Home(object sender, RoutedEventArgs e)
         {
-            SurveyView sv = new SurveyView();
-            this.Close();
-            sv.Show();
+            HomeView homeView = new HomeView();
+            homeView.Show();
+        }
+
+        private void Button_Help(object sender, RoutedEventArgs e)
+        {
+            HelpView helpView = new HelpView();
+            helpView.Show();
+        }
+
+        private void Button_About(object sender, RoutedEventArgs e)
+        {
+            AboutView aboutView = new AboutView();
+            aboutView.Show();
 
         }
-        <Button Height="35" Content="Back" FontSize="20" Background="#FF31577E" Click="Button_Back" Width="311" Foreground="AntiqueWhite"></Button>
 
-        */
+        private void Button_Review(object sender, RoutedEventArgs e)
+        {
+            ReviewView reviewView = new ReviewView();
+            reviewView.Show();
+        }
+
+        private void Button_Contact(object sender, RoutedEventArgs e)
+        {
+            ContactView contactView = new ContactView();
+            contactView.Show();
+        }
+
+        private void Button_Forward(object sender, RoutedEventArgs e)
+        {
+
+        }
 
 
+        private void Button_Back(object sender, RoutedEventArgs e)
+        {
+           
+            this.Close();
+            
+
+        }
+
+
+
+        private void Manage_Profile(object sender, RoutedEventArgs e)
+        {
+            ManageProfileView manageProfileView = new ManageProfileView();
+
+            this.Close();
+            manageProfileView.Show();
+
+        }
+
+
+        private void Button_LogOut(object sender, RoutedEventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            this.Close();
+            mw.Show();
+
+        }
 
 
 

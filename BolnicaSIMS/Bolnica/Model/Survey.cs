@@ -7,6 +7,10 @@ namespace Bolnica.Model
 {
     public class Survey
     {
+        private string v1;
+        private DateTime dateTime;
+        private string v2;
+
         public Patient Patient { get; set; }
         public DateTime RatedBolnicu { get; set; }
         public Operation Operation { get; set; }
@@ -25,6 +29,13 @@ namespace Bolnica.Model
             Operation = operation;
             QuestionSurvey = questionSurvey;
             MoreComments = moreComments;
+        }
+
+        public Survey(string v1, DateTime dateTime, string v2)
+        {
+            this.v1 = v1;
+            this.dateTime = dateTime;
+            this.v2 = v2;
         }
     }
 }

@@ -17,6 +17,9 @@ namespace Service
         public static int MAX_NUM = 5;
         // private List<Appointment> allAppointments;
         public static List<Appointment> allAppointments = new List<Appointment>();
+        public AppointmentRepository appointmentRepository = new AppointmentRepository();   
+
+
 
         public static Appointment Create(Appointment appointment)
       {
@@ -33,10 +36,10 @@ namespace Service
             }
         }
       
-      public void Read(String appointmentID)
+      public List<Appointment> Read()
       {
-         throw new NotImplementedException();
-      }
+            return appointmentRepository.Read();
+        }
 
         public bool Update(String appointmentID, DateTime date, String time)
         {
@@ -97,7 +100,7 @@ namespace Service
             return null;
         }
 
-        public AppointmentRepository appointmentRepository;
+       
 
     }
 }

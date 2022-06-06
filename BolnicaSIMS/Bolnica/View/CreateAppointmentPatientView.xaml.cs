@@ -12,6 +12,8 @@ using System.Windows.Shapes;
 using Model;
 using Controller;
 using Service;
+using Bolnica.Model;
+using Bolnica.Service;
 
 namespace Bolnica.View
 {
@@ -22,6 +24,10 @@ namespace Bolnica.View
     {
 
         public static int num = 1;
+
+        public static int counter = 1;
+        public static List<Therapy> allTherapys = new List<Therapy>();
+
         public CreateAppointmentPatientView()
         {
             InitializeComponent();
@@ -30,25 +36,21 @@ namespace Bolnica.View
         {
 
             return num++;
+            
+        }
+
+
+        public int INCREASE()
+        {
+
+            return counter++;
+
         }
         private void Button_Confirm(object sender, RoutedEventArgs e)
         {
 
-           
-
-
-
 
             String appointmentID = "A" + (increase().ToString());
-
-            //OVAKO : izmenio si u Patient klasi objekat patient da ti unosi samo ime kako da unesem ime + prezime ?? ?  ? ? ?  
-            // Patient p = new Patient(Patient.Text);
-
-           // int DoctorID = 0;
-
-
-
-
 
             DateTime? date = this.date.SelectedDate;  //// OVDE FORMATIRAS DATUM 
 
@@ -59,36 +61,34 @@ namespace Bolnica.View
                 format = date.Value.ToString("MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture);  
             }
 
-
             String? Time = time.Text;
 
-
-            //String roomNumber = null;
-
-
+           
             Appointment a = new Appointment(appointmentID, date, Time);
 
 
 
-            ///////////////////////////***************////////
+            String therapyID = "T" + (INCREASE().ToString());
+            String medication = "Paracetamol";
+            String amount = "5mg";
+            String timeeStart = "12.07.2022";
+            String timeeEnd = "22.09.2022";
 
-            //  Appointment a = (appointmentID,DoctorID, p, date,  format, TimeStart, roomNumber); ////kako ove objekte da formatiram a da mi budu ko u Appointmenttu
 
+         //   Therapy t1 = new Therapy(therapyID, medication, amount, timeeStart, timeeEnd);
+
+
+
+
+
+
+           // TherapyService.Create(t1);
             AppointmentController.Create(a);
 
 
-
-
             
-            AppointmentService.CheckPatientAccount(PatientView.logIN);
 
-            if (PatientView.logIN.Blocked)
-            {
-                MessageBox.Show("You are blocked ");
-                return;
-            }
-
-            
+      
 
 
 

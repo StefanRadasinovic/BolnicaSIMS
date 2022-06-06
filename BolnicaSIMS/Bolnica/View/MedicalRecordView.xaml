@@ -5,10 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bolnica.View"
         mc:Ignorable="d"
-        Title="MedicalRecordView" Height="450" Width="800">
-    <Grid>
+        Title="MedicalRecordView" Height="584" Width="489" WindowStartupLocation="CenterScreen">
+    <Grid Background="#42A5F5">
+        <StackPanel Margin="40,40,51,60">
 
-        <Button Margin="336,146,239,201" Content="Back" Click="Button_Back"> </Button>
-        
+            <Label  FontSize="25" FontFamily="Bold" HorizontalAlignment="Left">Medical Record</Label>
+            <Separator Height="8"  Background="#42A5F5"></Separator>
+
+            <Label  FontSize="15" Width="230">Used Medications</Label>
+            <TextBox Width="220">Bruffen</TextBox>
+
+            <Separator Height="8"  Background="#42A5F5"></Separator>
+
+            <Label Width="230" FontSize="15">Alergie</Label>
+            <TextBox Width="220">Pollen</TextBox>
+
+            <Separator Height="8"  Background="#42A5F5"></Separator>
+
+            <Label Width="230" FontSize="15" >Ilnesss</Label>
+            <TextBox Width="220">Headache</TextBox>
+
+            <Separator Height="8"  Background="#42A5F5"></Separator>
+
+            <Label Width="230" FontSize="15">Symptoms</Label>
+            <TextBox Width="220" >Cough</TextBox>
+
+            <Separator Height="8"  Background="#42A5F5"></Separator>
+
+            <Label Width="230" FontSize="15">Previous Hospitalisation</Label>
+            <TextBox  Width="220">Yes</TextBox>
+
+            <Separator Height="8"  Background="#42A5F5"></Separator>
+
+            <Label Width="230" FontSize="15">Duration(months)</Label>
+            <TextBox Width="220">3</TextBox>
+
+            <Separator Height="20"  Background="#42A5F5"></Separator>
+
+            <Button Height="24" Width="133"  Background="#FF31577E" Click="Button_Back" FontSize="15"> Done </Button>
+
+
+
+
+
+
+        </StackPanel>
+
+
+
+
     </Grid>
 </Window>

@@ -5,8 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bolnica.View"
         mc:Ignorable="d"
-        Title="TherapyView" Height="450" Width="800">
-    <Grid>
-        <Button Margin="185,137,346,175" Content="Only Back" Click="Button_Back"></Button>
+        Title="TherapyView" Height="866" Width="1352" WindowStartupLocation="CenterScreen">
+    <Grid Background="#42A5F5">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="638*"/>
+            <ColumnDefinition Width="205*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <DataGrid x:Name="dataGridTerminiPacijenta" ItemsSource="{Binding Termini}" IsReadOnly="true"
+                  SelectionMode="Single" Grid.RowSpan="4" Margin="20,20,20.4,20" Background="WhiteSmoke"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID Termina" Binding="{Binding Therapy.TherapyID}"/>
+                <DataGridTextColumn Header="Vrsta termina" Binding="{Binding Medication}" />
+                <DataGridTextColumn Header="Lekar" Binding="{Binding Therapy.Amount}"/>
+                <DataGridTextColumn Header="Pacijent" Binding="{Binding Pacijent.korisnickoIme }"/>
+                <DataGridTextColumn Header="Datum" Binding="{Binding Datum}"/>
+                <DataGridTextColumn Header="Pocetak termina" Binding="{Binding PocetnoVreme}"/>
+                <DataGridTextColumn Header="Trajanje" Binding="{Binding Trajanje}"/>
+                <DataGridTextColumn Header="Prostorija" Binding="{Binding Prostor.IdProstora}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+      
+
+
+
+
+
     </Grid>
+
+
+
+
+
+
+
+
 </Window>

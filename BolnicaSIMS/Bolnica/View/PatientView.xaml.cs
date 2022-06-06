@@ -10,6 +10,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Bolnica.Model;
+using Bolnica.Service;
 using Bolnica.View;
 using Model;
 using Service;
@@ -21,8 +23,9 @@ namespace Bolnica.View
     /// </summary>
     public partial class PatientView : Window
     {
-
+        public int counter1 = 0;
         public static ObservableCollection<Appointment> Appointments { get; set; }
+        public static ObservableCollection<Therapy> Therapys { get; set; }
         public static Grid MainContent { get; private set; }
 
         public static Patient logIN = null;   /// <summary> !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -38,25 +41,29 @@ namespace Bolnica.View
             this.DataContext = this;
 
             Appointments = new ObservableCollection<Appointment>();
+            Therapys = new ObservableCollection<Therapy>();
+
 
             foreach (Appointment appointment in AppointmentService.GetAll())
-            {  ////TREBALO BI VAMO DA BUDE GetAll() metoda umesto allAppointments  al nzm sto nece
-                ///Vamo sam morao GetAll() metodu u AppointmentServicu da promenim u  public static Listu<> iz obicne public List<>
-                ///sta je razlika izmedju public i public static liste  ?  Kaze objekat  reference je potreban za ne staticko polje/metod.......
-                ///
-
+            { 
 
 
                 Appointments.Add(appointment);
             }
 
+            
+            foreach (Therapy therapy in TherapyService.GetAll())
+            {
 
+
+                Therapys.Add(therapy);
+            }
+            
         }
 
+      
 
-
-        
-        private void Button_Create(object sender, RoutedEventArgs e) //OVO JE CREATE  
+        private void Button_Create(object sender, RoutedEventArgs e) 
         {
             CreateAppointmentPatientView create = new CreateAppointmentPatientView();
             create.Show();
@@ -64,20 +71,18 @@ namespace Bolnica.View
 
         }
         
-
-
         
-        private void Button_Update(object sender, RoutedEventArgs e) //////////OVDE IDE DUGME ZA UPDATE 
+        private void Button_Update(object sender, RoutedEventArgs e) 
         {
 
             AppointmentService appointmentService = new AppointmentService();
             if (GridDataPatientView.SelectedIndex != -1)
             {
 
-                String promena = (((Appointment)GridDataPatientView.SelectedItem).AppointmentID);
+                String change = (((Appointment)GridDataPatientView.SelectedItem).AppointmentID);
 
 
-                Appointment appointment = appointmentService.GetAppointmentID(promena);
+                Appointment appointment = appointmentService.GetAppointmentID(change);
                 UpdateAppointmentPatientView updatePatientView = new UpdateAppointmentPatientView(appointment);
                 updatePatientView.Show();
 
@@ -87,16 +92,10 @@ namespace Bolnica.View
                 MessageBox.Show("You must click on existing Appointment");
 
 
-
-
-
-
         }
         
-
-
         
-        private void Button_Delete(object sender, RoutedEventArgs e) //////////OVDE IDE DUGME ZA delete 
+        private void Button_Delete(object sender, RoutedEventArgs e) 
         {
             AppointmentService appointmentService = new AppointmentService();
             if (GridDataPatientView.SelectedIndex != -1)
@@ -111,17 +110,10 @@ namespace Bolnica.View
         }
         
 
-        private void Button_Back(object sender, RoutedEventArgs e)
-        {
-            MainWindow mw = new MainWindow();
-            this.Close();
-            mw.Show();
-
-        }
 
 
 
-        private void Button_RateDoctor2(object sender, RoutedEventArgs e)
+        private void Button_RateDoctor(object sender, RoutedEventArgs e)
         {
 
             AppointmentService appointmentService = new AppointmentService();
@@ -147,11 +139,36 @@ namespace Bolnica.View
             
         }
 
+        private void Button_Back(object sender, RoutedEventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            this.Close();
+            mw.Show();
+
+        }
 
 
         private void Button_Forward(object sender, RoutedEventArgs e)
         {
 
+
+        }
+
+        private void Manage_Profile(object sender, RoutedEventArgs e)
+        {
+            ManageProfileView manageProfileView = new ManageProfileView();  
+        
+            this.Close();
+            manageProfileView.Show();
+
+        }
+
+
+        private void Button_LogOut(object sender, RoutedEventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            this.Close();
+            mw.Show();
 
         }
 
@@ -210,17 +227,34 @@ namespace Bolnica.View
 
         private void Button_Survey(object sender, RoutedEventArgs e)
         {
-            SurveyView surveyView = new SurveyView();
-            surveyView.Show();
+
+            counter1++;
+            if (counter1 >= 2)
+
+            //   if (!SurveyService.FreeSurveyAboutBolnica(PatientView.logIN))
+
+            {
+                MessageBox.Show("You already Rated Bolnica!");
+                return;
+            }
+            else
+            {
+
+                RateBolnicaView rateBolnica = new RateBolnicaView();
+                rateBolnica.Show();
+
+            }
+           // SurveyView surveyView = new SurveyView();
+           // surveyView.Show();
         }
 
-
-        public void PromeniPrikaz(UserControl userControl)
+/*
+        public void ChnageView(UserControl userControl)
         {
             MainPanel.Children.Clear();
             MainPanel.Children.Add(userControl);
         }
-
+*/
 
         private void ComboBoxItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {

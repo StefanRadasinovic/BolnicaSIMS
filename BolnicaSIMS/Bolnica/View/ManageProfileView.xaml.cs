@@ -13,20 +13,20 @@ using System.Windows.Shapes;
 namespace Bolnica.View
 {
     /// <summary>
-    /// Interaction logic for MedicalRecordView.xaml
+    /// Interaction logic for ManageProfileView.xaml
     /// </summary>
-    public partial class MedicalRecordView : Window
+    public partial class ManageProfileView : Window
     {
-        public MedicalRecordView()
+        public ManageProfileView()
         {
             InitializeComponent();
         }
 
         private void Button_Back(object sender, RoutedEventArgs e)
         {
-            
+
             this.Close();
-            
+
 
         }
 
@@ -106,6 +106,13 @@ namespace Bolnica.View
             ContactView contactView = new ContactView();
             contactView.Show();
         }
+
+
+
+
+
+
+
 
 
 

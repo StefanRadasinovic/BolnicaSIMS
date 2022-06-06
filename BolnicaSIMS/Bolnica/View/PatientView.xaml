@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Bolnica.View"
         mc:Ignorable="d"
         Title="PatientView" Height="1030" Width="1620" WindowStartupLocation="CenterScreen">
-    <Grid Background="LightSkyBlue">
+    <Grid Background="#42A5F5">
 
 
         <Grid.ColumnDefinitions>
@@ -20,25 +20,25 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="27*">
+            <RowDefinition Height="26*">
             </RowDefinition>
-            <RowDefinition Height="27*">
+            <RowDefinition Height="26*">
             </RowDefinition>
-            <RowDefinition Height="21*">
+            <RowDefinition Height="20*">
             </RowDefinition>
-            <RowDefinition Height="352*">
+            <RowDefinition Height="336*">
+            </RowDefinition>
+            <RowDefinition Height="96*">
+            </RowDefinition>
+            <RowDefinition Height="106*">
             </RowDefinition>
             <RowDefinition Height="101*">
             </RowDefinition>
-            <RowDefinition Height="111*">
+            <RowDefinition Height="101*">
             </RowDefinition>
-            <RowDefinition Height="106*">
+            <RowDefinition Height="101*">
             </RowDefinition>
-            <RowDefinition Height="106*">
-            </RowDefinition>
-            <RowDefinition Height="106*">
-            </RowDefinition>
-            <RowDefinition Height="106*">
+            <RowDefinition Height="101*">
             </RowDefinition>
 
 
@@ -49,53 +49,52 @@
 
 
 
-        <Label Background="LightGray" Grid.ColumnSpan="3" Grid.RowSpan="3">
+        <Label Background="LightGray" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
 
-        </Label>
 
-        <Button Background="White" Grid.Column="0" Name="back" Click="Button_Back" Margin="0,0,881,0" Grid.RowSpan="1">
+
+        <Button Background="White" Grid.Column="0" Name="back" Click="Button_Back" Margin="0,0,881,25" Grid.RowSpan="2">
             <Image Source="/Pictures/Patient/baack.jpg" Width="31"></Image>
         </Button>
 
-        <Button Grid.Column="0" Margin="34,0,847,0" Name="forward" Click="Button_Forward" Grid.RowSpan="1">
-            <Image Source="/Pictures/Patient/forwardPravi.png" Width="57" Height="25"></Image>
+        <Button Grid.Column="0" Margin="34,0,847,25" Name="forward" Click="Button_Forward" Grid.RowSpan="2">
+            <Image Source="/Pictures/Patient/forwardPravi.png" Width="40" Height="26"></Image>
         </Button>
 
-        <Button Grid.Column="0" Margin="68,0,813,0">
-            <Image Source="/Pictures/Patient/reload.png" Width="29"></Image>
+        <Button Grid.Column="0" Margin="68,0,813,25" Grid.RowSpan="2">
+            <Image Source="/Pictures/Patient/reload.png" Width="32" Height="24"></Image>
         </Button>
 
-        <Button Grid.Column="0" Margin="0,27,881,0" Grid.RowSpan="2">
-            <Image Source="/Pictures/Patient/3dots.png" Width="23"></Image>
+        <Button Grid.Column="0" Margin="0,26,881,0" Grid.RowSpan="2">
+            <Image Source="/Pictures/Patient/3dots.png" Width="25" Height="21"></Image>
         </Button>
 
-        <Button Grid.Column="0" Margin="34,27,847,0" Grid.RowSpan="2" >
-            <Image Source="/Pictures/Patient/google.png"></Image>
+        <Button Grid.Column="0" Margin="34,26,847,0" Grid.RowSpan="2" >
+            <Image Source="/Pictures/Patient/google.png" Width="22"></Image>
         </Button>
 
-        <Button Grid.Column="0" Margin="68,27,813,0" Grid.RowSpan="2">
-            <Image Source="/Pictures/Patient/youtube.png" Width="31" Height="26"></Image>
+        <Button Grid.Column="0" Margin="68,26,813,0" Grid.RowSpan="2">
+            <Image Source="/Pictures/Patient/youtube.png" Width="34" Height="25"></Image>
         </Button>
 
         <Label Background="LightGray" Grid.ColumnSpan="3" Margin="102,0,0,0" Grid.RowSpan="2">
-            <Button Height="17" Width="1808" Background="WhiteSmoke" Content="https://www.Bolnica.com/" HorizontalAlignment="Center" HorizontalContentAlignment="Center" >
+            <Button Height="17" Width="1508" Background="WhiteSmoke" Content="https://www.Bolnica.com/" HorizontalAlignment="Center" HorizontalContentAlignment="Center" >
             </Button>
         </Label>
 
 
-        <Image Grid.Column="0" Source="/Pictures/Patient/search.png" Margin="-330,6,331,6"/>
+        <Image Grid.Column="0" Source="/Pictures/Patient/search.png" Margin="-19,6,331,6"/>
 
 
 
         <DataGrid x:Name="GridDataPatientView" ItemsSource="{Binding Appointments}" IsReadOnly="true"
-                  SelectionMode="Single" Grid.RowSpan="5" Margin="68,253,159,106" Background="White"
+                  SelectionMode="Single" Grid.RowSpan="4" Margin="76,253,159,5" Background="White"
                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" AutoGenerateColumns="False" Grid.Row="3">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="AppointmentID" Binding="{Binding AppointmentID}" Width="97">
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="DocotorID" Binding="{Binding DocotorID}" Width="97"   />
-
+                <DataGridTextColumn Header="Docotor" Binding="{Binding DocotorID}" Width="97"   />
                 <DataGridTextColumn Header="Date" Binding="{Binding Date }" Width="130"/>
                 <DataGridTextColumn Header="TimeStart" Binding="{Binding Time}" Width="117"/>
                 <DataGridTextColumn Header="TimeEnd" Binding="{Binding TimeEnd}" Width="124"/>
@@ -106,29 +105,67 @@
 
         </DataGrid>
 
-        <Button Grid.Column="0" Grid.Row="7"  FontSize="22" Margin="283,36,362,26" RenderTransformOrigin="0.5,0.5" Background="#FF31577E" Content="Create Appointment" Click="Button_Create" />
+        <Button Grid.Column="0" Grid.Row="7"  FontSize="22" Margin="283,41,372,20" RenderTransformOrigin="0.5,0.5" Background="#FF31577E" Content="Create Appointment" Click="Button_Create" />
+        <Button Grid.Column="0" Grid.Row="8" Margin="283,36,372,27" FontSize="22" Content="Update Apppointment" Background="#FF31577E" Click="Button_Update" />
+        <Button Grid.Column="0" Grid.Row="9" Margin="283,27,372,37" FontSize="22" Content="Delete Appointment" Click="Button_Delete" Background="#FF31577E"/>
 
-        <Button Grid.Column="0" Grid.Row="8" Margin="283,36,362,27" FontSize="22" Content="Update Apppointment" Background="#FF31577E" Click="Button_Update" />
-        <Button Grid.Column="0" Grid.Row="9" Margin="283,27,362,37" FontSize="22" Content="Delete Appointment" Click="Button_Delete" Background="#FF31577E">
 
-        </Button>
+        <StackPanel Grid.Column="1"  Grid.RowSpan="7" Grid.Row="3" Grid.ColumnSpan="2" Margin="0,331,324,0">
+            <Separator Width="20" Height="37" Background="Transparent"/>
+            <Separator Width="20" Height="2" Background="Transparent"/>
+
+            <Button Grid.Column="1" Grid.Row="8"  Width="258" Height="36" Content="Rate Doctor" Click="Button_RateDoctor" FontSize="22" Background="#FF31577E"    />
+            <Separator Width="20" Height="30" Background="Transparent"/>
+            <Separator Width="20" Height="20" Background="Transparent"/>
+
+
+
+            <Button Grid.Column="1" Grid.Row="4"  Width="258" Height="36" Content="Medical Record" Click="Button_Medical_Record" FontSize="22" Background="#FF31577E"     />
+
+            <Separator Width="20" Height="34" Background="Transparent"/>
+            <Separator Width="20" Height="20" Background="Transparent"/>
+
+            <Button Grid.Column="1" Grid.Row="5"   Width="258" Height="36"  Content="Therapy"  Click="Button_Therapy" FontSize="22" Background="#FF31577E" />
+            <Separator Width="20" Height="31" Background="Transparent"/>
+            <Separator Width="20" Height="19" Background="Transparent"/>
+
+            <Button  Grid.Column="1" Grid.Row="6" Width="258" Height="36"  Content="Notes" HorizontalAlignment="Center" Click="Button_Notes"  FontSize="22" Background="#FF31577E"  />
+
+            <Separator Width="20" Height="30" Background="Transparent"/>
+            <Separator Width="20" Height="18" Background="Transparent"/>
+
+            <Button  Width="258" Content="Survey"  Click="Button_Survey"  FontSize="22" Background="#FF31577E" Height="36" />
+
+        </StackPanel>
+
+
+
+
+
+
+
+
+
+
 
 
 
 
         <StackPanel Grid.Row="3" Grid.Column="2" Margin="89,19,31,84">
-            <Label Content="User  Profile:" FontSize="23" HorizontalAlignment="Center" Width="148"></Label>
+            <Label></Label>
+
+
             <Image  HorizontalAlignment="Center" Source="/Pictures/Patient/user.png" Height="109" Width="117"/>
 
             <ComboBox   HorizontalAlignment="Center" Name="Combobox" Height="23" Width="40" Background="LightGray">
                 <ComboBoxItem Width="125" Background="Transparent">
-                    <Button Content="Manage Profile" HorizontalContentAlignment="Center" Width="120" Background="LightGray" Click="Button_Back"></Button>
+                    <Button Content="Manage Profile" HorizontalContentAlignment="Center" Width="120" Background="LightGray" Click="Manage_Profile"></Button>
 
                 </ComboBoxItem>
 
                 <Separator Width="143"  />
                 <ComboBoxItem Width="125" Background="Transparent">
-                    <Button Content="Log Out" HorizontalContentAlignment="Center" Click="Button_Back" Width="120" Background="LightGray"></Button>
+                    <Button Content="Log Out" HorizontalContentAlignment="Center" Click="Button_LogOut" Width="120" Background="LightGray"></Button>
                 </ComboBoxItem>
 
             </ComboBox>
@@ -139,27 +176,22 @@
 
 
 
-        <Button Grid.Column="0" Grid.Row="1" Margin="0,27,864,0" Grid.RowSpan="2" Content="Home" Click="Button_Home"/>
-        <Button Grid.Row="1" Margin="51,27,813,0" Grid.RowSpan="2" Content="Help" Click="Button_Help"/>
-        <Button Margin="102,27,761,0" Grid.Row="1" Grid.RowSpan="2" Content="About" Click="Button_About"/>
-        <Button Grid.Row="1" Margin="154,27,710,0" Grid.RowSpan="2" Content="Review" Click="Button_Review"/>
-        <Button Margin="205,27,659,0" Grid.Row="1" Grid.RowSpan="2" Content="Contact" Click="Button_Contact"/>
+        <Button Grid.Column="0" Grid.Row="1" Margin="0,26,864,0" Grid.RowSpan="2" Content="Home" Click="Button_Home"/>
+        <Button Grid.Row="1" Margin="51,26,813,0" Grid.RowSpan="2" Content="Help" Click="Button_Help"/>
+        <Button Margin="102,26,761,0" Grid.Row="1" Grid.RowSpan="2" Content="About" Click="Button_About"/>
+        <Button Grid.Row="1" Margin="154,26,710,0" Grid.RowSpan="2" Content="Review" Click="Button_Review"/>
+        <Button Margin="205,26,659,0" Grid.Row="1" Grid.RowSpan="2" Content="Contact" Click="Button_Contact"/>
 
 
 
 
-        <Button Grid.Column="1" Grid.Row="9" Content="Rate Doctor" Click="Button_RateDoctor2" FontSize="25" Background="#FF31577E"  Margin="55,36,114,26" />
-        
-        <Button Grid.Column="1" Grid.Row="5" Content="Medical Record" Click="Button_Medical_Record" FontSize="25" Background="#FF31577E"  Margin="55,36,114,26" />
-        <Button Grid.Column="1" Grid.Row="6" Margin="55,36,114,26"  Content="Therapy"  Click="Button_Therapy" FontSize="25" Background="#FF31577E" />
-        <Button  Grid.Column="1" Grid.Row="7" Margin="55,36,114,26" Content="Notes"  Click="Button_Notes"  FontSize="25" Background="#FF31577E" />
-        <Button  Grid.Column="1" Grid.Row="8" Margin="55,36,114,26" Content="Survey"  Click="Button_Survey"  FontSize="25" Background="#FF31577E" />
 
-        
 
-        <Label Grid.Column="1" Grid.Row="3" FontWeight="Bold" Margin="27,265,51,10" Content="Other OPTIONS :" FontSize="25"  HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" />
 
-        <StackPanel  Height="209" VerticalAlignment="Top"  Background="LightSkyBlue" Grid.Column="0" Margin="62,39,67,0" Grid.Row="3">
+
+        <Label Grid.Column="1" Grid.Row="3" FontWeight="Bold" Margin="39,265,39,10" Content="Other OPTIONS :" FontSize="25"  HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" />
+
+        <StackPanel  Height="209" VerticalAlignment="Top"  Background="#42A5F5" Grid.Column="0" Margin="62,39,67,0" Grid.Row="3">
             <Label Content=" WELCOME TO BOLNICA" Width="465" Height="56" FontSize="40" FontWeight="Bold"/>
             <Label Height="27"/>
             <Label Height="52"/>
@@ -169,7 +201,7 @@
 
         </StackPanel>
 
-        <StackPanel Margin="650,15,451,158" Grid.Row="3" RenderTransformOrigin="0.368,0.522" Grid.ColumnSpan="2">
+        <StackPanel Margin="650,15,70,158" Grid.Row="3" RenderTransformOrigin="0.368,0.522">
             <Image Source="/Pictures/Patient/hospital.jpg" Height="134" Width="327"/>
 
         </StackPanel>
@@ -177,7 +209,7 @@
 
 
 
-        <Grid x:Name="MainPanel"/>
+
 
 
 

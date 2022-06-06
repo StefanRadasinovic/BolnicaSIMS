@@ -86,7 +86,11 @@ namespace Bolnica
         }
         */
 
-
+        private void ForgotPassword_Click(object sender, RoutedEventArgs e)
+        {
+            ForggotPassword fg = new ForggotPassword();
+            fg.Show();
+        }
 
         //EXIT APP
         private void btnExit_Click(object sender, RoutedEventArgs e)

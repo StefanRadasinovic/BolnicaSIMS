@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Bolnica.View"
         mc:Ignorable="d"
         Title="CreateAppointmentPatientView" Height="570" Width="430" WindowStartupLocation="CenterScreen">
-    <Grid Background="LightSkyBlue">
+    <Grid Background="#42A5F5">
         <StackPanel Margin="40">
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>
@@ -23,7 +23,17 @@
             
            
             <Label>Date</Label>
-            <DatePicker Name="date" Width="327"></DatePicker>
+
+
+            <DatePicker Name="date" Width="327"
+                        DisplayDateStart="6/3/22"
+                        DisplayDateEnd="7/13/22">
+
+                
+            </DatePicker>
+
+            
+            
             
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>
@@ -76,7 +86,7 @@
             <Separator Width="20" Background="Transparent"/>
 
 
-            <Button Click="Button_Confirm" >Confirm</Button>
+            <Button Click="Button_Confirm" Width="240"  Background="#FF31577E" >Confirm</Button>
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>
@@ -85,7 +95,7 @@
             <Separator Width="20" Background="Transparent"/>
             <Separator Width="20" Background="Transparent"/>
 
-            <Button Click="Button_Back" >Back</Button>
+            <Button Click="Button_Back" Width="240"   Background="#FF31577E">Back</Button>
 
 
 

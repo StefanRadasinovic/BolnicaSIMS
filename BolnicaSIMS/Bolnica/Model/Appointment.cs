@@ -23,7 +23,9 @@ namespace Model
         private string datee;
         private DateTime? date;
         private string? time;
-        
+        private string v;
+        private string v1;
+        private int v2;
 
         public DateTime Date { get; set; }
       public DateTime TimeStart { get; set; }
@@ -54,7 +56,7 @@ namespace Model
         //public String RoomNumber;
 
 
-        public Appointment() { }
+        
 
 
 
@@ -83,7 +85,11 @@ namespace Model
             this.Datee = datee;
         }
 
-        //public Appointment()
-
+        public Appointment(string v, string v1, int v2)
+        {
+            this.v = v;
+            this.v1 = v1;
+            this.v2 = v2;
+        }
     }
 }

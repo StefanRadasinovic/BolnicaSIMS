@@ -29,7 +29,7 @@ namespace Bolnica.View
             // time.Text = appointment.TimeStart.ToString();
         }
 
-        private void Button_Confirm(object sender, RoutedEventArgs e) ///OVDE KUCAS IZMENE 
+        private void Button_Confirm(object sender, RoutedEventArgs e)  
         {
 
             AppointmentService appointmentService = new AppointmentService();
@@ -47,8 +47,8 @@ namespace Bolnica.View
              appointmentService.Update(ID,  date.Value, time.Text);
 
 
-            
-
+           
+            /*
             AppointmentService.CheckPatientAccount(PatientView.logIN);
 
             if (PatientView.logIN.Blocked)
@@ -56,8 +56,8 @@ namespace Bolnica.View
                 MessageBox.Show("You are blocked ");
                 return;
             }
+            */
             
-
 
             this.Close();
 
